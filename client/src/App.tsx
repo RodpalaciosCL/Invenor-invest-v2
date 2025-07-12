@@ -1,30 +1,23 @@
-import { Switch, Route } from "wouter";
-import { queryClient } from "./lib/queryClient";
-import { QueryClientProvider } from "@tanstack/react-query";
-import { Toaster } from "@/components/ui/toaster";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import NotFound from "@/pages/not-found";
-import Home from "@/pages/home";
+import UseCasesSection from './components/UseCasesSection'
+import ValidationSection from './components/ValidationSection'
+import RankingSection from './components/RankingSection'
+import StatsSection from './components/StatsSection'
+import VideoSection from './components/VideoSection'
+import MapSection from './components/MapSection'
+import FAQSection from './components/FAQSection'
+import ContactSection from './components/ContactSection'
 
-function Router() {
+export default function App() {
   return (
-    <Switch>
-      <Route path="/" component={Home} />
-      {/* Fallback to 404 */}
-      <Route component={NotFound} />
-    </Switch>
-  );
+    <main className="bg-zinc-900 text-white">
+      <UseCasesSection />
+      <ValidationSection />
+      <RankingSection />
+      <StatsSection />
+      <VideoSection />
+      <MapSection />
+      <FAQSection />
+      <ContactSection />
+    </main>
+  )
 }
-
-function App() {
-  return (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Router />
-      </TooltipProvider>
-    </QueryClientProvider>
-  );
-}
-
-export default App;

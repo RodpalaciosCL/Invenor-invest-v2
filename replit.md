@@ -1,8 +1,8 @@
-# Rest Express Application
+# INVENOR Pitch Website
 
 ## Overview
 
-This is a full-stack TypeScript application built with React frontend and Express backend, featuring a modern tech stack including Drizzle ORM for database operations, shadcn/ui components, and TanStack Query for state management.
+This is a React-based pitch deck website for INVENOR, showcasing their railway crossing monitoring system. Built with modern web technologies including React, TypeScript, Tailwind CSS, Recharts for data visualization, and CountUp for animated statistics.
 
 ## User Preferences
 
