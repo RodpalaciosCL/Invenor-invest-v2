@@ -1,23 +1,26 @@
-import UseCasesSection from './components/UseCasesSection'
-import ValidationSection from './components/ValidationSection'
-import RankingSection from './components/RankingSection'
-import StatsSection from './components/StatsSection'
-import VideoSection from './components/VideoSection'
-import MapSection from './components/MapSection'
-import FAQSection from './components/FAQSection'
-import ContactSection from './components/ContactSection'
+import { loadProjectData } from './data/loadData';
+import Hero from './components/Hero';
+import ProblemSolution from './components/ProblemSolution';
+import Cases from './components/Cases';
+import ChartRanking from './components/ChartRanking';
+import Indicators from './components/Indicators';
+import DemoVideo from './components/DemoVideo';
+import Map from './components/Map';
+import FAQ from './components/FAQ';
 
 export default function App() {
+  const { casosData, rankingData, indicadoresData } = loadProjectData();
+  
   return (
     <main className="bg-zinc-900 text-white">
-      <UseCasesSection />
-      <ValidationSection />
-      <RankingSection />
-      <StatsSection />
-      <VideoSection />
-      <MapSection />
-      <FAQSection />
-      <ContactSection />
+      <Hero />
+      <ProblemSolution />
+      <Cases items={casosData} />
+      <ChartRanking data={rankingData} />
+      <Indicators data={indicadoresData} />
+      <DemoVideo />
+      <Map />
+      <FAQ />
     </main>
   )
 }

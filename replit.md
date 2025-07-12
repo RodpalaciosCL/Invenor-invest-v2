@@ -13,18 +13,15 @@ Preferred communication style: Simple, everyday language.
 ### Frontend Architecture
 - **Framework**: React 18 with TypeScript
 - **Build Tool**: Vite for fast development and optimized builds
-- **UI Library**: shadcn/ui components built on Radix UI primitives
-- **Styling**: Tailwind CSS with CSS variables for theming
-- **Routing**: Wouter for lightweight client-side routing
-- **State Management**: TanStack Query (React Query) for server state
-- **Form Handling**: React Hook Form with Zod validation
+- **Styling**: Tailwind CSS with dark theme (zinc-900 background)
+- **Charts**: Recharts for data visualization
+- **Animations**: CountUp for animated statistics
+- **Components**: Modular component architecture with data props
 
-### Backend Architecture
-- **Runtime**: Node.js with TypeScript
-- **Framework**: Express.js for REST API
-- **Database**: PostgreSQL (configured for Neon serverless)
-- **ORM**: Drizzle ORM for type-safe database operations
-- **Session Management**: PostgreSQL-based sessions with connect-pg-simple
+### Data Architecture
+- **Data Source**: Simulated project data (originally from Excel PROYECTO_CRUCES_AI_V3.xlsx)
+- **Structure**: Typed interfaces for CasoUso, RankingComuna, and Indicador
+- **Loading**: Centralized data loading function in loadData.ts
 
 ### Development Environment
 - **Package Manager**: npm
@@ -34,23 +31,21 @@ Preferred communication style: Simple, everyday language.
 
 ## Key Components
 
-### Database Layer
-- **Schema Location**: `shared/schema.ts` - centralizes database models
-- **User Model**: Basic user table with id, username, and password fields
-- **Validation**: Drizzle-Zod integration for schema validation
-- **Migrations**: Managed through Drizzle Kit with PostgreSQL dialect
+### Pitch Deck Sections
+1. **Hero**: Main landing with title, subtitle, and CTA
+2. **ProblemSolution**: Problem/solution comparison with validation
+3. **Cases**: Use cases with icons and descriptions
+4. **ChartRanking**: Interactive bar chart of comuna rankings
+5. **Indicators**: Animated statistics with CountUp
+6. **DemoVideo**: Video placeholder with feature highlights
+7. **Map**: Interactive map placeholder with network stats
+8. **FAQ**: Expandable accordion with common questions
 
-### API Layer
-- **Routes**: Centralized in `server/routes.ts` with `/api` prefix
-- **Storage Interface**: Abstracted storage layer with memory implementation fallback
-- **Error Handling**: Centralized error middleware with proper HTTP status codes
-- **Logging**: Request/response logging with performance metrics
-
-### Frontend Components
-- **Component Library**: Comprehensive shadcn/ui component set
-- **Theme System**: CSS variables with light/dark mode support
-- **Responsive Design**: Mobile-first approach with Tailwind utilities
-- **Type Safety**: Full TypeScript coverage with proper type inference
+### Data Components
+- **loadData.ts**: Centralized data loading with typed interfaces
+- **Real Data**: Casos de uso, ranking comunas, indicadores generales
+- **Responsive Design**: Mobile-first approach with grid layouts
+- **Interactive Elements**: Hover effects, animations, smooth transitions
 
 ## Data Flow
 
