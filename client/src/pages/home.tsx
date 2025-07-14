@@ -22,6 +22,8 @@ import Timeline3D from '../components/Timeline3D';
 import GameInvestor from '../components/GameInvestor';
 import AutoPresentationMode from '../components/AutoPresentationMode';
 import ComparisonMatrix from '../components/ComparisonMatrix';
+import DataRoomDashboard from '../components/DataRoomDashboard';
+import ESGMetrics from '../components/ESGMetrics';
 
 export default function Home() {
   const { casosData, rankingData, indicadoresData, proyeccionesAnuales } = loadProjectData();
@@ -33,6 +35,8 @@ export default function Home() {
       <EmotionalImpact />
       <ProblemSolution />
       <ComparisonMatrix />
+      <DataRoomDashboard />
+      <ESGMetrics />
       <Cases items={casosData} />
       <InteractiveDemo />
       <ValidationSection />
