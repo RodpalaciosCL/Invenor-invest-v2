@@ -15,6 +15,8 @@ import EmotionalImpact from '../components/EmotionalImpact';
 import FutureOpportunities from '../components/FutureOpportunities';
 import InvestorCredibility from '../components/InvestorCredibility';
 import CompetitiveAdvantage from '../components/CompetitiveAdvantage';
+import InteractiveDemo from '../components/InteractiveDemo';
+import InvestmentSimulator from '../components/InvestmentSimulator';
 
 export default function Home() {
   const { casosData, rankingData, indicadoresData, proyeccionesAnuales } = loadProjectData();
@@ -26,9 +28,11 @@ export default function Home() {
       <EmotionalImpact />
       <ProblemSolution />
       <Cases items={casosData} />
+      <InteractiveDemo />
       <ValidationSection />
       <InvestorCredibility />
       <CompetitiveAdvantage />
+      <InvestmentSimulator />
       <ChartRanking data={rankingData} />
       <Projections data={proyeccionesAnuales} />
       <InvestmentOpportunity />
