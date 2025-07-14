@@ -13,6 +13,8 @@ import ContactSection from '../components/ContactSection';
 import ValidationSection from '../components/ValidationSection';
 import EmotionalImpact from '../components/EmotionalImpact';
 import FutureOpportunities from '../components/FutureOpportunities';
+import InvestorCredibility from '../components/InvestorCredibility';
+import CompetitiveAdvantage from '../components/CompetitiveAdvantage';
 
 export default function Home() {
   const { casosData, rankingData, indicadoresData, proyeccionesAnuales } = loadProjectData();
@@ -25,6 +27,8 @@ export default function Home() {
       <ProblemSolution />
       <Cases items={casosData} />
       <ValidationSection />
+      <InvestorCredibility />
+      <CompetitiveAdvantage />
       <ChartRanking data={rankingData} />
       <Projections data={proyeccionesAnuales} />
       <InvestmentOpportunity />

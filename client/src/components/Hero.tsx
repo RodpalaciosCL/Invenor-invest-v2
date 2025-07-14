@@ -57,17 +57,6 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
-        {/* Badge */}
-        <motion.div
-          className="inline-flex items-center px-4 py-2 bg-orange-600/20 border border-orange-600/30 rounded-full mb-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <Zap className="w-4 h-4 text-orange-400 mr-2" />
-          <span className="text-orange-300 font-medium text-sm">Primera Solución B2G Chile</span>
-        </motion.div>
-
         {/* Logo */}
         <motion.div
           className="flex justify-center mb-8"
@@ -78,8 +67,19 @@ export default function Hero() {
           <img 
             src="https://res.cloudinary.com/dhobnlg73/image/upload/v1751486212/Untitled_design_6_g3yugq.png" 
             alt="INVENOR Logo" 
-            className="h-28 md:h-32 filter drop-shadow-2xl"
+            className="h-36 md:h-40 filter drop-shadow-2xl"
           />
+        </motion.div>
+
+        {/* Badge */}
+        <motion.div
+          className="inline-flex items-center px-4 py-2 bg-orange-600/20 border border-orange-600/30 rounded-full mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <Zap className="w-4 h-4 text-orange-400 mr-2" />
+          <span className="text-orange-300 font-medium text-sm">Primera Solución B2G Chile</span>
         </motion.div>
 
         {/* Subtitle */}
