@@ -99,6 +99,14 @@ export default function NavigationBar() {
           <motion.div 
             className="logo"
             whileHover={{ scale: 1.05 }}
+            animate={{ 
+              opacity: [1, 0.7, 1],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
           >
             <img 
               src="https://res.cloudinary.com/dhobnlg73/image/upload/v1752531633/Untitled_design_7_lr3xod.png" 
