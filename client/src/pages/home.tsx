@@ -11,6 +11,8 @@ import VideoSection from '../components/VideoSection';
 import MapSection from '../components/MapSection';
 import ContactSection from '../components/ContactSection';
 import ValidationSection from '../components/ValidationSection';
+import EmotionalImpact from '../components/EmotionalImpact';
+import FutureOpportunities from '../components/FutureOpportunities';
 
 export default function Home() {
   const { casosData, rankingData, indicadoresData, proyeccionesAnuales } = loadProjectData();
@@ -19,12 +21,14 @@ export default function Home() {
     <main className="bg-zinc-900 text-white">
       <Hero />
       <StatsSection data={indicadoresData} />
+      <EmotionalImpact />
       <ProblemSolution />
       <Cases items={casosData} />
       <ValidationSection />
       <ChartRanking data={rankingData} />
       <Projections data={proyeccionesAnuales} />
       <InvestmentOpportunity />
+      <FutureOpportunities />
       <VideoSection />
       <MapSection />
       <ContactSection />

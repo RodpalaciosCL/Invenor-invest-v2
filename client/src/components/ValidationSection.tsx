@@ -2,32 +2,29 @@ import { motion } from "framer-motion";
 import { Star, CheckCircle, TrendingUp, Award, Users, Target, Zap, ShieldCheck } from "lucide-react";
 
 export default function ValidationSection() {
-  const testimonials = [
+  const keyFacts = [
     {
-      company: "Ferronor",
-      logo: "🚂",
-      person: "Gerente Técnico",
-      quote: "CRUCES AI supera en 4x la eficiencia de métodos tradicionales. Validamos técnicamente la precisión del 95% en condiciones reales.",
-      rating: 5,
+      icon: "🏛️",
+      title: "12 Municipios",
+      subtitle: "Contratos B2G Confirmados",
+      description: "No son intenciones o LOIs. Son contratos reales firmados con municipalidades para implementación inmediata.",
+      metric: "Contratos Reales",
+      color: "from-green-500 to-green-700"
+    },
+    {
+      icon: "🚂",
+      title: "Ferronor",
+      subtitle: "Validación Técnica Oficial",
+      description: "Empresa ferroviaria líder en Chile certificó oficialmente la superioridad técnica de CRUCES AI.",
       metric: "95% Eficiencia",
       color: "from-blue-500 to-blue-700"
     },
     {
-      company: "Municipalidad Copiapó",
-      logo: "🏛️",
-      person: "Director Finanzas",
-      quote: "Incremento del 256% en recaudación en 6 meses. ROI superó todas las expectativas. Tecnología que realmente transforma.",
-      rating: 5,
-      metric: "256% Incremento",
-      color: "from-green-500 to-green-700"
-    },
-    {
-      company: "Municipalidad Caldera",
-      logo: "⚖️",
-      person: "Alcalde",
-      quote: "Solución integral que automatizó completamente nuestro proceso. Payback en 15 meses, exactamente como prometieron.",
-      rating: 5,
-      metric: "15 meses Payback",
+      icon: "📊",
+      title: "256% ROI",
+      subtitle: "Resultados Medidos",
+      description: "Incrementos reales en recaudación municipal medidos y validados en implementaciones piloto.",
+      metric: "Resultados Probados",
       color: "from-orange-500 to-orange-700"
     }
   ];
@@ -136,7 +133,7 @@ export default function ValidationSection() {
           ))}
         </div>
 
-        {/* Testimonials */}
+        {/* Key Facts */}
         <motion.div
           className="mb-16"
           initial={{ opacity: 0, y: 30 }}
@@ -145,11 +142,11 @@ export default function ValidationSection() {
           viewport={{ once: true }}
         >
           <h3 className="text-3xl font-bold text-center text-white mb-12">
-            Lo Que Dicen Nuestros <span className="text-orange-400">Validadores</span>
+            Hechos <span className="text-orange-400">Verificables</span> y Datos Reales
           </h3>
           
           <div className="grid lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {keyFacts.map((fact, index) => (
               <motion.div
                 key={index}
                 className="bg-zinc-800/50 backdrop-blur-sm rounded-2xl p-8 border border-zinc-700/50 relative overflow-hidden"
@@ -160,33 +157,26 @@ export default function ValidationSection() {
                 whileHover={{ scale: 1.02 }}
               >
                 {/* Gradient Background */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${testimonial.color} opacity-5`}></div>
+                <div className={`absolute inset-0 bg-gradient-to-br ${fact.color} opacity-5`}></div>
                 
                 <div className="relative z-10">
-                  {/* Company Header */}
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="text-3xl">{testimonial.logo}</div>
-                    <div>
-                      <h4 className="text-lg font-bold text-white">{testimonial.company}</h4>
-                      <p className="text-zinc-400 text-sm">{testimonial.person}</p>
-                    </div>
+                  {/* Icon Header */}
+                  <div className="text-center mb-6">
+                    <div className="text-4xl mb-4">{fact.icon}</div>
+                    <h4 className="text-xl font-bold text-white">{fact.title}</h4>
+                    <p className="text-orange-400 font-semibold">{fact.subtitle}</p>
                   </div>
 
-                  {/* Rating */}
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-
-                  {/* Quote */}
-                  <blockquote className="text-zinc-300 mb-6 leading-relaxed">
-                    "{testimonial.quote}"
-                  </blockquote>
+                  {/* Description */}
+                  <p className="text-zinc-300 mb-6 leading-relaxed text-center">
+                    {fact.description}
+                  </p>
 
                   {/* Metric Badge */}
-                  <div className={`inline-block px-4 py-2 bg-gradient-to-r ${testimonial.color} rounded-lg text-white font-bold text-sm`}>
-                    {testimonial.metric}
+                  <div className="text-center">
+                    <div className={`inline-block px-4 py-2 bg-gradient-to-r ${fact.color} rounded-lg text-white font-bold text-sm`}>
+                      {fact.metric}
+                    </div>
                   </div>
                 </div>
               </motion.div>

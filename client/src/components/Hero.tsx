@@ -26,7 +26,7 @@ export default function Hero() {
 
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-zinc-900 via-zinc-800 to-orange-900/20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-zinc-900">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         <motion.div
@@ -68,23 +68,18 @@ export default function Hero() {
           <span className="text-orange-300 font-medium text-sm">Primera Solución B2G Chile</span>
         </motion.div>
 
-        {/* Logo and Title */}
+        {/* Logo */}
         <motion.div
-          className="flex flex-col items-center mb-6"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          className="flex justify-center mb-8"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <img 
             src="https://res.cloudinary.com/dhobnlg73/image/upload/v1751486212/Untitled_design_6_g3yugq.png" 
             alt="INVENOR Logo" 
-            className="w-24 h-24 md:w-32 md:h-32 mb-4"
+            className="h-28 md:h-32 filter drop-shadow-2xl"
           />
-          <h1 className="text-6xl md:text-8xl font-black">
-            <span className="bg-gradient-to-r from-white via-orange-200 to-orange-400 bg-clip-text text-transparent">
-              INVENOR
-            </span>
-          </h1>
         </motion.div>
 
         {/* Subtitle */}
