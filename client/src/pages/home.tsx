@@ -21,6 +21,7 @@ import InteractiveMap3D from '../components/InteractiveMap3D';
 import Timeline3D from '../components/Timeline3D';
 import GameInvestor from '../components/GameInvestor';
 import AutoPresentationMode from '../components/AutoPresentationMode';
+import ComparisonMatrix from '../components/ComparisonMatrix';
 
 export default function Home() {
   const { casosData, rankingData, indicadoresData, proyeccionesAnuales } = loadProjectData();
@@ -31,6 +32,7 @@ export default function Home() {
       <StatsSection data={indicadoresData} />
       <EmotionalImpact />
       <ProblemSolution />
+      <ComparisonMatrix />
       <Cases items={casosData} />
       <InteractiveDemo />
       <ValidationSection />
