@@ -103,7 +103,7 @@ export default function NavigationBar() {
             <img 
               src="https://res.cloudinary.com/dhobnlg73/image/upload/v1752531633/Untitled_design_7_lr3xod.png" 
               alt="INVENOR Logo" 
-              className="w-12 h-12"
+              className="h-10 w-auto"
             />
           </motion.div>
           
@@ -115,7 +115,7 @@ export default function NavigationBar() {
                 onClick={() => scrollToSection(item.id)}
                 className={`nav-item relative text-white text-sm font-medium tracking-wide py-2 px-4 rounded-full transition-all duration-300 ${
                   activeSection === item.id
-                    ? 'bg-gradient-to-r from-orange-600 to-orange-500 text-white shadow-lg'
+                    ? 'bg-orange-600 text-white shadow-lg'
                     : 'hover:text-orange-400 hover:bg-orange-400/10 hover:-translate-y-0.5'
                 }`}
                 whileHover={{ scale: 1.05 }}
