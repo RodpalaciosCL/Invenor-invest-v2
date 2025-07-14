@@ -41,6 +41,7 @@ export default function NavigationBar() {
   const navigationItems = [
     { id: "hero", label: "Overview", icon: <Zap className="w-4 h-4" /> },
     { id: "stats", label: "Métricas", icon: <BarChart3 className="w-4 h-4" /> },
+    { id: "indicadores", label: "Indicadores", icon: <TrendingUp className="w-4 h-4" /> },
     { id: "comparacion", label: "Comparación", icon: <PieChart className="w-4 h-4" /> },
     { id: "data-room", label: "Data Room", icon: <Shield className="w-4 h-4" /> },
     { id: "simulador", label: "Simulador", icon: <TrendingUp className="w-4 h-4" /> },
