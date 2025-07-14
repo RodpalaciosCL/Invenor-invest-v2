@@ -9,7 +9,8 @@ import InvestmentOpportunity from '../components/InvestmentOpportunity';
 import StatsSection from '../components/StatsSection';
 import VideoSection from '../components/VideoSection';
 import MapSection from '../components/MapSection';
-import FAQ from '../components/FAQ';
+import ContactSection from '../components/ContactSection';
+import ValidationSection from '../components/ValidationSection';
 
 export default function Home() {
   const { casosData, rankingData, indicadoresData, proyeccionesAnuales } = loadProjectData();
@@ -20,12 +21,13 @@ export default function Home() {
       <StatsSection data={indicadoresData} />
       <ProblemSolution />
       <Cases items={casosData} />
+      <ValidationSection />
       <ChartRanking data={rankingData} />
       <Projections data={proyeccionesAnuales} />
       <InvestmentOpportunity />
       <VideoSection />
       <MapSection />
-      <FAQ />
+      <ContactSection />
     </main>
   );
 }
