@@ -24,7 +24,7 @@ export default function ProgressIndicator() {
       transition={{ duration: 0.2 }}
     >
       <motion.div
-        className="h-full bg-gradient-to-r from-orange-600 via-orange-500 to-orange-400"
+        className="h-full bg-orange-600"
         style={{ width: `${scrollProgress}%` }}
         initial={{ width: 0 }}
         animate={{ width: `${scrollProgress}%` }}

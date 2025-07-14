@@ -36,7 +36,7 @@ export default function ValidationSection() {
       subtitle: "Contratos Confirmados",
       description: "No son LOIs o intenciones. Son contratos B2G firmados de largo plazo.",
       badge: "CONFIRMADO",
-      color: "text-green-400"
+      color: "text-orange-400"
     },
     {
       icon: <Award className="w-8 h-8" />,
@@ -44,7 +44,7 @@ export default function ValidationSection() {
       subtitle: "Validación Técnica",
       description: "Empresa ferroviaria líder certificó superioridad técnica 95% vs 22%.",
       badge: "VALIDADO",
-      color: "text-blue-400"
+      color: "text-zinc-400"
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
@@ -60,16 +60,16 @@ export default function ValidationSection() {
       subtitle: "Operación 24/7",
       description: "Sistema funcionando sin interrupciones desde implementación.",
       badge: "ESTABLE",
-      color: "text-purple-400"
+      color: "text-orange-400"
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-zinc-900 to-zinc-800 relative overflow-hidden">
+    <section className="py-20 bg-zinc-900 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-green-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-600/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-zinc-600/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
@@ -81,13 +81,13 @@ export default function ValidationSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="inline-flex items-center px-4 py-2 bg-green-600/20 border border-green-600/30 rounded-full mb-6">
-            <Star className="w-4 h-4 text-green-400 mr-2" />
-            <span className="text-green-300 font-medium text-sm">Validación Completa - No Es Solo Promesa</span>
+          <div className="inline-flex items-center px-4 py-2 bg-orange-600/20 border border-orange-600/30 rounded-full mb-6">
+            <Star className="w-4 h-4 text-orange-400 mr-2" />
+            <span className="text-orange-300 font-medium text-sm">Validación Completa - No Es Solo Promesa</span>
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            La Diferencia: <span className="text-green-400">Resultados Reales</span>
+            La Diferencia: <span className="text-orange-400">Resultados Reales</span>
             <br />vs Proyecciones Teóricas
           </h2>
           <p className="text-xl text-zinc-400 max-w-3xl mx-auto">

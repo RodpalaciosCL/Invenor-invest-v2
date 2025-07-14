@@ -38,7 +38,7 @@ export default function ScrollToTop() {
           {/* Scroll to Top Button */}
           <motion.button
             onClick={scrollToTop}
-            className="group bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-500 hover:to-orange-400 text-white p-4 rounded-full shadow-2xl transition-all duration-300"
+            className="group bg-orange-600 hover:bg-orange-500 text-white p-4 rounded-full shadow-2xl transition-all duration-300"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             title="Volver al inicio"
@@ -49,7 +49,7 @@ export default function ScrollToTop() {
           {/* Home/Logo Button */}
           <motion.button
             onClick={scrollToTop}
-            className="group bg-gradient-to-r from-zinc-800 to-zinc-700 hover:from-zinc-700 hover:to-zinc-600 text-white p-4 rounded-full shadow-2xl border border-zinc-600 transition-all duration-300"
+            className="group bg-zinc-800 hover:bg-zinc-700 text-white p-4 rounded-full shadow-2xl border border-zinc-600 transition-all duration-300"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             title="INVENOR - Inicio"

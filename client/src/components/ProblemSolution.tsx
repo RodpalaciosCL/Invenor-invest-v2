@@ -72,11 +72,11 @@ export default function ProblemSolution() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-zinc-800 to-zinc-900 relative overflow-hidden">
+    <section className="py-20 bg-zinc-800 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 right-20 w-64 h-64 bg-red-500/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-green-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 right-20 w-64 h-64 bg-orange-600/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-zinc-600/10 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">

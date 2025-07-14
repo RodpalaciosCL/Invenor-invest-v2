@@ -77,7 +77,7 @@ export default function InvestmentOpportunity() {
           >
             <button
               onClick={() => setShowInvestmentDetail(true)}
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center gap-3 bg-orange-600 hover:bg-orange-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               <FileText size={20} />
               Ver Detalle Completo de Inversión
@@ -86,13 +86,13 @@ export default function InvestmentOpportunity() {
 
           {/* Main Investment Showcase */}
           <motion.div
-            className="relative bg-gradient-to-br from-orange-600/20 to-orange-400/10 rounded-3xl p-10 border border-orange-600/40 max-w-5xl mx-auto"
+            className="relative bg-orange-600/20 rounded-3xl p-10 border border-orange-600/40 max-w-5xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-600/5 to-transparent animate-pulse"></div>
+            <div className="absolute inset-0 bg-orange-600/5 animate-pulse"></div>
             
             <div className="relative z-10">
               <div className="text-center mb-8">

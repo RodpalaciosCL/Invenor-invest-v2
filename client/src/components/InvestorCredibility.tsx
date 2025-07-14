@@ -128,7 +128,7 @@ export default function InvestorCredibility() {
           viewport={{ once: true }}
         >
           <h3 className="text-3xl font-bold text-center text-white mb-12">
-            Equipo con <span className="text-blue-400">Track Record</span> Comprobado
+            Equipo con <span className="text-orange-400">Track Record</span> Comprobado
           </h3>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -142,11 +142,11 @@ export default function InvestorCredibility() {
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.05 }}
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 rounded-2xl mb-4 text-white">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-600 rounded-2xl mb-4 text-white">
                   {credential.icon}
                 </div>
                 
-                <div className="inline-block px-3 py-1 bg-blue-600/20 rounded-full text-blue-300 text-xs font-bold mb-3">
+                <div className="inline-block px-3 py-1 bg-orange-600/20 rounded-full text-orange-300 text-xs font-bold mb-3">
                   {credential.badge}
                 </div>
                 

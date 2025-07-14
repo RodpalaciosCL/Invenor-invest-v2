@@ -31,7 +31,7 @@ export default function Login({ onLogin }: LoginProps) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-orange-900/20 flex items-center justify-center p-4 overflow-hidden relative">
+    <div className="min-h-screen bg-zinc-900 flex items-center justify-center p-4 overflow-hidden relative">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         <motion.div

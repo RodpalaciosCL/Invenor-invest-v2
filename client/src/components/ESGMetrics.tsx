@@ -73,7 +73,7 @@ export default function ESGMetrics() {
     governance: {
       title: "Governance Excellence",
       icon: <Shield className="w-8 h-8" />,
-      color: "from-purple-600 to-indigo-600",
+      color: "bg-zinc-600",
       metrics: [
         {
           title: "Transparencia Municipal",

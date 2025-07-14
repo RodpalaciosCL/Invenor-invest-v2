@@ -12,6 +12,7 @@ Content focus: Maintain all authentic data from intro.md dataset - never lose th
 Access: Direct entry without login barriers - focus on immediate emotional impact and investment appeal.
 Navigation: Professional scroll-to-top buttons, navigation bar, and progress indicators for improved usability.
 Content restrictions: NO presentation modes, auto-play features, or gamified elements inappropriate for sophisticated investors.
+Color palette: STRICTLY orange, gray, white, black only - NO gradients, blues, purples, greens or other colors.
 
 ## System Architecture
 

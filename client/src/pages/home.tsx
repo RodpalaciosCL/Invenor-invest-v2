@@ -58,7 +58,7 @@ export default function Home() {
         <ComparisonMatrix />
       </section>
       
-      <SectionDivider title="DUE DILIGENCE AVANZADO" gradient="from-blue-600 to-purple-600" />
+      <SectionDivider title="DUE DILIGENCE AVANZADO" color="bg-zinc-600" />
       
       <section id="data-room">
         <DataRoomDashboard />

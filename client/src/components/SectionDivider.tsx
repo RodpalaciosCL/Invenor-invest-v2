@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 
 interface SectionDividerProps {
   title?: string;
-  gradient?: string;
+  color?: string;
 }
 
-export default function SectionDivider({ title, gradient = "from-orange-600 to-orange-400" }: SectionDividerProps) {
+export default function SectionDivider({ title, color = "bg-orange-600" }: SectionDividerProps) {
   return (
     <motion.div
       className="relative py-8"
@@ -18,7 +18,7 @@ export default function SectionDivider({ title, gradient = "from-orange-600 to-o
         <div className="w-full border-t border-zinc-700"></div>
       </div>
       <div className="relative flex justify-center">
-        <div className={`bg-gradient-to-r ${gradient} h-1 w-32 rounded-full`}></div>
+        <div className={`${color} h-1 w-32 rounded-full`}></div>
       </div>
       {title && (
         <div className="relative flex justify-center mt-4">

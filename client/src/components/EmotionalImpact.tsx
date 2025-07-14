@@ -74,7 +74,7 @@ export default function EmotionalImpact() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-zinc-800 to-zinc-900 relative overflow-hidden">
+    <section className="py-20 bg-zinc-800 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 opacity-30">
         <motion.div
@@ -90,7 +90,7 @@ export default function EmotionalImpact() {
           }}
         />
         <motion.div
-          className="absolute bottom-20 right-20 w-80 h-80 bg-purple-400/10 rounded-full blur-3xl"
+          className="absolute bottom-20 right-20 w-80 h-80 bg-zinc-400/10 rounded-full blur-3xl"
           animate={{
             scale: [1.2, 1, 1.2],
             opacity: [0.2, 0.5, 0.2],

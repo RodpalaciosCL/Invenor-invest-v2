@@ -9,7 +9,7 @@ export default function CompetitiveAdvantage() {
       description: "Primera y única solución B2G validada en Chile con tecnología IA ferroviaria",
       competitive: "Competencia: 0 soluciones similares validadas",
       barrier: "Barrera: 2-3 años para replicar validación",
-      color: "from-purple-500 to-purple-700"
+      color: "bg-orange-600"
     },
     {
       icon: <Shield className="w-8 h-8" />,
@@ -17,7 +17,7 @@ export default function CompetitiveAdvantage() {
       description: "Único respaldo técnico oficial de empresa ferroviaria líder en Chile",
       competitive: "Competencia: Sin validación ferroviaria",
       barrier: "Barrera: Acceso exclusivo a infraestructura",
-      color: "from-blue-500 to-blue-700"
+      color: "bg-zinc-600"
     },
     {
       icon: <Users className="w-8 h-8" />,
@@ -25,7 +25,7 @@ export default function CompetitiveAdvantage() {
       description: "12 municipios con contratos firmados - red de distribución establecida",
       competitive: "Competencia: Deben construir desde cero",
       barrier: "Barrera: Ciclos de venta B2G 12-18 meses",
-      color: "from-green-500 to-green-700"
+      color: "bg-orange-600"
     },
     {
       icon: <Zap className="w-8 h-8" />,
@@ -33,7 +33,7 @@ export default function CompetitiveAdvantage() {
       description: "95% eficiencia vs 22% métodos tradicionales - diferencia exponencial",
       competitive: "Competencia: Máximo 30-40% eficiencia",
       barrier: "Barrera: Algoritmos propietarios protegidos",
-      color: "from-orange-500 to-orange-700"
+      color: "bg-orange-600"
     }
   ];
 
@@ -42,19 +42,19 @@ export default function CompetitiveAdvantage() {
       factor: "Switching Costs",
       description: "Municipios invierten 15-24 meses en implementación. Cambiar proveedor significa reiniciar todo.",
       strength: "ALTO",
-      color: "text-green-400"
+      color: "text-orange-400"
     },
     {
       factor: "Network Effects", 
       description: "Cada municipio nuevo valida la solución para otros. Credibilidad se multiplica.",
       strength: "CRECIENTE",
-      color: "text-blue-400"
+      color: "text-zinc-400"
     },
     {
       factor: "Data Moat",
       description: "Datos únicos de infracciones ferroviarias chilenas. Imposible de replicar.",
       strength: "EXCLUSIVO",
-      color: "text-purple-400"
+      color: "text-orange-400"
     },
     {
       factor: "Regulatory Advantage",

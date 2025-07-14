@@ -73,7 +73,7 @@ export default function Hero() {
 
         {/* Investment Badge */}
         <motion.div
-          className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-600/20 to-orange-500/20 border border-orange-600/30 rounded-full mb-12"
+          className="inline-flex items-center px-6 py-3 bg-orange-600/20 border border-orange-600/30 rounded-full mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
