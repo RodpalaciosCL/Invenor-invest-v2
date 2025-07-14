@@ -54,7 +54,7 @@ export default function InvestmentOpportunity() {
   ];
 
   return (
-    <section className="py-20 bg-zinc-800">
+    <section id="inversion" className="py-20 bg-zinc-800">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">

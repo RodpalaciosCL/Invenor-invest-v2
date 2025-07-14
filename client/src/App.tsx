@@ -1,28 +1,63 @@
-import { loadProjectData } from './data/loadData';
-import Hero from './components/Hero';
-import ProblemSolution from './components/ProblemSolution';
-import Cases from './components/Cases';
-import ChartRanking from './components/ChartRanking';
-import Indicators from './components/Indicators';
-import Projections from './components/Projections';
-import DemoVideo from './components/DemoVideo';
-import Map from './components/Map';
-import FAQ from './components/FAQ';
+import { useState, useEffect } from "react";
+import { Switch, Route } from "wouter";
+import { queryClient } from "./lib/queryClient";
+import { QueryClientProvider } from "@tanstack/react-query";
+import { Toaster } from "@/components/ui/toaster";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import Login from "@/components/Login";
+import Home from "@/pages/home";
+import NotFound from "@/pages/not-found";
+import Chatbot from "@/components/Chatbot";
+import { createRoot } from "react-dom/client";
 
-export default function App() {
-  const { casosData, rankingData, indicadoresData, proyeccionesAnuales } = loadProjectData();
-  
+function Router() {
   return (
-    <main className="bg-zinc-900 text-white">
-      <Hero />
-      <ProblemSolution />
-      <Cases items={casosData} />
-      <ChartRanking data={rankingData} />
-      <Indicators data={indicadoresData} />
-      <Projections data={proyeccionesAnuales} />
-      <DemoVideo />
-      <Map />
-      <FAQ />
-    </main>
-  )
+    <Switch>
+      <Route path="/" component={Home} />
+      <Route component={NotFound} />
+    </Switch>
+  );
 }
+
+function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  const handleLogin = () => {
+    setIsAuthenticated(true);
+  };
+
+  // Renderizar chatbot en wrapper independiente cuando se autentique
+  useEffect(() => {
+    if (isAuthenticated) {
+      const chatWrapper = document.getElementById("chat-wrapper");
+      if (chatWrapper) {
+        // Limpiar contenido previo
+        chatWrapper.innerHTML = '';
+        // Renderizar chatbot
+        createRoot(chatWrapper).render(
+          <QueryClientProvider client={queryClient}>
+            <Chatbot />
+          </QueryClientProvider>
+        );
+      }
+    }
+  }, [isAuthenticated]);
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        {!isAuthenticated ? (
+          <Login onLogin={handleLogin} />
+        ) : (
+          <>
+            <Toaster />
+            <Router />
+            <div id="chat-wrapper"></div>
+          </>
+        )}
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+}
+
+export default App;

@@ -1,12 +1,14 @@
-# INVENOR Pitch Website
+# INVENOR Interactive Pitch Platform
 
 ## Overview
 
-This is a React-based pitch deck website for INVENOR, showcasing their railway crossing monitoring system. Built with modern web technologies including React, TypeScript, Tailwind CSS, Recharts for data visualization, and CountUp for animated statistics.
+This is a sophisticated React-based interactive pitch deck for INVENOR, showcasing their CRUCES AI railway crossing monitoring system. Built with advanced web technologies including React, TypeScript, Framer Motion, TailwindCSS, and includes authentication system, AI chatbot (MarIA), and comprehensive data visualization.
 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+Design preferences: Cool, innovative, marketero, convincente - focus on visual impact and professional presentation for investors.
+Content focus: Maintain all authentic data from intro.md dataset - never lose the detailed financial projections and technical specifications.
 
 ## System Architecture
 
@@ -31,21 +33,27 @@ Preferred communication style: Simple, everyday language.
 
 ## Key Components
 
-### Pitch Deck Sections
-1. **Hero**: Main landing with title, subtitle, and CTA
-2. **ProblemSolution**: Problem/solution comparison with validation
-3. **Cases**: Use cases with icons and descriptions
-4. **ChartRanking**: Interactive bar chart of comuna rankings
-5. **Indicators**: Animated statistics with CountUp
-6. **DemoVideo**: Video placeholder with feature highlights
-7. **Map**: Interactive map placeholder with network stats
-8. **FAQ**: Expandable accordion with common questions
+### Advanced Pitch Deck Sections
+1. **Login System**: Investor authentication with password protection (243678)
+2. **Hero**: Dynamic animated landing with rotating metrics, INVENOR logo, and smooth scroll
+3. **StatsSection**: CountUp animations with real financial data and hover effects
+4. **ProblemSolution**: Enhanced comparison with validation data
+5. **Cases**: Use cases with animated icons and detailed descriptions
+6. **ChartRanking**: Interactive bar chart of real comuna rankings with increments
+7. **Projections**: Multi-year cashflow projections with Recharts visualization
+8. **InvestmentOpportunity**: Detailed financial breakdown with modal system and sensitivity analysis
+9. **VideoSection**: Validation showcase with interactive demo and tech stats
+10. **MapSection**: Interactive Chile map with regional data and expansion strategy
+11. **FAQ**: Updated with investor-focused questions and technical details
+12. **MarIA Chatbot**: AI assistant specialized in INVENOR with extensive financial knowledge
 
-### Data Components
-- **loadData.ts**: Centralized data loading with typed interfaces
-- **Real Data**: Casos de uso, ranking comunas, indicadores generales
-- **Responsive Design**: Mobile-first approach with grid layouts
-- **Interactive Elements**: Hover effects, animations, smooth transitions
+### Advanced Interactive Components
+- **loadData.ts**: Centralized loading of authentic CRUCES AI dataset
+- **Real Financial Data**: Complete intro.md dataset with ROI 55%, IRR 42%, payback 15 months
+- **Authentication Flow**: Login system with visitor tracking and session management
+- **Framer Motion**: Professional animations throughout all components
+- **Interactive Elements**: Hover effects, smooth transitions, modal systems
+- **AI Integration**: MarIA chatbot with specialized INVENOR knowledge base
 
 ## Data Flow
 
