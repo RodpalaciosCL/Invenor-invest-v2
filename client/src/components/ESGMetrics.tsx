@@ -10,7 +10,7 @@ export default function ESGMetrics() {
     environmental: {
       title: "Environmental Impact",
       icon: <Leaf className="w-8 h-8" />,
-      color: "from-green-600 to-emerald-600",
+      color: "bg-orange-600",
       metrics: [
         {
           title: "CO2 Ahorrado Anualmente",
@@ -38,7 +38,7 @@ export default function ESGMetrics() {
     social: {
       title: "Social Impact",
       icon: <Heart className="w-8 h-8" />,
-      color: "from-blue-600 to-cyan-600",
+      color: "bg-zinc-600",
       metrics: [
         {
           title: "Vidas Salvadas",

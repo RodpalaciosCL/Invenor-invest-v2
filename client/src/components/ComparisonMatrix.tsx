@@ -114,32 +114,32 @@ export default function ComparisonMatrix() {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case "excellent": return "text-green-400 bg-green-500/20";
-      case "good": return "text-blue-400 bg-blue-500/20";
-      case "baseline": return "text-yellow-400 bg-yellow-500/20";
-      case "poor": return "text-orange-400 bg-orange-500/20";
-      case "bad": return "text-red-400 bg-red-500/20";
+      case "excellent": return "text-orange-400 bg-orange-500/20";
+      case "good": return "text-white bg-zinc-600/20";
+      case "baseline": return "text-zinc-400 bg-zinc-500/20";
+      case "poor": return "text-zinc-300 bg-zinc-700/20";
+      case "bad": return "text-zinc-500 bg-zinc-800/20";
       default: return "text-zinc-400 bg-zinc-500/20";
     }
   };
 
   const getStatusIcon = (status: string) => {
     switch (status) {
-      case "excellent": return <CheckCircle className="w-5 h-5 text-green-400" />;
-      case "good": return <CheckCircle className="w-5 h-5 text-blue-400" />;
-      case "baseline": return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
-      case "poor": return <AlertTriangle className="w-5 h-5 text-orange-400" />;
-      case "bad": return <XCircle className="w-5 h-5 text-red-400" />;
+      case "excellent": return <CheckCircle className="w-5 h-5 text-orange-400" />;
+      case "good": return <CheckCircle className="w-5 h-5 text-white" />;
+      case "baseline": return <AlertTriangle className="w-5 h-5 text-zinc-400" />;
+      case "poor": return <AlertTriangle className="w-5 h-5 text-zinc-300" />;
+      case "bad": return <XCircle className="w-5 h-5 text-zinc-500" />;
       default: return <AlertTriangle className="w-5 h-5 text-zinc-400" />;
     }
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-zinc-900 to-zinc-800 relative overflow-hidden">
+    <section className="py-20 bg-zinc-800 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-red-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-green-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-zinc-700/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
@@ -157,8 +157,8 @@ export default function ComparisonMatrix() {
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            <span className="text-red-400">Métodos Tradicionales</span> vs 
-            <br /><span className="text-green-400">CRUCES AI</span>
+            <span className="text-zinc-400">Métodos Tradicionales</span> vs 
+            <br /><span className="text-orange-400">CRUCES AI</span>
           </h2>
           <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
             Comparación exhaustiva basada en datos reales de implementaciones. 
@@ -191,11 +191,11 @@ export default function ComparisonMatrix() {
                 <div className="grid grid-cols-4 gap-4 pb-4 border-b border-zinc-700">
                   <div className="text-zinc-400 font-semibold">Métrica</div>
                   <div className="text-center">
-                    <div className="text-red-400 font-bold">Método Tradicional</div>
+                    <div className="text-zinc-400 font-bold">Método Tradicional</div>
                     <div className="text-zinc-500 text-sm">Inspector Humano</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-green-400 font-bold">CRUCES AI</div>
+                    <div className="text-orange-400 font-bold">CRUCES AI</div>
                     <div className="text-zinc-500 text-sm">Tecnología IA</div>
                   </div>
                   <div className="text-center text-zinc-400 font-semibold">Diferencia</div>

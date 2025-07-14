@@ -10,8 +10,8 @@ export default function EmotionalImpact() {
       suffix: "%",
       label: "Incremento Recaudación",
       sublabel: "Cambio de vida para municipios",
-      color: "text-red-400",
-      bgColor: "bg-red-500/20"
+      color: "text-orange-400",
+      bgColor: "bg-orange-500/20"
     },
     {
       icon: <Clock className="w-8 h-8" />,
@@ -19,8 +19,8 @@ export default function EmotionalImpact() {
       suffix: " meses",
       label: "Payback Garantizado",
       sublabel: "Recuperación de inversión record",
-      color: "text-green-400",
-      bgColor: "bg-green-500/20"
+      color: "text-orange-400",
+      bgColor: "bg-orange-500/20"
     },
     {
       icon: <DollarSign className="w-8 h-8" />,
@@ -28,8 +28,8 @@ export default function EmotionalImpact() {
       suffix: "B USD",
       label: "Retorno Total Proyectado",
       sublabel: "Oportunidad única en la vida",
-      color: "text-yellow-400",
-      bgColor: "bg-yellow-500/20"
+      color: "text-orange-400",
+      bgColor: "bg-orange-500/20"
     },
     {
       icon: <Rocket className="w-8 h-8" />,
@@ -37,8 +37,8 @@ export default function EmotionalImpact() {
       suffix: "%",
       label: "ROI Garantizado",
       sublabel: "Superando expectativas industria",
-      color: "text-purple-400",
-      bgColor: "bg-purple-500/20"
+      color: "text-orange-400",
+      bgColor: "bg-orange-500/20"
     }
   ];
 
@@ -55,21 +55,21 @@ export default function EmotionalImpact() {
       title: "Impacto Social Real",
       description: "Cada peso invertido se traduce en mayor seguridad en cruces ferroviarios, salvando vidas y protegiendo familias. Una inversión con propósito que trasciende los números.",
       emotion: "PROPÓSITO",
-      color: "text-blue-400"
+      color: "text-white"
     },
     {
       icon: <Zap className="w-6 h-6" />,
       title: "Momento Único Irrepetible",
       description: "Esta ventana de oportunidad no se repetirá. Los early adopters de Tesla, Google, Amazon saben que el timing es todo. Este es tu momento Tesla ferroviario.",
       emotion: "URGENCIA",
-      color: "text-red-400"
+      color: "text-orange-400"
     },
     {
       icon: <TrendingUp className="w-6 h-6" />,
       title: "Multiplicador de Riqueza",
       description: "No es solo ROI del 55%. Es acceso al ecosistema completo INVENOR, deal flow privilegiado y oportunidades que multiplican tu patrimonio exponencialmente.",
       emotion: "ABUNDANCIA",
-      color: "text-green-400"
+      color: "text-white"
     }
   ];
 
@@ -115,7 +115,7 @@ export default function EmotionalImpact() {
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Esto No Es Solo una <span className="text-orange-400">Inversión</span>
-            <br />Es una <span className="text-purple-400">Transformación</span>
+            <br />Es una <span className="text-orange-400">Transformación</span>
           </h2>
           <p className="text-xl text-zinc-400 max-w-4xl mx-auto leading-relaxed">
             CRUCES AI representa mucho más que números financieros. Es la oportunidad de ser parte 

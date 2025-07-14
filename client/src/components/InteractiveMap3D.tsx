@@ -20,7 +20,7 @@ export default function InteractiveMap3D() {
         payback: 14
       },
       status: "operativo",
-      color: "bg-green-500"
+      color: "bg-orange-500"
     },
     {
       id: "caldera",
@@ -36,7 +36,7 @@ export default function InteractiveMap3D() {
         payback: 15
       },
       status: "operativo",
-      color: "bg-green-500"
+      color: "bg-orange-500"
     },
     {
       id: "antofagasta",
@@ -68,7 +68,7 @@ export default function InteractiveMap3D() {
         payback: 18
       },
       status: "planificado",
-      color: "bg-blue-500"
+      color: "bg-zinc-500"
     },
     {
       id: "valparaiso",
@@ -84,7 +84,7 @@ export default function InteractiveMap3D() {
         payback: 16
       },
       status: "planificado", 
-      color: "bg-blue-500"
+      color: "bg-zinc-500"
     },
     {
       id: "concepcion",
@@ -100,7 +100,7 @@ export default function InteractiveMap3D() {
         payback: 17
       },
       status: "evaluacion",
-      color: "bg-purple-500"
+      color: "bg-zinc-400"
     },
     {
       id: "temuco",
@@ -116,7 +116,7 @@ export default function InteractiveMap3D() {
         payback: 16
       },
       status: "evaluacion",
-      color: "bg-purple-500"
+      color: "bg-zinc-400"
     }
   ];
 

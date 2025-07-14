@@ -65,34 +65,34 @@ export default function InvestorCredibility() {
       risk: "Riesgo Técnico",
       mitigation: "Tecnología validada por Ferronor + 95% precisión comprobada",
       status: "BAJO",
-      color: "text-green-400"
+      color: "text-orange-400"
     },
     {
       risk: "Riesgo Comercial", 
       mitigation: "12 contratos municipales firmados + demanda urgente sector",
       status: "BAJO",
-      color: "text-green-400"
+      color: "text-orange-400"
     },
     {
       risk: "Riesgo Financiero",
       mitigation: "ROI 55% respaldado por contratos + payback 15 meses",
       status: "BAJO", 
-      color: "text-green-400"
+      color: "text-orange-400"
     },
     {
       risk: "Riesgo Competencia",
       mitigation: "First mover + barreras entrada + validación exclusiva",
       status: "MODERADO",
-      color: "text-yellow-400"
+      color: "text-zinc-400"
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-zinc-900 to-zinc-800 relative overflow-hidden">
+    <section className="py-20 bg-zinc-800 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-green-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-zinc-700/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
@@ -104,14 +104,14 @@ export default function InvestorCredibility() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 border border-blue-600/30 rounded-full mb-6">
-            <Shield className="w-4 h-4 text-blue-400 mr-2" />
-            <span className="text-blue-300 font-medium text-sm">Due Diligence Ready - Transparencia Total</span>
+          <div className="inline-flex items-center px-4 py-2 bg-orange-600/20 border border-orange-600/30 rounded-full mb-6">
+            <Shield className="w-4 h-4 text-orange-400 mr-2" />
+            <span className="text-orange-300 font-medium text-sm">Due Diligence Ready - Transparencia Total</span>
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            La Diferencia: <span className="text-blue-400">Credibilidad</span> 
-            <br />y <span className="text-green-400">Transparencia Absoluta</span>
+            La Diferencia: <span className="text-orange-400">Credibilidad</span> 
+            <br />y <span className="text-orange-400">Transparencia Absoluta</span>
           </h2>
           <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
             No somos una startup teórica. Somos un equipo con track record comprobado, 

@@ -34,11 +34,11 @@ export default function InteractiveDemo() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-zinc-800 to-zinc-900 relative overflow-hidden">
+    <section className="py-20 bg-zinc-800 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-green-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-zinc-700/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
@@ -50,14 +50,14 @@ export default function InteractiveDemo() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 border border-blue-600/30 rounded-full mb-6">
-            <Eye className="w-4 h-4 text-blue-400 mr-2" />
-            <span className="text-blue-300 font-medium text-sm">Demo Interactivo - Tecnología en Acción</span>
+          <div className="inline-flex items-center px-4 py-2 bg-orange-600/20 border border-orange-600/30 rounded-full mb-6">
+            <Eye className="w-4 h-4 text-orange-400 mr-2" />
+            <span className="text-orange-300 font-medium text-sm">Demo Interactivo - Tecnología en Acción</span>
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ve <span className="text-blue-400">CRUCES AI</span> en Acción
-            <br /><span className="text-green-400">Tiempo Real</span>
+            Ve <span className="text-orange-400">CRUCES AI</span> en Acción
+            <br /><span className="text-orange-400">Tiempo Real</span>
           </h2>
           <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
             Simulación interactiva que muestra cómo nuestra IA detecta infracciones 
@@ -79,8 +79,8 @@ export default function InteractiveDemo() {
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-xl font-bold text-white">Cruce Ferroviario - Copiapó</h3>
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                  <span className="text-green-400 text-sm font-semibold">EN VIVO</span>
+                  <div className="w-3 h-3 bg-orange-400 rounded-full animate-pulse"></div>
+                  <span className="text-orange-400 text-sm font-semibold">EN VIVO</span>
                 </div>
               </div>
               
@@ -97,26 +97,26 @@ export default function InteractiveDemo() {
                   <>
                     {/* Detection Boxes */}
                     <motion.div
-                      className="absolute top-1/4 left-1/3 w-20 h-12 border-2 border-green-400 rounded"
+                      className="absolute top-1/4 left-1/3 w-20 h-12 border-2 border-orange-400 rounded"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: [0, 1, 0] }}
                       transition={{ duration: 2, repeat: Infinity }}
                     >
-                      <div className="bg-green-400 text-black text-xs px-1 -mt-5">VEH-001</div>
+                      <div className="bg-orange-400 text-black text-xs px-1 -mt-5">VEH-001</div>
                     </motion.div>
                     
                     <motion.div
-                      className="absolute top-1/2 right-1/4 w-16 h-10 border-2 border-red-400 rounded"
+                      className="absolute top-1/2 right-1/4 w-16 h-10 border-2 border-zinc-400 rounded"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: [0, 1, 0] }}
                       transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
                     >
-                      <div className="bg-red-400 text-white text-xs px-1 -mt-5">INFRACCIÓN</div>
+                      <div className="bg-zinc-400 text-white text-xs px-1 -mt-5">INFRACCIÓN</div>
                     </motion.div>
                     
                     {/* License Plate Recognition */}
                     <motion.div
-                      className="absolute bottom-4 left-4 bg-blue-600/90 rounded px-3 py-2"
+                      className="absolute bottom-4 left-4 bg-orange-600/90 rounded px-3 py-2"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: 1 }}

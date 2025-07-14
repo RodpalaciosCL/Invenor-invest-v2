@@ -66,11 +66,11 @@ export default function DataRoomDashboard() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-zinc-900 via-zinc-800 to-zinc-900 relative overflow-hidden">
+    <section className="py-20 bg-zinc-800 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-1/3 left-1/5 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/3 right-1/5 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/3 left-1/5 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/3 right-1/5 w-80 h-80 bg-zinc-700/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
@@ -82,14 +82,14 @@ export default function DataRoomDashboard() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-600/30 rounded-full mb-8">
-            <Shield className="w-5 h-5 text-blue-400 mr-3" />
-            <span className="text-blue-300 font-semibold">DUE DILIGENCE DATA ROOM</span>
+          <div className="inline-flex items-center px-6 py-3 bg-orange-600/20 border border-orange-600/30 rounded-full mb-8">
+            <Shield className="w-5 h-5 text-orange-400 mr-3" />
+            <span className="text-orange-300 font-semibold">DUE DILIGENCE DATA ROOM</span>
           </div>
           
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Análisis <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Cuantitativo</span>
-            <br />Para Inversionistas <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Sofisticados</span>
+            Análisis <span className="text-orange-400">Cuantitativo</span>
+            <br />Para Inversionistas <span className="text-orange-400">Sofisticados</span>
           </h2>
           <p className="text-xl text-zinc-400 max-w-4xl mx-auto leading-relaxed">
             Métricas avanzadas, análisis de cohorts, stress testing y due diligence completa 
@@ -105,31 +105,31 @@ export default function DataRoomDashboard() {
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <div className="bg-gradient-to-br from-green-600/20 to-green-800/20 rounded-2xl p-6 border border-green-600/30 text-center">
-            <Award className="w-8 h-8 text-green-400 mx-auto mb-3" />
-            <div className="text-3xl font-bold text-green-400 mb-1">
+          <div className="bg-orange-600/20 rounded-2xl p-6 border border-orange-600/30 text-center">
+            <Award className="w-8 h-8 text-orange-400 mx-auto mb-3" />
+            <div className="text-3xl font-bold text-orange-400 mb-1">
               <CountUp end={92} duration={2} />%
             </div>
             <div className="text-zinc-300 text-sm">Renovación Contratos</div>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-600/20 to-blue-800/20 rounded-2xl p-6 border border-blue-600/30 text-center">
-            <TrendingUp className="w-8 h-8 text-blue-400 mx-auto mb-3" />
-            <div className="text-3xl font-bold text-blue-400 mb-1">
+          <div className="bg-zinc-600/20 rounded-2xl p-6 border border-zinc-600/30 text-center">
+            <TrendingUp className="w-8 h-8 text-white mx-auto mb-3" />
+            <div className="text-3xl font-bold text-white mb-1">
               <CountUp end={34} duration={2} />%
             </div>
             <div className="text-zinc-300 text-sm">Expansión Revenue</div>
           </div>
 
-          <div className="bg-gradient-to-br from-purple-600/20 to-purple-800/20 rounded-2xl p-6 border border-purple-600/30 text-center">
-            <Target className="w-8 h-8 text-purple-400 mx-auto mb-3" />
-            <div className="text-3xl font-bold text-purple-400 mb-1">
+          <div className="bg-orange-600/20 rounded-2xl p-6 border border-orange-600/30 text-center">
+            <Target className="w-8 h-8 text-orange-400 mx-auto mb-3" />
+            <div className="text-3xl font-bold text-orange-400 mb-1">
               <CountUp end={14.2} decimals={1} duration={2} />m
             </div>
             <div className="text-zinc-300 text-sm">Time to Break Even</div>
           </div>
 
-          <div className="bg-gradient-to-br from-orange-600/20 to-orange-800/20 rounded-2xl p-6 border border-orange-600/30 text-center">
+          <div className="bg-orange-600/20 rounded-2xl p-6 border border-orange-600/30 text-center">
             <Users className="w-8 h-8 text-orange-400 mx-auto mb-3" />
             <div className="text-3xl font-bold text-orange-400 mb-1">
               <CountUp end={2.8} decimals={1} duration={2} />
@@ -152,7 +152,7 @@ export default function DataRoomDashboard() {
               onClick={() => setActiveTab(tab.id)}
               className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                 activeTab === tab.id
-                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-2xl'
+                  ? 'bg-orange-600 text-white shadow-2xl'
                   : 'bg-zinc-800/50 text-zinc-400 hover:bg-zinc-700/50 hover:text-white border border-zinc-700'
               }`}
               whileHover={{ scale: 1.05 }}
@@ -175,7 +175,7 @@ export default function DataRoomDashboard() {
           {activeTab === "cohorts" && (
             <div className="space-y-8">
               <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl">
+                <div className="p-3 bg-orange-600 rounded-xl">
                   <BarChart3 className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -199,27 +199,27 @@ export default function DataRoomDashboard() {
                           borderRadius: '12px'
                         }}
                       />
-                      <Line type="monotone" dataKey="taltal" stroke="#10B981" strokeWidth={3} name="Taltal" />
-                      <Line type="monotone" dataKey="sierraGorda" stroke="#3B82F6" strokeWidth={3} name="Sierra Gorda" />
+                      <Line type="monotone" dataKey="taltal" stroke="#F97316" strokeWidth={3} name="Taltal" />
+                      <Line type="monotone" dataKey="sierraGorda" stroke="#6B7280" strokeWidth={3} name="Sierra Gorda" />
                     </LineChart>
                   </ResponsiveContainer>
                 </div>
 
                 <div className="space-y-6">
-                  <div className="bg-gradient-to-br from-green-600/20 to-green-800/20 rounded-2xl p-6 border border-green-600/30">
+                  <div className="bg-orange-600/20 rounded-2xl p-6 border border-orange-600/30">
                     <h4 className="text-xl font-bold text-white mb-4">Taltal Performance</h4>
                     <div className="space-y-3">
                       <div className="flex justify-between">
                         <span className="text-zinc-400">Crecimiento vs Baseline:</span>
-                        <span className="text-green-400 font-bold">+252%</span>
+                        <span className="text-orange-400 font-bold">+252%</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-zinc-400">Satisfacción:</span>
-                        <span className="text-green-400 font-bold">9.2/10</span>
+                        <span className="text-orange-400 font-bold">9.2/10</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-zinc-400">Renovación:</span>
-                        <span className="text-green-400 font-bold">Confirmada 3 años</span>
+                        <span className="text-orange-400 font-bold">Confirmada 3 años</span>
                       </div>
                     </div>
                   </div>

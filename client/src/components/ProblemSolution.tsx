@@ -8,21 +8,21 @@ export default function ProblemSolution() {
       stat: "22%",
       label: "Eficiencia Actual",
       description: "Métodos tradicionales de detección",
-      color: "text-red-400"
+      color: "text-zinc-400"
     },
     {
       icon: <Clock className="w-6 h-6" />,
       stat: "24/7",
       label: "Infracciones No Detectadas",
       description: "Pérdida continua de recaudación",
-      color: "text-orange-400"
+      color: "text-zinc-400"
     },
     {
       icon: <DollarSign className="w-6 h-6" />,
       stat: "$MM",
       label: "Pérdidas Anuales",
       description: "Por ineficiencia en detección",
-      color: "text-red-500"
+      color: "text-zinc-400"
     }
   ];
 
@@ -32,21 +32,21 @@ export default function ProblemSolution() {
       stat: "95%",
       label: "Eficiencia IA",
       description: "Detección automatizada precisa",
-      color: "text-green-400"
+      color: "text-orange-400"
     },
     {
       icon: <Zap className="w-6 h-6" />,
       stat: "24/7",
       label: "Monitoreo Continuo",
       description: "Cero pérdidas por infracciones",
-      color: "text-blue-400"
+      color: "text-orange-400"
     },
     {
       icon: <TrendingUp className="w-6 h-6" />,
       stat: "256%",
       label: "Incremento Recaudación",
       description: "Validado por municipios",
-      color: "text-green-500"
+      color: "text-orange-400"
     }
   ];
 
@@ -89,8 +89,8 @@ export default function ProblemSolution() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            El Problema es <span className="text-red-400">Real</span>, 
-            <br />La Solución es <span className="text-green-400">Revolucionaria</span>
+            El Problema es <span className="text-zinc-400">Real</span>, 
+            <br />La Solución es <span className="text-orange-400">Revolucionaria</span>
           </h2>
           <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
             Municipios pierden millones por ineficiencia en detección de infracciones ferroviarias. 
@@ -107,14 +107,14 @@ export default function ProblemSolution() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <div className="bg-red-500/10 border border-red-500/20 rounded-2xl p-8">
+            <div className="bg-zinc-600/10 border border-zinc-600/20 rounded-2xl p-8">
               <div className="flex items-center gap-3 mb-6">
-                <div className="p-3 bg-red-500/20 rounded-xl">
-                  <AlertTriangle className="w-8 h-8 text-red-400" />
+                <div className="p-3 bg-zinc-600/20 rounded-xl">
+                  <AlertTriangle className="w-8 h-8 text-zinc-400" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white">EL PROBLEMA</h3>
-                  <p className="text-red-300">Situación actual ineficiente</p>
+                  <p className="text-zinc-300">Situación actual ineficiente</p>
                 </div>
               </div>
 
@@ -147,7 +147,7 @@ export default function ProblemSolution() {
               </div>
 
               {/* Problem Details */}
-              <div className="mt-6 p-4 bg-red-900/20 rounded-xl border border-red-800/30">
+              <div className="mt-6 p-4 bg-zinc-800/20 rounded-xl border border-zinc-700/30">
                 <h4 className="text-white font-bold mb-2">Consecuencias:</h4>
                 <ul className="text-zinc-300 text-sm space-y-1">
                   <li>• Pérdida millonaria de ingresos municipales</li>
@@ -167,14 +167,14 @@ export default function ProblemSolution() {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="bg-green-500/10 border border-green-500/20 rounded-2xl p-8">
+            <div className="bg-orange-500/10 border border-orange-500/20 rounded-2xl p-8">
               <div className="flex items-center gap-3 mb-6">
-                <div className="p-3 bg-green-500/20 rounded-xl">
-                  <CheckCircle className="w-8 h-8 text-green-400" />
+                <div className="p-3 bg-orange-500/20 rounded-xl">
+                  <CheckCircle className="w-8 h-8 text-orange-400" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white">LA SOLUCIÓN</h3>
-                  <p className="text-green-300">CRUCES AI revoluciona el sector</p>
+                  <p className="text-orange-300">CRUCES AI revoluciona el sector</p>
                 </div>
               </div>
 
@@ -207,7 +207,7 @@ export default function ProblemSolution() {
               </div>
 
               {/* Solution Details */}
-              <div className="mt-6 p-4 bg-green-900/20 rounded-xl border border-green-800/30">
+              <div className="mt-6 p-4 bg-orange-900/20 rounded-xl border border-orange-800/30">
                 <h4 className="text-white font-bold mb-2">Beneficios:</h4>
                 <ul className="text-zinc-300 text-sm space-y-1">
                   <li>• Incremento inmediato de recaudación</li>
@@ -228,7 +228,7 @@ export default function ProblemSolution() {
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <div className="bg-gradient-to-r from-orange-600/20 to-orange-400/20 rounded-2xl p-8 border border-orange-600/30">
+          <div className="bg-orange-600/20 rounded-2xl p-8 border border-orange-600/30">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-white mb-4">
                 Validación Completa: No Es Solo Teoría

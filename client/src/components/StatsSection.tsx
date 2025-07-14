@@ -25,8 +25,8 @@ export default function StatsSection({ data }: StatsSectionProps) {
       value: 55,
       format: "%",
       icon: <TrendingUp className="w-8 h-8" />,
-      color: "from-green-400 to-emerald-600",
-      bgColor: "bg-green-400/10",
+      color: "text-orange-400",
+      bgColor: "bg-orange-400/10",
       description: "Retorno de inversión garantizado en 24 meses",
       trend: "+42% vs promedio industria"
     },
@@ -35,7 +35,7 @@ export default function StatsSection({ data }: StatsSectionProps) {
       value: 95,
       format: "%",
       icon: <Zap className="w-8 h-8" />,
-      color: "from-orange-400 to-red-500",
+      color: "text-orange-400",
       bgColor: "bg-orange-400/10", 
       description: "Precisión en detección de infracciones",
       trend: "vs 22% método tradicional"
@@ -46,8 +46,8 @@ export default function StatsSection({ data }: StatsSectionProps) {
       format: "B",
       prefix: "$",
       icon: <DollarSign className="w-8 h-8" />,
-      color: "from-blue-400 to-indigo-600",
-      bgColor: "bg-blue-400/10",
+      color: "text-orange-400",
+      bgColor: "bg-orange-400/10",
       description: "Valor proyectado a 10 años",
       trend: "CLP $2.5 trillones"
     },
@@ -56,8 +56,8 @@ export default function StatsSection({ data }: StatsSectionProps) {
       value: 15,
       format: " meses",
       icon: <Target className="w-8 h-8" />,
-      color: "from-purple-400 to-pink-600",
-      bgColor: "bg-purple-400/10",
+      color: "text-orange-400",
+      bgColor: "bg-orange-400/10",
       description: "Tiempo de recuperación de inversión",
       trend: "vs 36 meses promedio"
     }
@@ -69,11 +69,11 @@ export default function StatsSection({ data }: StatsSectionProps) {
   }, []);
 
   return (
-    <section className="py-20 bg-gradient-to-b from-zinc-900 to-zinc-800 relative overflow-hidden">
+    <section className="py-20 bg-zinc-800 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-20 left-10 w-72 h-72 bg-orange-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-zinc-700/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
@@ -97,7 +97,7 @@ export default function StatsSection({ data }: StatsSectionProps) {
           </motion.div>
           
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Números que <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Convencen</span>
+            Números que <span className="text-orange-400">Convencen</span>
           </h2>
           <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
             Resultados validados por Ferronor y respaldados por data real de 12 municipios confirmados
