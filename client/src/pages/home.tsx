@@ -37,7 +37,7 @@ export default function Home() {
     <main className="bg-zinc-900 text-white">
       <ProgressIndicator />
       <NavigationBar />
-      <section id="hero">
+      <section id="hero" className="pt-20">
         <Hero />
       </section>
       

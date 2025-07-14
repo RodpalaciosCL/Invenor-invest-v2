@@ -1,0 +1,129 @@
+INSTRUCCIONES PARA ARREGLAR EL MENÚ
+❌ PROBLEMAS ACTUALES:
+
+Menú pegado a la derecha - Se ve desbalanceado
+Tipografía inconsistente - No coincide con el logo "Invernor"
+Spacing horrible - Muy apretado y mal distribuido
+Colores desentonados - No armoniza con el naranja del diseño
+Falta jerarquía visual - Todo se ve igual de importante
+
+✅ SOLUCIÓN ESPECÍFICA:
+1. REPOSICIONAR EL MENÚ:
+css/* Centrar la navegación */
+.navbar {
+  display: flex;
+  justify-content: center;  /* NO justify-content: flex-end */
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  background: rgba(0,0,0,0.9);
+  backdrop-filter: blur(20px);
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;  /* Controla el ancho total */
+  max-width: 1400px;
+}
+2. ESTRUCTURA HTML CORRECTA:
+html<nav class="navbar">
+  <div class="nav-container">
+    <!-- Logo a la izquierda -->
+    <div class="logo">
+      <span>Invernor</span>
+    </div>
+    
+    <!-- Menú centrado -->
+    <div class="nav-menu">
+      <a href="#overview" class="nav-item">Overview</a>
+      <a href="#metricas" class="nav-item">Métricas</a>  
+      <a href="#comparacion" class="nav-item">Comparación</a>
+      <a href="#data-room" class="nav-item">Data Room</a>
+      <a href="#simulador" class="nav-item">Simulador</a>
+      <a href="#inversion" class="nav-item">Inversión</a>
+    </div>
+    
+    <!-- CTA a la derecha -->
+    <div class="nav-cta">
+      <button class="cta-button">Invertir Ahora</button>
+    </div>
+  </div>
+</nav>
+3. ESTILOS MEJORADOS:
+css.nav-menu {
+  display: flex;
+  gap: 40px;  /* Más espacio entre items */
+  align-items: center;
+}
+
+.nav-item {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 12px 20px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-item:hover {
+  color: #ff6b35;  /* Color naranja del sitio */
+  background: rgba(255,107,53,0.1);
+  transform: translateY(-2px);
+}
+
+.nav-item.active {
+  background: linear-gradient(45deg, #ff6b35, #f7931e);
+  color: white;
+}
+
+.cta-button {
+  background: linear-gradient(45deg, #ff6b35, #f7931e);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255,107,53,0.4);
+}
+4. RESPONSIVO MÓVIL:
+css@media (max-width: 768px) {
+  .nav-menu {
+    display: none; /* Ocultar en móvil */
+  }
+  
+  .nav-container {
+    justify-content: space-between;
+  }
+  
+  /* Agregar hamburger menu */
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+}
+🎨 RESULTADO ESPERADO:
+
+✅ Logo "Invernor" a la izquierda
+✅ Menú centrado con buen spacing
+✅ Botón CTA destacado a la derecha
+✅ Colores consistentes con el diseño
+✅ Hover effects suaves
+✅ Responsive en móvil
+
+💡 INSTRUCCIÓN PARA REPLIT:
+
+"Elimina el menú actual que está mal posicionado. Implementa la estructura HTML que te doy con el CSS exacto. El menú debe estar CENTRADO, no a la derecha. Logo a la izquierda, menú al centro, botón CTA a la derecha. Usa los colores naranjas (#ff6b35) que ya tienes en el sitio. Asegúrate que el spacing entre items sea de 40px y que tenga hover effects suaves."

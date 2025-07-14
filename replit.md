@@ -41,7 +41,7 @@ Color palette: STRICTLY orange, gray, white, black only - NO gradients, blues, p
 1. **Direct Access**: Immediate access to pitch deck without barriers
 2. **Hero**: Dynamic animated landing with rotating metrics, INVENOR logo, and smooth scroll
 3. **StatsSection**: CountUp animations with real financial data and hover effects
-4. **FinancialIndicators**: Real-time Chilean financial indicators (USD, UF, EUR, UTM) with currency calculator
+4. **NavigationBar**: Professional header with INVENOR logo left, centered menu, CTA button right, integrated currency calculator widget
 4. **ProblemSolution**: Enhanced comparison with validation data
 5. **Cases**: Use cases with animated icons and detailed descriptions
 6. **ChartRanking**: Interactive bar chart of real comuna rankings with increments
