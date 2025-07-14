@@ -17,6 +17,10 @@ import InvestorCredibility from '../components/InvestorCredibility';
 import CompetitiveAdvantage from '../components/CompetitiveAdvantage';
 import InteractiveDemo from '../components/InteractiveDemo';
 import InvestmentSimulator from '../components/InvestmentSimulator';
+import InteractiveMap3D from '../components/InteractiveMap3D';
+import Timeline3D from '../components/Timeline3D';
+import GameInvestor from '../components/GameInvestor';
+import AutoPresentationMode from '../components/AutoPresentationMode';
 
 export default function Home() {
   const { casosData, rankingData, indicadoresData, proyeccionesAnuales } = loadProjectData();
@@ -33,10 +37,14 @@ export default function Home() {
       <InvestorCredibility />
       <CompetitiveAdvantage />
       <InvestmentSimulator />
+      <GameInvestor />
+      <Timeline3D />
+      <AutoPresentationMode />
       <ChartRanking data={rankingData} />
       <Projections data={proyeccionesAnuales} />
       <InvestmentOpportunity />
       <FutureOpportunities />
+      <InteractiveMap3D />
       <VideoSection />
       <MapSection />
       <ContactSection />
