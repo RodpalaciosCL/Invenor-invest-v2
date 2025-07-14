@@ -87,20 +87,25 @@ export default function NavigationBar() {
 
   return (
     <motion.nav
-      className="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur-lg"
+      className="fixed top-0 left-0 w-full z-50 bg-zinc-800/70 backdrop-blur-lg"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <div className="flex justify-center items-center w-full py-5">
+      <div className="flex justify-center items-center w-full py-3">
         <div className="flex justify-between items-center w-[90%] max-w-[1400px]">
           
           {/* Logo a la izquierda */}
           <motion.div 
-            className="logo"
+            className="logo flex items-center gap-3"
             whileHover={{ scale: 1.05 }}
           >
-            <span className="text-2xl font-bold text-white tracking-wider">INVENOR</span>
+            <span className="text-xl font-bold text-white tracking-wider">INVENOR</span>
+            <img 
+              src="https://res.cloudinary.com/dhobnlg73/image/upload/v1752531633/Untitled_design_7_lr3xod.png" 
+              alt="INVENOR Logo" 
+              className="w-8 h-8"
+            />
           </motion.div>
           
           {/* Menú centrado - Desktop */}
@@ -109,7 +114,7 @@ export default function NavigationBar() {
               <motion.button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`nav-item relative text-white text-base font-medium tracking-wide py-3 px-5 rounded-full transition-all duration-300 ${
+                className={`nav-item relative text-white text-sm font-medium tracking-wide py-2 px-4 rounded-full transition-all duration-300 ${
                   activeSection === item.id
                     ? 'bg-gradient-to-r from-orange-600 to-orange-500 text-white shadow-lg'
                     : 'hover:text-orange-400 hover:bg-orange-400/10 hover:-translate-y-0.5'
@@ -226,7 +231,7 @@ export default function NavigationBar() {
             {/* CTA Button */}
             <motion.button
               onClick={() => scrollToSection('inversion')}
-              className="cta-button bg-gradient-to-r from-orange-600 to-orange-500 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="cta-button bg-gradient-to-r from-orange-600 to-orange-500 text-white font-semibold py-2 px-5 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl text-sm"
               whileHover={{ 
                 scale: 1.05,
                 y: -2,
