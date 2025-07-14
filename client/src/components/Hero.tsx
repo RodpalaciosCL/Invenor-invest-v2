@@ -71,15 +71,15 @@ export default function Hero() {
           />
         </motion.div>
 
-        {/* Badge */}
+        {/* Investment Badge */}
         <motion.div
-          className="inline-flex items-center px-4 py-2 bg-orange-600/20 border border-orange-600/30 rounded-full mb-12"
+          className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-600/20 to-orange-500/20 border border-orange-600/30 rounded-full mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <Zap className="w-4 h-4 text-orange-400 mr-2" />
-          <span className="text-orange-300 font-medium text-sm">Primera Solución B2G Chile</span>
+          <Zap className="w-5 h-5 text-orange-400 mr-3" />
+          <span className="text-orange-300 font-semibold">🚀 OPORTUNIDAD DE INVERSIÓN TIER 1</span>
         </motion.div>
 
         {/* Subtitle */}

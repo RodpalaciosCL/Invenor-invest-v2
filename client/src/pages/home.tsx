@@ -20,40 +20,115 @@ import InvestmentSimulator from '../components/InvestmentSimulator';
 import InteractiveMap3D from '../components/InteractiveMap3D';
 import Timeline3D from '../components/Timeline3D';
 import GameInvestor from '../components/GameInvestor';
-import AutoPresentationMode from '../components/AutoPresentationMode';
+
 import ComparisonMatrix from '../components/ComparisonMatrix';
 import DataRoomDashboard from '../components/DataRoomDashboard';
 import ESGMetrics from '../components/ESGMetrics';
+import ScrollToTop from '../components/ScrollToTop';
+import NavigationBar from '../components/NavigationBar';
+import ProgressIndicator from '../components/ProgressIndicator';
+import SectionDivider from '../components/SectionDivider';
 
 export default function Home() {
   const { casosData, rankingData, indicadoresData, proyeccionesAnuales } = loadProjectData();
   
   return (
     <main className="bg-zinc-900 text-white">
-      <Hero />
-      <StatsSection data={indicadoresData} />
-      <EmotionalImpact />
-      <ProblemSolution />
-      <ComparisonMatrix />
-      <DataRoomDashboard />
-      <ESGMetrics />
-      <Cases items={casosData} />
-      <InteractiveDemo />
-      <ValidationSection />
-      <InvestorCredibility />
-      <CompetitiveAdvantage />
-      <InvestmentSimulator />
-      <GameInvestor />
-      <Timeline3D />
-      <AutoPresentationMode />
-      <ChartRanking data={rankingData} />
-      <Projections data={proyeccionesAnuales} />
-      <InvestmentOpportunity />
-      <FutureOpportunities />
-      <InteractiveMap3D />
-      <VideoSection />
-      <MapSection />
-      <ContactSection />
+      <ProgressIndicator />
+      <NavigationBar />
+      <section id="hero">
+        <Hero />
+      </section>
+      
+      <section id="stats">
+        <StatsSection data={indicadoresData} />
+      </section>
+      
+      <SectionDivider title="ANÁLISIS DE OPORTUNIDAD" />
+      
+      <section id="emotional">
+        <EmotionalImpact />
+      </section>
+      
+      <section id="problema">
+        <ProblemSolution />
+      </section>
+      
+      <section id="comparacion">
+        <ComparisonMatrix />
+      </section>
+      
+      <SectionDivider title="DUE DILIGENCE AVANZADO" gradient="from-blue-600 to-purple-600" />
+      
+      <section id="data-room">
+        <DataRoomDashboard />
+      </section>
+      
+      <section id="esg">
+        <ESGMetrics />
+      </section>
+      
+      <section id="casos">
+        <Cases items={casosData} />
+      </section>
+      
+      <section id="demo">
+        <InteractiveDemo />
+      </section>
+      
+      <section id="validacion">
+        <ValidationSection />
+      </section>
+      
+      <section id="credibilidad">
+        <InvestorCredibility />
+      </section>
+      
+      <section id="ventajas">
+        <CompetitiveAdvantage />
+      </section>
+      
+      <section id="simulador">
+        <InvestmentSimulator />
+      </section>
+      
+      <section id="juego">
+        <GameInvestor />
+      </section>
+      
+      <section id="timeline">
+        <Timeline3D />
+      </section>
+      
+      <section id="ranking">
+        <ChartRanking data={rankingData} />
+      </section>
+      
+      <section id="proyecciones">
+        <Projections data={proyeccionesAnuales} />
+      </section>
+      
+      <section id="inversion">
+        <InvestmentOpportunity />
+      </section>
+      
+      <section id="futuro">
+        <FutureOpportunities />
+      </section>
+      
+      <section id="mapa">
+        <InteractiveMap3D />
+      </section>
+      
+      <section id="video">
+        <VideoSection />
+      </section>
+      
+      <section id="contacto">
+        <MapSection />
+        <ContactSection />
+      </section>
+      <ScrollToTop />
     </main>
   );
 }

@@ -10,6 +10,8 @@ Preferred communication style: Simple, everyday language.
 Design preferences: Cool, innovative, marketero, convincente - focus on visual impact and professional presentation for investors.
 Content focus: Maintain all authentic data from intro.md dataset - never lose the detailed financial projections and technical specifications.
 Access: Direct entry without login barriers - focus on immediate emotional impact and investment appeal.
+Navigation: Professional scroll-to-top buttons, navigation bar, and progress indicators for improved usability.
+Content restrictions: NO presentation modes, auto-play features, or gamified elements inappropriate for sophisticated investors.
 
 ## System Architecture
 
@@ -55,6 +57,9 @@ Access: Direct entry without login barriers - focus on immediate emotional impac
 - **Framer Motion**: Professional animations throughout all components
 - **Interactive Elements**: Hover effects, smooth transitions, modal systems
 - **Professional CTAs**: Strategic call-to-action buttons for investor engagement
+- **DataRoomDashboard**: Advanced due diligence with cohort analysis, stress testing, unit economics
+- **ESGMetrics**: Comprehensive Environmental, Social, Governance impact measurement
+- **Professional Navigation**: Smooth scroll navigation bar, progress indicator, scroll-to-top functionality
 
 ## Data Flow
 
