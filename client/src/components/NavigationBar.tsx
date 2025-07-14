@@ -87,7 +87,7 @@ export default function NavigationBar() {
 
   return (
     <motion.nav
-      className="fixed top-0 left-0 w-full z-50 bg-zinc-800/70 backdrop-blur-lg"
+      className="fixed top-0 left-0 w-full z-50 bg-zinc-900/30 backdrop-blur-lg"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
@@ -97,14 +97,13 @@ export default function NavigationBar() {
           
           {/* Logo a la izquierda */}
           <motion.div 
-            className="logo flex items-center gap-3"
+            className="logo"
             whileHover={{ scale: 1.05 }}
           >
-            <span className="text-xl font-bold text-white tracking-wider">INVENOR</span>
             <img 
               src="https://res.cloudinary.com/dhobnlg73/image/upload/v1752531633/Untitled_design_7_lr3xod.png" 
               alt="INVENOR Logo" 
-              className="w-8 h-8"
+              className="w-12 h-12"
             />
           </motion.div>
           
@@ -127,8 +126,8 @@ export default function NavigationBar() {
             ))}
           </div>
           
-          {/* CTA + Calculator a la derecha - Desktop */}
-          <div className="hidden md:flex items-center gap-4">
+          {/* Calculator a la derecha - Desktop */}
+          <div className="hidden md:flex items-center">
             {/* Calculator Button */}
             <div className="relative">
               <motion.button
@@ -227,20 +226,6 @@ export default function NavigationBar() {
                 )}
               </AnimatePresence>
             </div>
-
-            {/* CTA Button */}
-            <motion.button
-              onClick={() => scrollToSection('inversion')}
-              className="cta-button bg-gradient-to-r from-orange-600 to-orange-500 text-white font-semibold py-2 px-5 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl text-sm"
-              whileHover={{ 
-                scale: 1.05,
-                y: -2,
-                boxShadow: "0 8px 25px rgba(255,107,53,0.4)"
-              }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Invertir Ahora
-            </motion.button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -284,16 +269,6 @@ export default function NavigationBar() {
                   {item.label}
                 </motion.button>
               ))}
-              <motion.button
-                onClick={() => {
-                  scrollToSection('inversion');
-                  setIsMobileMenuOpen(false);
-                }}
-                className="w-full bg-gradient-to-r from-orange-600 to-orange-500 text-white font-semibold py-3 px-6 rounded-lg mt-4"
-                whileTap={{ scale: 0.95 }}
-              >
-                Invertir Ahora
-              </motion.button>
             </div>
           </motion.div>
         )}
