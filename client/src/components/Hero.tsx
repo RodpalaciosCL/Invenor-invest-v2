@@ -7,20 +7,46 @@ export default function Hero() {
       </div>
       
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto">
+      <div className="relative z-10 max-w-6xl mx-auto">
         <h1 className="text-6xl md:text-8xl font-bold text-white mb-6">
           INVENOR
         </h1>
-        <h2 className="text-2xl md:text-3xl text-orange-400 mb-8">
-          Detección Inteligente de Cruces Ferroviarios
+        <h2 className="text-2xl md:text-4xl text-orange-400 mb-8">
+          Sistema de Cámaras Inteligentes con IA para Cruces
         </h2>
-        <p className="text-xl text-zinc-300 mb-12 max-w-2xl mx-auto">
-          Plataforma de monitoreo automático que detecta infracciones en cruces ferroviarios, 
-          genera evidencia legal trazable y optimiza la recaudación municipal.
+        <p className="text-xl text-zinc-300 mb-8 max-w-3xl mx-auto">
+          Primera solución integral B2G que aumenta la eficiencia de detección del 22% al 95%, 
+          generando retornos del 55% ROI en 24 meses para municipalidades.
         </p>
-        <button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200">
-          Solicitar Demo
-        </button>
+        
+        {/* Key Metrics */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto">
+          <div className="bg-zinc-800 bg-opacity-60 p-4 rounded-lg">
+            <div className="text-2xl font-bold text-orange-400">55%</div>
+            <div className="text-zinc-300 text-sm">ROI</div>
+          </div>
+          <div className="bg-zinc-800 bg-opacity-60 p-4 rounded-lg">
+            <div className="text-2xl font-bold text-orange-400">95%</div>
+            <div className="text-zinc-300 text-sm">Eficiencia IA</div>
+          </div>
+          <div className="bg-zinc-800 bg-opacity-60 p-4 rounded-lg">
+            <div className="text-2xl font-bold text-orange-400">15</div>
+            <div className="text-zinc-300 text-sm">meses payback</div>
+          </div>
+          <div className="bg-zinc-800 bg-opacity-60 p-4 rounded-lg">
+            <div className="text-2xl font-bold text-orange-400">$3.1B</div>
+            <div className="text-zinc-300 text-sm">retorno total</div>
+          </div>
+        </div>
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200">
+            Solicitar Demo
+          </button>
+          <button className="border-2 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200">
+            Ver Análisis Financiero
+          </button>
+        </div>
       </div>
 
       {/* Scroll Indicator */}

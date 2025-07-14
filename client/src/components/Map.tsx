@@ -21,23 +21,43 @@ export default function Map() {
           </div>
         </div>
         
-        {/* Map stats */}
+        {/* Map stats with real data */}
         <div className="grid md:grid-cols-4 gap-6">
           <div className="text-center p-4 bg-zinc-700 rounded-lg">
-            <div className="text-2xl font-bold text-orange-400 mb-1">1,200</div>
-            <div className="text-zinc-300">km de red cubiertos</div>
-          </div>
-          <div className="text-center p-4 bg-zinc-700 rounded-lg">
-            <div className="text-2xl font-bold text-orange-400 mb-1">78</div>
-            <div className="text-zinc-300">cruces monitoreados</div>
+            <div className="text-2xl font-bold text-orange-400 mb-1">60</div>
+            <div className="text-zinc-300">cruces año 3</div>
           </div>
           <div className="text-center p-4 bg-zinc-700 rounded-lg">
             <div className="text-2xl font-bold text-orange-400 mb-1">12</div>
-            <div className="text-zinc-300">comunas activas</div>
+            <div className="text-zinc-300">comunas objetivo</div>
           </div>
           <div className="text-center p-4 bg-zinc-700 rounded-lg">
-            <div className="text-2xl font-bold text-orange-400 mb-1">24/7</div>
-            <div className="text-zinc-300">monitoreo continuo</div>
+            <div className="text-2xl font-bold text-orange-400 mb-1">4</div>
+            <div className="text-zinc-300">regiones norte</div>
+          </div>
+          <div className="text-center p-4 bg-zinc-700 rounded-lg">
+            <div className="text-2xl font-bold text-orange-400 mb-1">95%</div>
+            <div className="text-zinc-300">eficiencia IA</div>
+          </div>
+        </div>
+        
+        {/* Regional breakdown */}
+        <div className="mt-8 grid md:grid-cols-4 gap-4 text-sm">
+          <div className="bg-zinc-700 p-3 rounded">
+            <div className="font-semibold text-orange-400">Tarapacá</div>
+            <div className="text-zinc-300">1 comuna: Iquique</div>
+          </div>
+          <div className="bg-zinc-700 p-3 rounded">
+            <div className="font-semibold text-orange-400">Antofagasta</div>
+            <div className="text-zinc-300">2 comunas: Sierra Gorda, Taltal</div>
+          </div>
+          <div className="bg-zinc-700 p-3 rounded">
+            <div className="font-semibold text-orange-400">Atacama</div>
+            <div className="text-zinc-300">5 comunas: Copiapó, Caldera, etc.</div>
+          </div>
+          <div className="bg-zinc-700 p-3 rounded">
+            <div className="font-semibold text-orange-400">Coquimbo & Valparaíso</div>
+            <div className="text-zinc-300">4 comunas: La Serena, etc.</div>
           </div>
         </div>
       </div>

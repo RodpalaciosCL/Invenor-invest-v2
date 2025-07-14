@@ -1,27 +1,27 @@
 const faqs = [
   {
-    pregunta: "¿Qué pasa si una comuna se baja del proyecto?",
-    respuesta: "La plataforma es completamente modular. Si una comuna decide retirarse, esto no afecta las operaciones de otras comunas. Cada implementación es independiente y autónoma."
+    pregunta: "¿Cuál es el retorno de inversión esperado?",
+    respuesta: "El ROI proyectado es del 55% en 24 meses, con un payback de 15 meses. Las municipalidades pueden incrementar sus multas hasta un 256% con nuestra tecnología IA."
   },
   {
-    pregunta: "¿Cuál es el respaldo legal de las evidencias?",
-    respuesta: "Todas las evidencias se almacenan con hash criptográfico y metadata completa, garantizando su validez jurídica. El sistema cumple con normativas de evidencia digital y trazabilidad."
+    pregunta: "¿Cómo funciona la detección automática?",
+    respuesta: "Utilizamos IA avanzada con 95% de eficiencia vs 22% actual. El sistema incluye reconocimiento de patentes con 99.5% de precisión y clasificación automática de infracciones 24/7."
   },
   {
-    pregunta: "¿Quién opera y mantiene el sistema?",
-    respuesta: "El equipo técnico de INVENOR se encarga de la instalación, configuración, monitoreo 24/7 y mantenimiento preventivo. Ofrecemos soporte completo durante toda la operación."
+    pregunta: "¿Qué validez legal tienen las evidencias?",
+    respuesta: "Todas las evidencias incluyen video + metadata con hash criptográfico, garantizando 100% validez jurídica. El sistema está validado técnicamente con Ferronor y municipios piloto."
   },
   {
-    pregunta: "¿Cuánto tiempo toma la implementación?",
-    respuesta: "El tiempo promedio de implementación es de 90 días desde la firma del contrato, incluyendo instalación de equipos, configuración del sistema y capacitación del personal municipal."
+    pregunta: "¿Cuántos cruces se pueden monitorear?",
+    respuesta: "Comenzamos con 25 cruces en el año 1, escalando a 40 cruces en año 2, 50 cruces en año 2.5, y 60 cruces en año 3. El modelo es completamente escalable."
   },
   {
-    pregunta: "¿Cómo se garantiza la precisión de las detecciones?",
-    respuesta: "Nuestro sistema de IA tiene una precisión del 98.5% comprobada en pilotos. Además, cada detección es validada con múltiples criterios antes de generar una infracción."
+    pregunta: "¿Qué apoyo técnico incluye el servicio?",
+    respuesta: "Incluye instalación completa, configuración del sistema, app municipal web + móvil, dashboard tiempo real, reportes automáticos, y soporte técnico continuo 24/7."
   },
   {
-    pregunta: "¿Qué pasa con la privacidad de los datos?",
-    respuesta: "Cumplimos estrictamente con la Ley de Protección de Datos. Solo se almacenan datos necesarios para la infracción y se eliminan automáticamente según los plazos legales."
+    pregunta: "¿Cuál es la estructura de costos?",
+    respuesta: "Inversión inicial de $2.067B con retorno total de $3.096B. Incluye hardware, software, desarrollo IA, conectividad 5G, y equipo técnico especializado."
   }
 ];
 
