@@ -28,7 +28,7 @@ import ScrollToTop from '../components/ScrollToTop';
 import NavigationBar from '../components/NavigationBar';
 import ProgressIndicator from '../components/ProgressIndicator';
 import SectionDivider from '../components/SectionDivider';
-import FinancialIndicators from '../components/FinancialIndicators';
+
 
 export default function Home() {
   const { casosData, rankingData, indicadoresData, proyeccionesAnuales } = loadProjectData();
@@ -43,10 +43,6 @@ export default function Home() {
       
       <section id="stats">
         <StatsSection data={indicadoresData} />
-      </section>
-      
-      <section id="indicadores">
-        <FinancialIndicators />
       </section>
       
       <SectionDivider title="ANÁLISIS DE OPORTUNIDAD" />

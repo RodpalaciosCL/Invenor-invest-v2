@@ -1,15 +1,47 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import { ChevronDown, BarChart3, PieChart, TrendingUp, Shield, Zap, Users } from "lucide-react";
+import { ChevronDown, BarChart3, PieChart, TrendingUp, Shield, Zap, Users, Calculator, DollarSign } from "lucide-react";
 
 export default function NavigationBar() {
-  const [isVisible, setIsVisible] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const [showCalculator, setShowCalculator] = useState(false);
+  const [convertAmount, setConvertAmount] = useState("");
+  const [convertFrom, setConvertFrom] = useState("USD");
+  const [convertResult, setConvertResult] = useState("");
+
+  // Valores actuales al 14 de julio 2025
+  const indicators = {
+    usd: 949.78,
+    uf: 39265.20,
+    euro: 1091.06,
+    utm: 68785.0
+  };
+
+  const handleConvert = () => {
+    const amount = parseFloat(convertAmount);
+    if (!amount || amount <= 0) {
+      setConvertResult("Ingresa un monto válido");
+      return;
+    }
+
+    let result = 0;
+    let resultText = "";
+
+    if (convertFrom === "USD") {
+      result = amount * indicators.usd;
+      resultText = `$${amount.toLocaleString('es-CL')} USD = $${result.toLocaleString('es-CL')} CLP`;
+    } else if (convertFrom === "UF") {
+      result = amount * indicators.uf;
+      resultText = `${amount.toLocaleString('es-CL')} UF = $${result.toLocaleString('es-CL')} CLP`;
+    } else if (convertFrom === "EUR") {
+      result = amount * indicators.euro;
+      resultText = `€${amount.toLocaleString('es-CL')} EUR = $${result.toLocaleString('es-CL')} CLP`;
+    }
+
+    setConvertResult(resultText);
+  };
 
   useEffect(() => {
-    const toggleVisibility = () => {
-      setIsVisible(window.pageYOffset > 100);
-    };
 
     const handleScroll = () => {
       const sections = [
@@ -30,10 +62,8 @@ export default function NavigationBar() {
       if (current) setActiveSection(current);
     };
 
-    window.addEventListener("scroll", toggleVisibility);
     window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", toggleVisibility);
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
@@ -41,7 +71,6 @@ export default function NavigationBar() {
   const navigationItems = [
     { id: "hero", label: "Overview", icon: <Zap className="w-4 h-4" /> },
     { id: "stats", label: "Métricas", icon: <BarChart3 className="w-4 h-4" /> },
-    { id: "indicadores", label: "Indicadores", icon: <TrendingUp className="w-4 h-4" /> },
     { id: "comparacion", label: "Comparación", icon: <PieChart className="w-4 h-4" /> },
     { id: "data-room", label: "Data Room", icon: <Shield className="w-4 h-4" /> },
     { id: "simulador", label: "Simulador", icon: <TrendingUp className="w-4 h-4" /> },
@@ -55,11 +84,9 @@ export default function NavigationBar() {
     }
   };
 
-  if (!isVisible) return null;
-
   return (
     <motion.nav
-      className="fixed top-4 left-1/2 transform -translate-x-1/2 z-40 bg-zinc-900/90 backdrop-blur-lg border border-zinc-700/50 rounded-2xl px-6 py-3 shadow-2xl"
+      className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-zinc-900/90 backdrop-blur-lg border border-zinc-700/50 rounded-2xl px-6 py-3 shadow-2xl"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
@@ -81,6 +108,106 @@ export default function NavigationBar() {
             <span className="hidden md:inline">{item.label}</span>
           </motion.button>
         ))}
+        
+        {/* Calculator Button */}
+        <div className="relative">
+          <motion.button
+            onClick={() => setShowCalculator(!showCalculator)}
+            className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
+              showCalculator
+                ? 'bg-orange-600 text-white shadow-lg'
+                : 'text-zinc-400 hover:text-white hover:bg-zinc-800'
+            }`}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Calculator className="w-4 h-4" />
+            <span className="hidden md:inline">Calc</span>
+          </motion.button>
+
+          {/* Calculator Dropdown */}
+          <AnimatePresence>
+            {showCalculator && (
+              <motion.div
+                className="absolute top-full mt-2 right-0 w-80 bg-zinc-900/95 backdrop-blur-lg border border-zinc-700/50 rounded-2xl p-6 shadow-2xl"
+                initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                transition={{ duration: 0.2 }}
+              >
+                <div className="mb-4">
+                  <h3 className="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                    <Calculator className="w-5 h-5 text-orange-400" />
+                    Calculadora CLP
+                  </h3>
+                  
+                  {/* Current Indicators */}
+                  <div className="grid grid-cols-2 gap-2 mb-4 text-xs">
+                    <div className="bg-zinc-800/50 p-2 rounded-lg">
+                      <div className="text-zinc-400">USD</div>
+                      <div className="text-orange-400 font-bold">${indicators.usd.toLocaleString('es-CL')}</div>
+                    </div>
+                    <div className="bg-zinc-800/50 p-2 rounded-lg">
+                      <div className="text-zinc-400">UF</div>
+                      <div className="text-orange-400 font-bold">${indicators.uf.toLocaleString('es-CL')}</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <div>
+                    <input
+                      type="number"
+                      value={convertAmount}
+                      onChange={(e) => setConvertAmount(e.target.value)}
+                      placeholder="Monto"
+                      className="w-full px-3 py-2 bg-zinc-800 border border-zinc-600 rounded-lg text-white text-sm placeholder-zinc-500 focus:border-orange-500 focus:outline-none"
+                    />
+                  </div>
+
+                  <div>
+                    <select
+                      value={convertFrom}
+                      onChange={(e) => setConvertFrom(e.target.value)}
+                      className="w-full px-3 py-2 bg-zinc-800 border border-zinc-600 rounded-lg text-white text-sm focus:border-orange-500 focus:outline-none"
+                    >
+                      <option value="USD">Dólares (USD)</option>
+                      <option value="UF">UF</option>
+                      <option value="EUR">Euros (EUR)</option>
+                    </select>
+                  </div>
+
+                  <motion.button
+                    onClick={handleConvert}
+                    className="w-full bg-orange-600 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded-lg text-sm transition-colors"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    Convertir a CLP
+                  </motion.button>
+
+                  {convertResult && (
+                    <motion.div
+                      className="p-3 bg-orange-600/20 border border-orange-600/30 rounded-lg"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                    >
+                      <div className="text-orange-400 font-bold text-sm text-center">
+                        {convertResult}
+                      </div>
+                    </motion.div>
+                  )}
+                </div>
+
+                <div className="mt-4 pt-3 border-t border-zinc-700">
+                  <p className="text-xs text-zinc-500 text-center">
+                    Valores 14 jul 2025 - BCCH
+                  </p>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
       </div>
     </motion.nav>
   );
