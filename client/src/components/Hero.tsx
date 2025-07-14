@@ -23,10 +23,7 @@ export default function Hero() {
     document.getElementById('inversion')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const startChat = () => {
-    const chatButton = document.querySelector('[data-chat-trigger]') as HTMLElement;
-    chatButton?.click();
-  };
+
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-zinc-900 via-zinc-800 to-orange-900/20">
@@ -172,14 +169,13 @@ export default function Hero() {
           </motion.button>
           
           <motion.button
-            onClick={startChat}
+            onClick={() => document.getElementById('video-section')?.scrollIntoView({ behavior: 'smooth' })}
             className="group border-2 border-orange-600 text-orange-400 hover:bg-orange-600 hover:text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            data-chat-trigger
           >
             <Play className="w-5 h-5" />
-            Hablar con MarIA
+            Ver Demo Técnico
             <TrendingUp className="w-5 h-5 group-hover:rotate-12 transition-transform" />
           </motion.button>
         </motion.div>

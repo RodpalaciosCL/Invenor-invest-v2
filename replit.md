@@ -45,7 +45,7 @@ Content focus: Maintain all authentic data from intro.md dataset - never lose th
 9. **VideoSection**: Validation showcase with interactive demo and tech stats
 10. **MapSection**: Interactive Chile map with regional data and expansion strategy
 11. **FAQ**: Updated with investor-focused questions and technical details
-12. **MarIA Chatbot**: AI assistant specialized in INVENOR with extensive financial knowledge
+11. **Contact Integration**: Professional contact forms and investor engagement
 
 ### Advanced Interactive Components
 - **loadData.ts**: Centralized loading of authentic CRUCES AI dataset
@@ -53,7 +53,7 @@ Content focus: Maintain all authentic data from intro.md dataset - never lose th
 - **Authentication Flow**: Login system with visitor tracking and session management
 - **Framer Motion**: Professional animations throughout all components
 - **Interactive Elements**: Hover effects, smooth transitions, modal systems
-- **AI Integration**: MarIA chatbot with specialized INVENOR knowledge base
+- **Professional CTAs**: Strategic call-to-action buttons for investor engagement
 
 ## Data Flow
 

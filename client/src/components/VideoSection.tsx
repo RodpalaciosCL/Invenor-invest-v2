@@ -33,7 +33,7 @@ export default function VideoSection() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-zinc-900 to-zinc-800">
+    <section id="video-section" className="py-20 bg-gradient-to-b from-zinc-900 to-zinc-800">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <motion.div

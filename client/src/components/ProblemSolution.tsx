@@ -1,161 +1,296 @@
+import { motion } from "framer-motion";
+import { AlertTriangle, CheckCircle, TrendingUp, Zap, DollarSign, Clock, Users, Target } from "lucide-react";
+
 export default function ProblemSolution() {
+  const problemStats = [
+    {
+      icon: <AlertTriangle className="w-6 h-6" />,
+      stat: "22%",
+      label: "Eficiencia Actual",
+      description: "Métodos tradicionales de detección",
+      color: "text-red-400"
+    },
+    {
+      icon: <Clock className="w-6 h-6" />,
+      stat: "24/7",
+      label: "Infracciones No Detectadas",
+      description: "Pérdida continua de recaudación",
+      color: "text-orange-400"
+    },
+    {
+      icon: <DollarSign className="w-6 h-6" />,
+      stat: "$MM",
+      label: "Pérdidas Anuales",
+      description: "Por ineficiencia en detección",
+      color: "text-red-500"
+    }
+  ];
+
+  const solutionStats = [
+    {
+      icon: <CheckCircle className="w-6 h-6" />,
+      stat: "95%",
+      label: "Eficiencia IA",
+      description: "Detección automatizada precisa",
+      color: "text-green-400"
+    },
+    {
+      icon: <Zap className="w-6 h-6" />,
+      stat: "24/7",
+      label: "Monitoreo Continuo",
+      description: "Cero pérdidas por infracciones",
+      color: "text-blue-400"
+    },
+    {
+      icon: <TrendingUp className="w-6 h-6" />,
+      stat: "256%",
+      label: "Incremento Recaudación",
+      description: "Validado por municipios",
+      color: "text-green-500"
+    }
+  ];
+
+  const validationPoints = [
+    {
+      icon: <Target className="w-5 h-5" />,
+      title: "Ferronor",
+      description: "Validación técnica empresa líder",
+      badge: "Técnico"
+    },
+    {
+      icon: <Users className="w-5 h-5" />,
+      title: "12 Municipios",
+      description: "Contratos B2G confirmados",
+      badge: "Comercial"
+    },
+    {
+      icon: <TrendingUp className="w-5 h-5" />,
+      title: "Data Real",
+      description: "Incrementos validados en terreno",
+      badge: "Resultados"
+    }
+  ];
+
   return (
-    <section className="py-20 bg-zinc-800">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className="py-20 bg-gradient-to-b from-zinc-800 to-zinc-900 relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-20 right-20 w-64 h-64 bg-red-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-green-500/10 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
+        {/* Header */}
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            El Problema es <span className="text-red-400">Real</span>, 
+            <br />La Solución es <span className="text-green-400">Revolucionaria</span>
+          </h2>
+          <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
+            Municipios pierden millones por ineficiencia en detección de infracciones ferroviarias. 
+            CRUCES AI lo resuelve con tecnología validada.
+          </p>
+        </motion.div>
+
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Problema */}
-          <div>
-            <h2 className="text-4xl font-bold text-red-400 mb-8">El Problema</h2>
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-white font-bold text-sm">!</span>
+          <motion.div
+            className="space-y-8"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <div className="bg-red-500/10 border border-red-500/20 rounded-2xl p-8">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-3 bg-red-500/20 rounded-xl">
+                  <AlertTriangle className="w-8 h-8 text-red-400" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Accidentes Fatales</h3>
-                  <p className="text-zinc-400">Cruces ferroviarios sin control generan accidentes graves y pérdidas humanas</p>
+                  <h3 className="text-2xl font-bold text-white">EL PROBLEMA</h3>
+                  <p className="text-red-300">Situación actual ineficiente</p>
                 </div>
               </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-white font-bold text-sm">$</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Pérdida de Ingresos</h3>
-                  <p className="text-zinc-400">Municipios pierden millones en multas no detectadas por falta de tecnología</p>
-                </div>
+
+              <div className="space-y-6">
+                {problemStats.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex items-center gap-4 p-4 bg-zinc-800/30 rounded-xl"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className={`p-3 bg-zinc-700 rounded-lg ${item.color}`}>
+                      {item.icon}
+                    </div>
+                    <div className="flex-1">
+                      <div className={`text-3xl font-bold ${item.color} mb-1`}>
+                        {item.stat}
+                      </div>
+                      <div className="text-white font-semibold mb-1">
+                        {item.label}
+                      </div>
+                      <div className="text-zinc-400 text-sm">
+                        {item.description}
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-white font-bold text-sm">⚠</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Falta de Control</h3>
-                  <p className="text-zinc-400">Imposibilidad de monitorear 24/7 todos los cruces ferroviarios críticos</p>
-                </div>
+
+              {/* Problem Details */}
+              <div className="mt-6 p-4 bg-red-900/20 rounded-xl border border-red-800/30">
+                <h4 className="text-white font-bold mb-2">Consecuencias:</h4>
+                <ul className="text-zinc-300 text-sm space-y-1">
+                  <li>• Pérdida millonaria de ingresos municipales</li>
+                  <li>• Inseguridad en cruces ferroviarios</li>
+                  <li>• Procesos manuales lentos e ineficientes</li>
+                  <li>• Falta de datos para optimización</li>
+                </ul>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Solución */}
-          <div>
-            <h2 className="text-4xl font-bold text-green-400 mb-8">La Solución</h2>
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"/>
-                  </svg>
+          <motion.div
+            className="space-y-8"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <div className="bg-green-500/10 border border-green-500/20 rounded-2xl p-8">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-3 bg-green-500/20 rounded-xl">
+                  <CheckCircle className="w-8 h-8 text-green-400" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Detección Automática</h3>
-                  <p className="text-zinc-400">IA avanzada que detecta infracciones en tiempo real las 24 horas del día</p>
+                  <h3 className="text-2xl font-bold text-white">LA SOLUCIÓN</h3>
+                  <p className="text-green-300">CRUCES AI revoluciona el sector</p>
                 </div>
               </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Evidencia Legal Trazada</h3>
-                  <p className="text-zinc-400">Documentación automática con validez jurídica y trazabilidad completa</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M7,13H17V11H7M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z"/>
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Reportes Diarios</h3>
-                  <p className="text-zinc-400">Informes automatizados listos para procesamiento municipal</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        {/* Validation section with real metrics */}
-        <div className="mt-20 text-center bg-zinc-900 p-8 rounded-xl">
-          <h3 className="text-3xl font-bold text-white mb-4">Validación Técnica & Comercial</h3>
-          <p className="text-xl text-zinc-400 max-w-3xl mx-auto mb-8">
-            Confirmado con Ferronor y municipios pilotos. Tecnología comprobada con 
-            $2.3B en pérdidas anuales por infracciones no detectadas.
-          </p>
-          
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <div className="bg-zinc-800 p-6 rounded-lg">
-              <h4 className="text-xl font-semibold text-red-400 mb-4">Problemática Actual</h4>
-              <div className="space-y-3 text-left">
-                <div className="flex justify-between">
-                  <span className="text-zinc-300">Infracciones no detectadas:</span>
-                  <span className="text-red-400 font-bold">78%</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-zinc-300">Eficiencia actual:</span>
-                  <span className="text-red-400 font-bold">22%</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-zinc-300">Pérdidas anuales:</span>
-                  <span className="text-red-400 font-bold">$2.3B</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-zinc-300">Accidentes promedio/comuna:</span>
-                  <span className="text-red-400 font-bold">2,847</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-zinc-800 p-6 rounded-lg">
-              <h4 className="text-xl font-semibold text-green-400 mb-4">Solución INVENOR</h4>
-              <div className="space-y-3 text-left">
-                <div className="flex justify-between">
-                  <span className="text-zinc-300">Eficiencia IA:</span>
-                  <span className="text-green-400 font-bold">95%</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-zinc-300">Reconocimiento patentes:</span>
-                  <span className="text-green-400 font-bold">99.5%</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-zinc-300">Monitoreo:</span>
-                  <span className="text-green-400 font-bold">24/7</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-zinc-300">Reducción accidentes:</span>
-                  <span className="text-green-400 font-bold">Significativa</span>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <div className="flex justify-center gap-8">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-orange-400">✓</div>
-              <div className="text-zinc-300 mt-1">Ferronor</div>
+              <div className="space-y-6">
+                {solutionStats.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex items-center gap-4 p-4 bg-zinc-800/30 rounded-xl"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 + 0.3 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className={`p-3 bg-zinc-700 rounded-lg ${item.color}`}>
+                      {item.icon}
+                    </div>
+                    <div className="flex-1">
+                      <div className={`text-3xl font-bold ${item.color} mb-1`}>
+                        {item.stat}
+                      </div>
+                      <div className="text-white font-semibold mb-1">
+                        {item.label}
+                      </div>
+                      <div className="text-zinc-400 text-sm">
+                        {item.description}
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Solution Details */}
+              <div className="mt-6 p-4 bg-green-900/20 rounded-xl border border-green-800/30">
+                <h4 className="text-white font-bold mb-2">Beneficios:</h4>
+                <ul className="text-zinc-300 text-sm space-y-1">
+                  <li>• Incremento inmediato de recaudación</li>
+                  <li>• Automatización completa del proceso</li>
+                  <li>• Data en tiempo real para decisiones</li>
+                  <li>• ROI garantizado en 15 meses</li>
+                </ul>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-orange-400">✓</div>
-              <div className="text-zinc-300 mt-1">Municipios Piloto</div>
+          </motion.div>
+        </div>
+
+        {/* Validation Section */}
+        <motion.div
+          className="mt-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
+        >
+          <div className="bg-gradient-to-r from-orange-600/20 to-orange-400/20 rounded-2xl p-8 border border-orange-600/30">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Validación Completa: No Es Solo Teoría
+              </h3>
+              <p className="text-orange-200">
+                CRUCES AI está respaldado por validación técnica y contratos comerciales confirmados
+              </p>
             </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-orange-400">✓</div>
-              <div className="text-zinc-300 mt-1">Plataforma Ready</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-orange-400">✓</div>
-              <div className="text-zinc-300 mt-1">12 Comunas</div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {validationPoints.map((point, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-zinc-800/50 p-6 rounded-xl border border-zinc-700/50 text-center"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: index * 0.1 + 0.6 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-orange-600 rounded-xl mb-4">
+                    {point.icon}
+                  </div>
+                  <div className="inline-block px-3 py-1 bg-orange-600/20 rounded-full text-orange-300 text-xs font-bold mb-3">
+                    {point.badge}
+                  </div>
+                  <h4 className="text-xl font-bold text-white mb-2">
+                    {point.title}
+                  </h4>
+                  <p className="text-zinc-400 text-sm">
+                    {point.description}
+                  </p>
+                </motion.div>
+              ))}
             </div>
           </div>
-        </div>
+        </motion.div>
+
+        {/* Bottom CTA */}
+        <motion.div
+          className="text-center mt-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <h3 className="text-2xl font-bold text-white mb-4">
+            La Oportunidad Es <span className="text-orange-400">Ahora</span>
+          </h3>
+          <p className="text-zinc-400 mb-8 max-w-2xl mx-auto">
+            Mientras otros intentan solucionar el problema, INVENOR ya tiene la solución validada y funcionando.
+          </p>
+          <motion.button
+            onClick={() => document.getElementById('inversion')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-2xl"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Ver Oportunidad de Inversión
+          </motion.button>
+        </motion.div>
       </div>
     </section>
-  )
+  );
 }
