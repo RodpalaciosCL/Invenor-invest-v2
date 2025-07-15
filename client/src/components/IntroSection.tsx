@@ -159,7 +159,7 @@ export default function IntroSection() {
                   
                   {isActive && (
                     <motion.div
-                      className="absolute left-0 top-0 w-1 h-full bg-orange-400 rounded-r"
+                      className="absolute inset-0 bg-orange-400/5 border border-orange-400/20 rounded-2xl"
                       layoutId="activeIndicator"
                     />
                   )}
