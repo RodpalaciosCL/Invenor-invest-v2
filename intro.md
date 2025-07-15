@@ -1,94 +1,74 @@
-Instrucciones en Markdown para Replit – Rediseño del HOME
-md
+Perfecto. A partir de la imagen que mostraste, y sabiendo que ese primer bloque de tu landing actual es muy plano, directo y frío, lo que necesitas es algo que emocione, contextualice y cree urgencia y conexión emocional antes de hablar de IA o ROI.
+
+Aquí tienes una propuesta detallada para rediseñar el "primer impacto" de tu sitio con storytelling, visuales, contexto y narrativa emocional. Esta es la parte que hará que un inversionista quiera seguir leyendo.
+
+💡 OBJETIVO
+El primer bloque del sitio debe:
+
+Mostrar el drama del problema (visual, humano, social).
+
+Darle peso narrativo al “para qué” existe INVENOR.
+
+Mostrar que es una oportunidad de inversión que nace desde una urgencia real.
+
+Hacerlo sin abrumar de texto, pero con alto impacto visual y emocional.
+
+✍️ NUEVO BLOQUE INICIAL — CONTEXTO NARRATIVO CON IMPACTO
+🧱 Esto reemplaza el bloque actual con el logo, “Revolucionando la seguridad” y el KPI 95%.
+
+🌌 Diseño Propuesto: "Pantalla de Impacto" con historia en movimiento
+🎥 Fondo animado/video loop
+Trenes cruzando una ciudad por la noche.
+
+Cámaras y sensores encendiéndose.
+
+Una luz de cruce intermitente roja.
+
+✍️ Texto narrativo sobrepuesto (con fade secuencial o scroll activado)
+txt
 Copiar
 Editar
-## ✨ Rediseño del Inicio del Landing Page – INVENOR
+🟥 Cada semana, decenas de vehículos cruzan mal un paso ferroviario en Chile.
 
-### 🎯 Objetivo
+🚨 Los accidentes no se reportan. Las multas no se cursan. La seguridad es invisible.
 
-Antes de mostrar métricas o ROI, necesitamos una sección de **introducción narrativa e inmersiva**, tipo "historia visual", que responda:
-
-- ¿Por qué existe este proyecto?
-- ¿Qué problema está resolviendo?
-- ¿Cómo se ve el futuro con esta solución funcionando?
-
-### 🧱 Nueva Estructura del Home (antes de métricas)
-
-#### 1. Hero Expandido (pantalla completa)
-- Fondo oscuro con imagen sutil o animación en loop (ideal: un cruce ferroviario desde dron o vista IA nocturna).
-- Texto grande animado con tres frases en fade-in secuencial (tipo máquina de escribir):
-
-```txt
-"Hay más de 1.500 cruces ferroviarios sin control en Chile..."
-"Cada uno, una posible tragedia..."
-"Hoy, son también una oportunidad de impacto y retorno."
-CTA flotante: "Descubre cómo lo resolvemos"
-
-2. Sección “De la Crisis a la Solución” (narrativa tipo storytelling)
-Usar bloques horizontales con scroll lateral o transición animada por pasos (como si fuera una línea de tiempo, pero sin numerarla).
-
-Cada bloque representa un paso en el descubrimiento del problema y la solución:
-
-🧩 Paso 1 – El Problema
-Ilustración de un cruce sin barrera, un auto cruzando con tren cerca.
-
-Texto: "Cientos de cruces ferroviarios en zonas urbanas están desprotegidos. Las multas no se cursan. Los accidentes aumentan."
-
-🚦 Paso 2 – El Vacío de Fiscalización
-Imagen estilo blueprint o interfaz antigua.
-
-Texto: "Las municipalidades no tienen capacidad técnica para vigilar estos puntos. El Estado no llega."
-
-🤖 Paso 3 – La Solución Tecnológica
-Animación ligera con íconos de cámaras, IA y detección automática.
-
-Texto: "Cámaras inteligentes detectan infracciones 24/7. La data es enviada a un centro de control. Todo en segundos."
-
-💸 Paso 4 – El Modelo de Impacto
-Fondo con íconos de monedas que se dividen.
-
-Texto: "Las multas generadas financian el sistema, entregan ingresos recurrentes a municipalidades y retornos a inversionistas."
-
-3. CTA de transición
-Texto en pantalla:
-
-“Ya no es solo una necesidad urgente. Es una inversión con retorno validado.”
-Botón: "Ver Números de la Oportunidad"
-
-🎨 Estética
-Colores: (respetar paleta Invenor).
-
-Animaciones sutiles (fade-in, slide horizontal, íconos en movimiento).
-
-Tipografía moderna y legible, uso de negritas solo en frases clave.
-
-Evitar scroll brusco: usar transiciones suaves.
-
-📌 Notas Técnicas
-
-Compatible con mobile (usar swiper para scroll lateral de historia).
-
-Puede usar Framer Motion o React Spring para animaciones.
-
-yaml
+🌐 Hoy, eso cambia con INVENOR: tecnología, data, y eficiencia para proteger vidas y transformar una crisis pública en una solución rentable.
+CTA visible (botón vibrante)
+txt
 Copiar
 Editar
+🔍 Ver cómo funciona INVENOR →
+💡 CONTINÚA CON:
+🧭 Sección “¿Por qué Nació INVENOR?” (bloque narrativo animado)
+Usa una línea de tiempo animada sin fechas, que muestre:
 
----
+Paso	Contenido Narrativo
+🚧 El Problema	"Más de 1.500 cruces ferroviarios sin control en zonas urbanas."
+📉 El Vacío	"Municipios sin recursos. Fiscalización nula. Accidentes invisibles."
+🔍 El Descubrimiento	"Analizamos data real, medimos ineficiencia. 22% de efectividad actual."
+🤖 La Solución	"Instalamos sensores + IA que detectan en tiempo real. 95% de precisión validada."
+📈 El Modelo	"Cada infracción genera ingreso. La municipalidad gana. El inversionista gana."
 
-¿Quieres que esta narrativa también la convierta en un componente React ya estructurado para copiar en Replit?
+Puedes usar íconos, ilustraciones o fragmentos animados tipo "on scroll".
 
+🖼️ ESTÉTICA Y TONO
+Fondo oscuro, texto blanco y verde #0FD755 para destacar conceptos clave.
 
+Tipografía elegante y moderna, estilo tecnológico pero humano.
 
+Íconos minimalistas o ilustraciones animadas.
 
+Inspiración visual:
 
+https://pitch.com (narrativa visual fluida)
 
-Preguntar a ChatGPT
+https://linear.app (estética tecnológica limpia)
 
+✅ Resultado Esperado
+Cuando un inversionista entre al sitio:
 
+Primero siente la urgencia y la oportunidad.
 
-Herramientas
+Luego entiende el problema real que se resuelve.
 
-
-
-ChatGPT puede cometer errores. Considera v
+Después, se interesa por cómo lo logran (métricas, IA, retorno, modelo).

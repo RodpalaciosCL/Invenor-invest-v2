@@ -1,326 +1,328 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { AlertTriangle, Camera, Brain, TrendingUp, ChevronRight, Train, Shield, Zap } from "lucide-react";
+import { AlertTriangle, Camera, Brain, TrendingUp, ChevronRight, Train, Shield, Zap, Eye, BarChart3 } from "lucide-react";
 
 export default function IntroSection() {
-  const [currentStep, setCurrentStep] = useState(0);
-  const [autoPlay, setAutoPlay] = useState(true);
+  const [currentNarrative, setCurrentNarrative] = useState(0);
+  const [showTimeline, setShowTimeline] = useState(false);
 
-  const steps = [
+  const narrativeSteps = [
+    "🟥 Cada semana, decenas de vehículos cruzan mal un paso ferroviario en Chile.",
+    "🚨 Los accidentes no se reportan. Las multas no se cursan. La seguridad es invisible.",
+    "🌐 Hoy, eso cambia con INVENOR: tecnología, data, y eficiencia para proteger vidas."
+  ];
+
+  const timelineSteps = [
     {
       id: "problema",
+      emoji: "🚧",
       title: "El Problema",
-      subtitle: "Crisis en Cruces Ferroviarios",
-      description: "Más de 1.500 cruces ferroviarios sin monitoreo automatizado en Chile. Infraestructura crítica sin supervisión tecnológica moderna.",
-      icon: AlertTriangle,
-      color: "text-zinc-400",
-      bgColor: "bg-zinc-400/10",
-      stats: "1.500+ cruces desprotegidos"
+      description: "Más de 1.500 cruces ferroviarios sin control en zonas urbanas.",
+      stats: "1.500+ cruces desprotegidos",
+      color: "text-red-400",
+      bgColor: "bg-red-400/10"
     },
     {
-      id: "vacio",
-      title: "El Vacío de Fiscalización",
-      subtitle: "Sin Capacidad de Control",
-      description: "Las municipalidades carecen de recursos técnicos para monitorear efectivamente estos puntos de infraestructura crítica.",
-      icon: Shield,
-      color: "text-zinc-500",
-      bgColor: "bg-zinc-500/10",
-      stats: "0% fiscalización efectiva"
+      id: "vacio", 
+      emoji: "📉",
+      title: "El Vacío",
+      description: "Municipios sin recursos. Fiscalización nula. Accidentes invisibles.",
+      stats: "0% fiscalización efectiva",
+      color: "text-zinc-400",
+      bgColor: "bg-zinc-400/10"
+    },
+    {
+      id: "descubrimiento",
+      emoji: "🔍", 
+      title: "El Descubrimiento",
+      description: "Analizamos data real, medimos ineficiencia. 22% de efectividad actual.",
+      stats: "22% efectividad tradicional",
+      color: "text-orange-400",
+      bgColor: "bg-orange-400/10"
     },
     {
       id: "solucion",
-      title: "La Solución Tecnológica",
-      subtitle: "IA + Visión Computacional",
-      description: "Sistema de cámaras inteligentes con procesamiento de datos mediante inteligencia artificial para monitoreo automatizado 24/7.",
-      icon: Brain,
+      emoji: "🤖",
+      title: "La Solución", 
+      description: "Instalamos sensores + IA que detectan en tiempo real. 95% de precisión validada.",
+      stats: "95% precisión IA",
       color: "text-orange-400",
-      bgColor: "bg-orange-400/10",
-      stats: "95% precisión IA"
+      bgColor: "bg-orange-400/10"
     },
     {
-      id: "impacto",
-      title: "El Modelo de Impacto",
-      subtitle: "Inversión con Propósito",
-      description: "Modelo de negocio basado en revenue compartido con municipalidades, generando flujos de ingresos recurrentes y retornos para inversionistas.",
-      icon: TrendingUp,
-      color: "text-orange-400",
-      bgColor: "bg-orange-400/10",
-      stats: "55% ROI proyectado"
+      id: "modelo",
+      emoji: "📈",
+      title: "El Modelo",
+      description: "Cada infracción genera ingreso. La municipalidad gana. El inversionista gana.",
+      stats: "55% ROI proyectado",
+      color: "text-orange-400", 
+      bgColor: "bg-orange-400/10"
     }
   ];
 
   useEffect(() => {
-    if (!autoPlay) return;
-    
-    const interval = setInterval(() => {
-      setCurrentStep((prev) => (prev + 1) % steps.length);
-    }, 5000);
-    
-    return () => clearInterval(interval);
-  }, [autoPlay, steps.length]);
+    const narrativeInterval = setInterval(() => {
+      setCurrentNarrative((prev) => {
+        if (prev >= narrativeSteps.length - 1) {
+          setShowTimeline(true);
+          return prev;
+        }
+        return prev + 1;
+      });
+    }, 3000);
 
-  const scrollToMetrics = () => {
+    return () => clearInterval(narrativeInterval);
+  }, []);
+
+  const scrollToNext = () => {
     document.getElementById('stats')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <section className="py-20 bg-zinc-900 relative overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0">
-        <motion.div
-          className="absolute top-0 right-0 w-96 h-96 bg-orange-600/5 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-      </div>
+    <>
+      {/* Pantalla de Impacto Narrativo */}
+      <section className="min-h-screen bg-black relative overflow-hidden flex items-center justify-center">
+        {/* Fondo Animado de Tren */}
+        <div className="absolute inset-0">
+          <motion.div
+            className="absolute top-1/4 left-1/4 w-32 h-32 bg-orange-500/20 rounded-full blur-2xl"
+            animate={{
+              scale: [1, 1.5, 1],
+              opacity: [0.2, 0.4, 0.2],
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+          <motion.div
+            className="absolute bottom-1/3 right-1/3 w-24 h-24 bg-red-500/20 rounded-full blur-2xl"
+            animate={{
+              scale: [1, 1.3, 1],
+              opacity: [0.3, 0.5, 0.3],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1
+            }}
+          />
+          
+          {/* Elementos de tren y señalización animados */}
+          <motion.div
+            className="absolute top-1/2 left-0 w-16 h-4 bg-orange-500/30 rounded-full"
+            animate={{
+              x: [0, window.innerWidth || 1200],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          />
+        </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4">
-        {/* Header */}
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            De la Crisis a la <span className="text-orange-400">Oportunidad</span>
-          </h2>
-          <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
-            Descubre cómo INVENOR transforma un problema nacional en una inversión con impacto social y retorno financiero validado
-          </p>
-        </motion.div>
+        {/* Contenido Narrativo */}
+        <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
+          <motion.div
+            className="mb-8"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <Train className="w-16 h-16 text-orange-400 mx-auto mb-6" />
+          </motion.div>
 
-        {/* Story Timeline */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          {/* Navigation Steps */}
-          <div className="space-y-6">
-            {steps.map((step, index) => {
-              const Icon = step.icon;
-              const isActive = index === currentStep;
-              
-              return (
+          {/* Narrativa Secuencial */}
+          <div className="space-y-8 mb-12">
+            {narrativeSteps.map((step, index) => (
+              <motion.div
+                key={index}
+                className="text-2xl md:text-3xl lg:text-4xl font-bold leading-relaxed"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ 
+                  opacity: index <= currentNarrative ? 1 : 0.3,
+                  y: index <= currentNarrative ? 0 : 20
+                }}
+                transition={{ 
+                  duration: 0.8,
+                  delay: index <= currentNarrative ? 0 : 0.5
+                }}
+              >
+                <span className="text-white">{step}</span>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* CTA Principal */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ 
+              opacity: showTimeline ? 1 : 0,
+              scale: showTimeline ? 1 : 0.9
+            }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+          >
+            <motion.button
+              onClick={() => setShowTimeline(true)}
+              className="inline-flex items-center gap-3 bg-orange-600 hover:bg-orange-500 text-white px-10 py-5 rounded-full font-bold text-xl transition-all duration-300 group shadow-2xl"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Eye className="w-6 h-6" />
+              Ver cómo funciona INVENOR
+              <ChevronRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
+            </motion.button>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Sección Timeline "¿Por qué Nació INVENOR?" */}
+      <motion.section 
+        className="py-20 bg-zinc-900 relative overflow-hidden"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        {/* Efectos de fondo */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl animate-pulse"></div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4">
+          {/* Header de Timeline */}
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <div className="inline-flex items-center px-4 py-2 bg-orange-600/20 border border-orange-600/30 rounded-full mb-6">
+              <BarChart3 className="w-4 h-4 text-orange-400 mr-2" />
+              <span className="text-orange-300 font-medium text-sm">Historia de la Solución</span>
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              ¿Por qué Nació <span className="text-orange-400">INVENOR</span>?
+            </h2>
+            <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
+              Una línea de tiempo que muestra cómo identificamos el problema, 
+              analizamos la oportunidad y desarrollamos la solución que está transformando Chile.
+            </p>
+          </motion.div>
+
+          {/* Timeline Interactiva */}
+          <div className="relative">
+            {/* Línea central */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-zinc-700 rounded-full">
+              <motion.div
+                className="bg-orange-400 w-full rounded-full origin-top"
+                initial={{ height: 0 }}
+                whileInView={{ height: "100%" }}
+                transition={{ duration: 2, ease: "easeOut" }}
+                viewport={{ once: true }}
+              />
+            </div>
+
+            {/* Steps de Timeline */}
+            <div className="space-y-16">
+              {timelineSteps.map((step, index) => (
                 <motion.div
                   key={step.id}
-                  className={`relative p-6 rounded-2xl border cursor-pointer transition-all duration-500 ${
-                    isActive 
-                      ? 'bg-zinc-800 border-orange-400/50 shadow-2xl' 
-                      : 'bg-zinc-800/30 border-zinc-700/50 hover:border-zinc-600'
+                  className={`flex items-center gap-8 ${
+                    index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
                   }`}
-                  onClick={() => {
-                    setCurrentStep(index);
-                    setAutoPlay(false);
-                  }}
-                  whileHover={{ scale: 1.02 }}
-                  layout
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                 >
-                  <div className="flex items-start gap-4">
-                    <motion.div
-                      className={`p-3 rounded-xl ${step.bgColor} ${isActive ? step.color : 'text-zinc-500'}`}
-                      animate={{ scale: isActive ? 1.1 : 1 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <Icon className="w-6 h-6" />
-                    </motion.div>
-                    
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between mb-2">
-                        <h3 className={`text-lg font-semibold ${isActive ? 'text-white' : 'text-zinc-400'}`}>
+                  {/* Contenido */}
+                  <div className={`flex-1 ${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
+                    <div className={`bg-zinc-800 rounded-2xl p-6 border border-zinc-700/50 ${step.bgColor} backdrop-blur-sm`}>
+                      <div className="flex items-center gap-3 mb-4">
+                        <span className="text-3xl">{step.emoji}</span>
+                        <h3 className={`text-2xl font-bold ${step.color}`}>
                           {step.title}
                         </h3>
-                        <span className={`text-sm font-medium ${isActive ? 'text-orange-400' : 'text-zinc-500'}`}>
+                      </div>
+                      
+                      <p className="text-zinc-300 text-lg leading-relaxed mb-4">
+                        {step.description}
+                      </p>
+                      
+                      <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full ${step.bgColor} border border-zinc-600/30`}>
+                        <span className={`text-sm font-semibold ${step.color}`}>
                           {step.stats}
                         </span>
                       </div>
-                      
-                      <p className={`text-sm ${isActive ? 'text-zinc-300' : 'text-zinc-500'}`}>
-                        {step.subtitle}
-                      </p>
-                      
-                      <motion.div
-                        initial={false}
-                        animate={{ opacity: isActive ? 1 : 0, height: isActive ? 'auto' : 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="overflow-hidden"
-                      >
-                        <p className="text-zinc-400 mt-3 leading-relaxed">
-                          {step.description}
-                        </p>
-                      </motion.div>
                     </div>
                   </div>
-                  
-                  {isActive && (
-                    <motion.div
-                      className="absolute inset-0 bg-orange-400/5 border border-orange-400/20 rounded-2xl"
-                      layoutId="activeIndicator"
-                    />
-                  )}
-                </motion.div>
-              );
-            })}
-          </div>
 
-          {/* Visual Content */}
-          <div className="relative">
-            <motion.div
-              className="bg-zinc-800 rounded-3xl p-8 border border-zinc-700/50"
-              key={currentStep}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              {/* Visual Icons based on current step */}
-              <div className="flex justify-center mb-8">
-                {currentStep === 0 && (
-                  <div className="relative">
-                    <Train className="w-20 h-20 text-red-400" />
+                  {/* Punto central */}
+                  <motion.div
+                    className="relative z-10 w-6 h-6 bg-orange-400 rounded-full border-4 border-zinc-900 flex-shrink-0"
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0.3, delay: index * 0.1 + 0.3 }}
+                    viewport={{ once: true }}
+                  >
                     <motion.div
-                      className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center"
-                      animate={{ scale: [1, 1.2, 1] }}
-                      transition={{ duration: 1, repeat: Infinity }}
-                    >
-                      <AlertTriangle className="w-4 h-4 text-white" />
-                    </motion.div>
-                  </div>
-                )}
-                
-                {currentStep === 1 && (
-                  <div className="grid grid-cols-3 gap-4">
-                    {[...Array(6)].map((_, i) => (
-                      <motion.div
-                        key={i}
-                        className="w-12 h-12 bg-zinc-700 rounded-lg flex items-center justify-center"
-                        animate={{ opacity: [0.3, 0.7, 0.3] }}
-                        transition={{ duration: 2, repeat: Infinity, delay: i * 0.2 }}
-                      >
-                        <Shield className="w-6 h-6 text-yellow-400" />
-                      </motion.div>
-                    ))}
-                  </div>
-                )}
-                
-                {currentStep === 2 && (
-                  <div className="relative">
-                    <Camera className="w-20 h-20 text-orange-400" />
-                    <motion.div
-                      className="absolute top-0 right-0 w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center"
-                      animate={{ scale: [1, 1.3, 1] }}
-                      transition={{ duration: 1.5, repeat: Infinity }}
-                    >
-                      <Brain className="w-5 h-5 text-white" />
-                    </motion.div>
-                    <motion.div
-                      className="absolute -bottom-2 -left-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center"
-                      animate={{ scale: [1, 1.2, 1] }}
-                      transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
-                    >
-                      <Zap className="w-4 h-4 text-white" />
-                    </motion.div>
-                  </div>
-                )}
-                
-                {currentStep === 3 && (
-                  <div className="grid grid-cols-2 gap-4">
-                    <motion.div
-                      className="bg-green-500/20 p-4 rounded-lg text-center"
-                      animate={{ y: [0, -5, 0] }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                    >
-                      <TrendingUp className="w-8 h-8 text-green-400 mx-auto mb-2" />
-                      <p className="text-sm text-green-400 font-semibold">Inversionistas</p>
-                    </motion.div>
-                    <motion.div
-                      className="bg-orange-500/20 p-4 rounded-lg text-center"
-                      animate={{ y: [0, -5, 0] }}
-                      transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
-                    >
-                      <Shield className="w-8 h-8 text-orange-400 mx-auto mb-2" />
-                      <p className="text-sm text-orange-400 font-semibold">Municipalidades</p>
-                    </motion.div>
-                    <motion.div
-                      className="bg-blue-500/20 p-4 rounded-lg text-center col-span-2"
-                      animate={{ y: [0, -5, 0] }}
-                      transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
-                    >
-                      <Train className="w-8 h-8 text-blue-400 mx-auto mb-2" />
-                      <p className="text-sm text-blue-400 font-semibold">Seguridad Ciudadana</p>
-                    </motion.div>
-                  </div>
-                )}
-              </div>
-              
-              {/* Step Content */}
-              <div className="text-center">
-                <h3 className="text-2xl font-bold text-white mb-4">
-                  {steps[currentStep].title}
-                </h3>
-                <p className="text-zinc-400 leading-relaxed mb-6">
-                  {steps[currentStep].description}
-                </p>
-                <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full ${steps[currentStep].bgColor}`}>
-                  <span className={`text-sm font-semibold ${steps[currentStep].color}`}>
-                    {steps[currentStep].stats}
-                  </span>
-                </div>
-              </div>
-            </motion.div>
-            
-            {/* Progress Indicator */}
-            <div className="flex justify-center mt-6 gap-3">
-              {steps.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => {
-                    setCurrentStep(index);
-                    setAutoPlay(false);
-                  }}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentStep 
-                      ? 'bg-orange-400 w-8' 
-                      : 'bg-zinc-600 hover:bg-zinc-500'
-                  }`}
-                />
+                      className="absolute inset-0 bg-orange-400 rounded-full"
+                      animate={{
+                        scale: [1, 1.5, 1],
+                        opacity: [1, 0, 1],
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        delay: index * 0.3
+                      }}
+                    />
+                  </motion.div>
+
+                  {/* Espacio del otro lado */}
+                  <div className="flex-1"></div>
+                </motion.div>
               ))}
             </div>
           </div>
-        </div>
 
-        {/* CTA de Transición */}
-        <motion.div
-          className="text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          viewport={{ once: true }}
-        >
-          <div className="bg-zinc-800/50 rounded-3xl p-8 border border-zinc-700/50 max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Información de <span className="text-orange-400">Inversión</span>
-            </h3>
-            <p className="text-xl text-zinc-400 mb-8">
-              CRUCES AI ofrece una oportunidad de inversión con retornos proyectados basados en datos reales.
-            </p>
-            
-            <motion.button
-              onClick={scrollToMetrics}
-              className="inline-flex items-center gap-3 bg-orange-600 hover:bg-orange-500 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 group"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Ver Análisis Financiero
-              <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-            </motion.button>
-          </div>
-        </motion.div>
-      </div>
-    </section>
+          {/* CTA Final */}
+          <motion.div
+            className="text-center mt-20"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+            <div className="bg-zinc-800/50 rounded-3xl p-8 border border-zinc-700/50 max-w-4xl mx-auto">
+              <h3 className="text-3xl font-bold text-white mb-4">
+                Análisis <span className="text-orange-400">Financiero</span> Detallado
+              </h3>
+              <p className="text-xl text-zinc-400 mb-8">
+                Ahora que conoces la historia, explora los números reales: 
+                ROI, proyecciones, modelo de negocio y retornos validados.
+              </p>
+              
+              <motion.button
+                onClick={scrollToNext}
+                className="inline-flex items-center gap-3 bg-orange-600 hover:bg-orange-500 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 group"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <BarChart3 className="w-5 h-5" />
+                Ver Métricas de Inversión
+                <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </motion.section>
+    </>
   );
 }
