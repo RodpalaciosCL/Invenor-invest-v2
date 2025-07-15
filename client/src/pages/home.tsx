@@ -19,7 +19,7 @@ import InteractiveDemo from '../components/InteractiveDemo';
 import InvestmentSimulator from '../components/InvestmentSimulator';
 import InteractiveMap3D from '../components/InteractiveMap3D';
 import Timeline3D from '../components/Timeline3D';
-import GameInvestor from '../components/GameInvestor';
+
 
 import ComparisonMatrix from '../components/ComparisonMatrix';
 import DataRoomDashboard from '../components/DataRoomDashboard';
@@ -98,9 +98,7 @@ export default function Home() {
         <InvestmentSimulator />
       </section>
       
-      <section id="juego">
-        <GameInvestor />
-      </section>
+
       
       <section id="timeline">
         <Timeline3D />

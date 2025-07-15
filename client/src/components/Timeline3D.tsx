@@ -8,7 +8,7 @@ export default function Timeline3D() {
   const phases = [
     {
       id: 0,
-      title: "FASE 1: BASE INSTALLATION",
+      title: "FASE 1: Implementación Base",
       period: "0-12 meses",
       status: "ACTIVO",
       color: "from-orange-500 to-orange-700",
@@ -37,7 +37,7 @@ export default function Timeline3D() {
     },
     {
       id: 1,
-      title: "FASE 2: OPTIMIZATION",
+      title: "FASE 2: Optimización",
       period: "13-16 meses", 
       status: "PRÓXIMO",
       color: "from-orange-500 to-orange-700",
@@ -66,7 +66,7 @@ export default function Timeline3D() {
     },
     {
       id: 2,
-      title: "FASE 3: SCALE UP",
+      title: "FASE 3: Escalamiento",
       period: "17-20 meses",
       status: "PLANIFICADO", 
       color: "from-zinc-500 to-zinc-700",
@@ -95,18 +95,18 @@ export default function Timeline3D() {
     },
     {
       id: 3,
-      title: "FASE 4: HYPERGROWTH", 
+      title: "FASE 4: Expansión Nacional", 
       period: "21-24 meses",
-      status: "ESTRATÉGICO",
+      status: "PLANIFICADO",
       color: "from-zinc-600 to-zinc-800", 
       bgColor: "bg-zinc-600/20",
       icon: <Rocket className="w-8 h-8" />,
       milestones: [
-        "50 cruces premium",
+        "50 cruces operativos",
         "$1.5B ingresos mensuales",
-        "Máximo ROI alcanzado", 
-        "Preparación LATAM",
-        "IPO considerations"
+        "Cobertura nacional",
+        "Evaluación mercados regionales",
+        "Optimización operacional"
       ],
       metrics: {
         cruces: 50,
@@ -116,39 +116,10 @@ export default function Timeline3D() {
         roi: 65
       },
       achievements: [
-        "🚀 Peak ROI achieved",
-        "🚀 LATAM expansion ready",
-        "🚀 Market leadership",
-        "🚀 Exit opportunities"
-      ]
-    },
-    {
-      id: 4,
-      title: "FASE 5: DOMINATION",
-      period: "25+ meses", 
-      status: "VISIÓN",
-      color: "from-orange-500 to-orange-700",
-      bgColor: "bg-orange-500/20", 
-      icon: <Star className="w-8 h-8" />,
-      milestones: [
-        "60+ cruces nacionales",
-        "$1.8B+ ingresos mensuales",
-        "Dominación mercado chileno",
-        "Expansión internacional",
-        "Multiple exit strategies"
-      ],
-      metrics: {
-        cruces: 60,
-        revenue: 1800,
-        teamSize: 200,
-        efficiency: 99.5,
-        roi: 75
-      },
-      achievements: [
-        "👑 Market domination",
-        "👑 International presence", 
-        "👑 Industry standard",
-        "👑 Legacy established"
+        "⭐ Cobertura nacional establecida",
+        "⭐ Operaciones optimizadas",
+        "⭐ Evaluación internacional iniciada",
+        "⭐ ROI sostenible"
       ]
     }
   ];
@@ -161,7 +132,7 @@ export default function Timeline3D() {
       case "PRÓXIMO": return "text-orange-400 bg-orange-500/20";
       case "PLANIFICADO": return "text-zinc-400 bg-zinc-500/20";
       case "ESTRATÉGICO": return "text-zinc-400 bg-zinc-500/20";
-      case "VISIÓN": return "text-orange-400 bg-orange-500/20";
+
       default: return "text-zinc-400 bg-zinc-500/20";
     }
   };

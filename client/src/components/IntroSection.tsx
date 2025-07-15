@@ -11,7 +11,7 @@ export default function IntroSection() {
       id: "problema",
       title: "El Problema",
       subtitle: "Crisis en Cruces Ferroviarios",
-      description: "Más de 1.500 cruces ferroviarios sin control en Chile. Cada uno, una posible tragedia. Las multas no se cursan. Los accidentes aumentan.",
+      description: "Más de 1.500 cruces ferroviarios sin monitoreo automatizado en Chile. Infraestructura crítica sin supervisión tecnológica moderna.",
       icon: AlertTriangle,
       color: "text-zinc-400",
       bgColor: "bg-zinc-400/10",
@@ -21,7 +21,7 @@ export default function IntroSection() {
       id: "vacio",
       title: "El Vacío de Fiscalización",
       subtitle: "Sin Capacidad de Control",
-      description: "Las municipalidades no tienen capacidad técnica para vigilar estos puntos críticos. El Estado no llega. La tecnología actual es insuficiente.",
+      description: "Las municipalidades carecen de recursos técnicos para monitorear efectivamente estos puntos de infraestructura crítica.",
       icon: Shield,
       color: "text-zinc-500",
       bgColor: "bg-zinc-500/10",
@@ -31,7 +31,7 @@ export default function IntroSection() {
       id: "solucion",
       title: "La Solución Tecnológica",
       subtitle: "IA + Visión Computacional",
-      description: "Cámaras inteligentes detectan infracciones 24/7. La data es procesada por IA y enviada a un centro de control. Todo en segundos, sin intervención humana.",
+      description: "Sistema de cámaras inteligentes con procesamiento de datos mediante inteligencia artificial para monitoreo automatizado 24/7.",
       icon: Brain,
       color: "text-orange-400",
       bgColor: "bg-orange-400/10",
@@ -41,7 +41,7 @@ export default function IntroSection() {
       id: "impacto",
       title: "El Modelo de Impacto",
       subtitle: "Inversión con Propósito",
-      description: "Las multas generadas financian el sistema, entregan ingresos recurrentes a municipalidades y retornos sostenibles a inversionistas. Un modelo ganar-ganar-ganar.",
+      description: "Modelo de negocio basado en revenue compartido con municipalidades, generando flujos de ingresos recurrentes y retornos para inversionistas.",
       icon: TrendingUp,
       color: "text-orange-400",
       bgColor: "bg-orange-400/10",
@@ -303,10 +303,10 @@ export default function IntroSection() {
         >
           <div className="bg-zinc-800/50 rounded-3xl p-8 border border-zinc-700/50 max-w-4xl mx-auto">
             <h3 className="text-3xl font-bold text-white mb-4">
-              Ya no es solo una necesidad urgente.
+              Información de <span className="text-orange-400">Inversión</span>
             </h3>
-            <p className="text-xl text-orange-400 mb-8 font-semibold">
-              Es una inversión con retorno validado.
+            <p className="text-xl text-zinc-400 mb-8">
+              CRUCES AI ofrece una oportunidad de inversión con retornos proyectados basados en datos reales.
             </p>
             
             <motion.button
@@ -315,7 +315,7 @@ export default function IntroSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Ver Números de la Oportunidad
+              Ver Análisis Financiero
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </motion.button>
           </div>
