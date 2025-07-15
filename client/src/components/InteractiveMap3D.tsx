@@ -163,8 +163,8 @@ export default function InteractiveMap3D() {
     switch (status) {
       case "operativo": return "text-green-400 bg-green-500/20";
       case "implementacion": return "text-orange-400 bg-orange-500/20";
-      case "planificado": return "text-blue-400 bg-blue-500/20";
-      case "evaluacion": return "text-purple-400 bg-purple-500/20";
+      case "planificado": return "text-zinc-400 bg-zinc-500/20";
+      case "evaluacion": return "text-zinc-400 bg-zinc-500/20";
       default: return "text-zinc-400 bg-zinc-500/20";
     }
   };
@@ -172,11 +172,11 @@ export default function InteractiveMap3D() {
   const selectedComunaData = selectedComuna ? comunas.find(c => c.id === selectedComuna) : null;
 
   return (
-    <section className="py-20 bg-gradient-to-b from-zinc-900 to-zinc-800 relative overflow-hidden">
+    <section className="py-20 bg-zinc-900 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-green-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-zinc-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
@@ -188,18 +188,17 @@ export default function InteractiveMap3D() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 border border-blue-600/30 rounded-full mb-6">
-            <MapPin className="w-4 h-4 text-blue-400 mr-2" />
-            <span className="text-blue-300 font-medium text-sm">Mapa Interactivo de Expansión</span>
+          <div className="inline-flex items-center px-4 py-2 bg-orange-600/20 border border-orange-600/30 rounded-full mb-6">
+            <MapPin className="w-4 h-4 text-orange-400 mr-2" />
+            <span className="text-orange-300 font-medium text-sm">Mapa Interactivo de Expansión</span>
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            El <span className="text-blue-400">Mapa</span> de Tu 
-            <br /><span className="text-green-400">Imperio Financiero</span>
+            Mapa de <span className="text-orange-400">Expansión</span> Nacional
           </h2>
           <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
-            Explora cada comuna, sus métricas reales y potencial de crecimiento. 
-            Esta es la expansión territorial que convertirá tu inversión en un imperio.
+            Visualización de comunas con implementaciones actuales y planificadas, 
+            incluyendo métricas de rendimiento y potencial de crecimiento.
           </p>
         </motion.div>
 
@@ -214,12 +213,12 @@ export default function InteractiveMap3D() {
               viewport={{ once: true }}
             >
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                <MapPin className="w-7 h-7 text-blue-400" />
+                <MapPin className="w-7 h-7 text-orange-400" />
                 Chile - Territorio CRUCES AI
               </h3>
 
               {/* Chile Map Container */}
-              <div className="relative w-full h-96 bg-gradient-to-b from-zinc-700/50 to-zinc-800/50 rounded-xl overflow-hidden">
+              <div className="relative w-full h-96 bg-zinc-800/50 rounded-xl overflow-hidden">
                 {/* Chile Shape Background */}
                 <div className="absolute inset-0">
                   <svg viewBox="0 0 100 100" className="w-full h-full">
@@ -458,34 +457,7 @@ export default function InteractiveMap3D() {
           </div>
         </motion.div>
 
-        {/* Call to Action */}
-        <motion.div
-          className="mt-16 bg-gradient-to-r from-blue-600/20 to-green-600/20 rounded-2xl p-8 border border-blue-600/30 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="text-3xl font-bold text-white mb-4">
-            Este es Tu <span className="text-blue-400">Territorio</span>
-            <br />Tu <span className="text-green-400">Imperio Financiero</span>
-          </h3>
-          <p className="text-zinc-300 mb-8 max-w-3xl mx-auto text-lg">
-            Cada punto en este mapa representa millones en revenue. 
-            Cada fase de expansión multiplica tu patrimonio. 
-            Esta no es especulación - es el mapa detallado de tu riqueza futura.
-          </p>
-          
-          <motion.button
-            onClick={() => document.getElementById('inversion')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-500 hover:to-green-500 text-white px-10 py-5 rounded-xl font-bold text-xl transition-all duration-300 shadow-2xl"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <MapPin className="w-6 h-6 inline mr-2" />
-            Reclamar Mi Territorio
-          </motion.button>
-        </motion.div>
+
       </div>
     </section>
   );

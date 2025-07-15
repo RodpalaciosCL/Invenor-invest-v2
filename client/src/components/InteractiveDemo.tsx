@@ -271,32 +271,7 @@ export default function InteractiveDemo() {
           </div>
         </motion.div>
 
-        {/* Call to Action */}
-        <motion.div
-          className="bg-gradient-to-r from-blue-600/20 to-green-600/20 rounded-2xl p-8 border border-blue-600/30 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="text-3xl font-bold text-white mb-4">
-            Esta Tecnología Ya Está <span className="text-green-400">Funcionando</span>
-          </h3>
-          <p className="text-zinc-300 mb-8 max-w-3xl mx-auto text-lg">
-            No es un concepto futuro. CRUCES AI está operando en cruces reales, 
-            detectando infracciones reales, generando revenue real para municipios chilenos.
-          </p>
-          
-          <motion.button
-            onClick={() => document.getElementById('inversion')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-500 hover:to-green-500 text-white px-10 py-5 rounded-xl font-bold text-xl transition-all duration-300 shadow-2xl"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Zap className="w-6 h-6 inline mr-2" />
-            Invertir en Tecnología Probada
-          </motion.button>
-        </motion.div>
+
       </div>
     </section>
   );
