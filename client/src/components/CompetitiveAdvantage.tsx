@@ -280,33 +280,7 @@ export default function CompetitiveAdvantage() {
           </div>
         </motion.div>
 
-        {/* Call to Action */}
-        <motion.div
-          className="bg-gradient-to-r from-purple-600/20 to-orange-600/20 rounded-2xl p-8 border border-purple-600/30 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="text-3xl font-bold text-white mb-4">
-            Esta Ventaja <span className="text-purple-400">Se Fortalece</span> 
-            <br />con Cada <span className="text-orange-400">Día que Pasa</span>
-          </h3>
-          <p className="text-zinc-300 mb-8 max-w-3xl mx-auto text-lg">
-            Mientras la competencia aún está entendiendo el problema, 
-            INVENOR ya está escalando la solución. Cada contrato nuevo, 
-            cada validación adicional, cada dato recolectado amplía nuestra ventaja.
-          </p>
-          
-          <motion.button
-            onClick={() => document.getElementById('inversion')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-gradient-to-r from-purple-600 to-orange-600 hover:from-purple-500 hover:to-orange-500 text-white px-10 py-5 rounded-xl font-bold text-xl transition-all duration-300 shadow-2xl"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Asegurar Posición en el Líder
-          </motion.button>
-        </motion.div>
+
       </div>
     </section>
   );

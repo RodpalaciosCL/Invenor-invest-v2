@@ -133,31 +133,7 @@ export default function VideoSection() {
           </motion.div>
         </div>
 
-        {/* Bottom CTA */}
-        <motion.div
-          className="text-center mt-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <div className="bg-gradient-to-r from-orange-600/20 to-orange-400/20 rounded-2xl p-8 border border-orange-600/30">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              ¿Listo para Revolucionar la Seguridad Ferroviaria?
-            </h3>
-            <p className="text-zinc-300 mb-6 max-w-2xl mx-auto">
-              Únete a la transformación digital del transporte ferroviario en Chile. 
-              CRUCES AI no es el futuro, es el presente.
-            </p>
-            <motion.button
-              className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors duration-200"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Solicitar Presentación Ejecutiva
-            </motion.button>
-          </div>
-        </motion.div>
+
 
         {/* Video Modal */}
         {showVideo && (

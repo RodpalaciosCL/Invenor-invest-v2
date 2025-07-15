@@ -346,33 +346,7 @@ export default function ESGMetrics() {
           </motion.div>
         )}
 
-        {/* Call to Action */}
-        <motion.div
-          className="mt-16 bg-gradient-to-r from-green-600/20 via-blue-600/20 to-purple-600/20 rounded-3xl p-8 border border-green-600/30 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="text-4xl font-bold text-white mb-4">
-            Invierte en el <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">Futuro</span>
-            <br />Que <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Beneficia a Todos</span>
-          </h3>
-          <p className="text-xl text-zinc-300 mb-8 max-w-4xl mx-auto">
-            CRUCES AI demuestra que la rentabilidad excepcional y el impacto social positivo 
-            no son mutuamente excluyentes. Es la definición de inversión con propósito.
-          </p>
-          
-          <motion.button
-            onClick={() => document.getElementById('inversion')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 hover:from-green-500 hover:via-blue-500 hover:to-purple-500 text-white px-12 py-6 rounded-xl font-bold text-xl transition-all duration-300 shadow-2xl"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Award className="w-6 h-6 inline mr-3" />
-            Únete a la Revolución Sostenible
-          </motion.button>
-        </motion.div>
+
       </div>
     </section>
   );
