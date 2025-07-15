@@ -173,12 +173,12 @@ export default function IntroSection() {
                   delay: index <= currentNarrative ? 0 : 0.5
                 }}
               >
-                <div className={`p-8 rounded-2xl border ${
+                <div className={`p-6 rounded-2xl border ${
                   index <= currentNarrative 
                     ? 'bg-zinc-800/50 border-orange-400/30' 
                     : 'bg-zinc-800/20 border-zinc-700/30'
                 } backdrop-blur-sm`}>
-                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-relaxed text-white">
+                  <h3 className="text-xl md:text-2xl font-semibold leading-relaxed text-white">
                     {step}
                   </h3>
                 </div>
