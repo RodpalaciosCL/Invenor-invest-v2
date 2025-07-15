@@ -43,7 +43,7 @@ export function loadProjectData() {
   const casosData: CasoUso[] = [
     {
       titulo: "Detección Automática IA",
-      descripcion: "95% eficiencia vs 22% actual. Reconocimiento de patentes y clasificación automática de infracciones 24/7.",
+      descripcion: "95% eficiencia vs 8% actual. Reconocimiento de patentes y clasificación automática de infracciones 24/7.",
       icono: "detection"
     },
     {

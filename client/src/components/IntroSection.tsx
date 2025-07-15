@@ -20,9 +20,9 @@ export default function IntroSection() {
       id: "impact", 
       title: "El Impacto",
       subtitle: "Ineficiencia Sistémica Documentada",
-      content: "Métodos tradicionales alcanzan solo 22% de efectividad, mientras infracciones no detectadas representan pérdidas millonarias anuales.",
+      content: "Métodos tradicionales alcanzan solo 8% de efectividad, mientras infracciones no detectadas representan pérdidas millonarias anuales.",
       visual: "inefficiency",
-      stats: { value: 22, label: "Efectividad Actual", prefix: "%" }
+      stats: { value: 8, label: "Efectividad Actual", prefix: "%" }
     },
     {
       id: "solution",
@@ -87,12 +87,12 @@ export default function IntroSection() {
             <div className="w-32 h-32 rounded-full border-4 border-zinc-600 relative">
               <motion.div
                 className="absolute inset-0 rounded-full border-4 border-orange-400"
-                style={{ clipPath: "polygon(0 0, 22% 0, 22% 100%, 0 100%)" }}
+                style={{ clipPath: "polygon(0 0, 8% 0, 8% 100%, 0 100%)" }}
                 animate={{ rotate: [0, 360] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
               />
               <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-2xl font-bold text-white">22%</span>
+                <span className="text-2xl font-bold text-white">8%</span>
               </div>
             </div>
           </div>

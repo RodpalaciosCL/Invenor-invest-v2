@@ -38,7 +38,7 @@ export default function StatsSection({ data }: StatsSectionProps) {
       color: "text-orange-400",
       bgColor: "bg-orange-400/10", 
       description: "Precisión en detección de infracciones",
-      trend: "vs 22% método tradicional"
+      trend: "vs 8% método tradicional"
     },
     {
       label: "Retorno Total",

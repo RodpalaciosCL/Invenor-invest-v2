@@ -5,7 +5,7 @@ export default function ProblemSolution() {
   const problemStats = [
     {
       icon: <AlertTriangle className="w-6 h-6" />,
-      stat: "22%",
+      stat: "8%",
       label: "Eficiencia Actual",
       description: "Métodos tradicionales de detección",
       color: "text-zinc-400"
