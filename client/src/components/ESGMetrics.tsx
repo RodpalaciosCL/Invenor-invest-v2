@@ -126,8 +126,8 @@ export default function ESGMetrics() {
     <section className="py-20 bg-gradient-to-b from-zinc-800 via-zinc-900 to-zinc-800 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-green-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-zinc-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
@@ -139,14 +139,14 @@ export default function ESGMetrics() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-600/20 to-blue-600/20 border border-green-600/30 rounded-full mb-8">
-            <Leaf className="w-5 h-5 text-green-400 mr-3" />
-            <span className="text-green-300 font-semibold">ESG & SOSTENIBILIDAD</span>
+          <div className="inline-flex items-center px-6 py-3 bg-orange-600/20 border border-orange-600/30 rounded-full mb-8">
+            <Leaf className="w-5 h-5 text-orange-400 mr-3" />
+            <span className="text-orange-300 font-semibold">ESG & SOSTENIBILIDAD</span>
           </div>
           
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Impacto <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">Medible</span>
-            <br />Más Allá del <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">ROI</span>
+            Impacto <span className="text-orange-400">Medible</span>
+            <br />Más Allá del <span className="text-orange-400">ROI</span>
           </h2>
           <p className="text-xl text-zinc-400 max-w-4xl mx-auto leading-relaxed">
             CRUCES AI no solo genera retornos financieros excepcionales. 
@@ -162,17 +162,17 @@ export default function ESGMetrics() {
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <div className="bg-gradient-to-br from-green-600/20 to-green-800/20 rounded-2xl p-6 border border-green-600/30 text-center">
-            <Leaf className="w-8 h-8 text-green-400 mx-auto mb-3" />
-            <div className="text-3xl font-bold text-green-400 mb-1">
+          <div className="bg-orange-600/20 rounded-2xl p-6 border border-orange-600/30 text-center">
+            <Leaf className="w-8 h-8 text-orange-400 mx-auto mb-3" />
+            <div className="text-3xl font-bold text-orange-400 mb-1">
               <CountUp end={2840} duration={2} />
             </div>
             <div className="text-zinc-300 text-sm">Tons CO2 Ahorradas</div>
           </div>
 
-          <div className="bg-gradient-to-br from-red-600/20 to-red-800/20 rounded-2xl p-6 border border-red-600/30 text-center">
-            <Heart className="w-8 h-8 text-red-400 mx-auto mb-3" />
-            <div className="text-3xl font-bold text-red-400 mb-1">
+          <div className="bg-zinc-600/20 rounded-2xl p-6 border border-zinc-600/30 text-center">
+            <Heart className="w-8 h-8 text-zinc-400 mx-auto mb-3" />
+            <div className="text-3xl font-bold text-zinc-400 mb-1">
               <CountUp end={23} duration={2} />
             </div>
             <div className="text-zinc-300 text-sm">Vidas Salvadas/Año</div>

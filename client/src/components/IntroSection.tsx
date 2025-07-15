@@ -13,8 +13,8 @@ export default function IntroSection() {
       subtitle: "Crisis en Cruces Ferroviarios",
       description: "Más de 1.500 cruces ferroviarios sin control en Chile. Cada uno, una posible tragedia. Las multas no se cursan. Los accidentes aumentan.",
       icon: AlertTriangle,
-      color: "text-red-400",
-      bgColor: "bg-red-400/10",
+      color: "text-zinc-400",
+      bgColor: "bg-zinc-400/10",
       stats: "1.500+ cruces desprotegidos"
     },
     {
@@ -23,8 +23,8 @@ export default function IntroSection() {
       subtitle: "Sin Capacidad de Control",
       description: "Las municipalidades no tienen capacidad técnica para vigilar estos puntos críticos. El Estado no llega. La tecnología actual es insuficiente.",
       icon: Shield,
-      color: "text-yellow-400",
-      bgColor: "bg-yellow-400/10",
+      color: "text-zinc-500",
+      bgColor: "bg-zinc-500/10",
       stats: "0% fiscalización efectiva"
     },
     {
@@ -43,8 +43,8 @@ export default function IntroSection() {
       subtitle: "Inversión con Propósito",
       description: "Las multas generadas financian el sistema, entregan ingresos recurrentes a municipalidades y retornos sostenibles a inversionistas. Un modelo ganar-ganar-ganar.",
       icon: TrendingUp,
-      color: "text-green-400",
-      bgColor: "bg-green-400/10",
+      color: "text-orange-400",
+      bgColor: "bg-orange-400/10",
       stats: "55% ROI proyectado"
     }
   ];

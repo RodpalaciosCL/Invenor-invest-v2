@@ -45,8 +45,8 @@ export default function EmotionalImpact() {
   const emotionalPoints = [
     {
       icon: <Award className="w-6 h-6" />,
-      title: "Ser Parte de la Historia",
-      description: "No es solo una inversión, es ser pionero en la revolución de la seguridad ferroviaria en Chile. Tu nombre estará asociado con la transformación de un sector completo.",
+      title: "Pioneros en Seguridad Ferroviaria",
+      description: "Primera implementación de IA para monitoreo de cruces ferroviarios en Chile, estableciendo nuevo estándar de seguridad e innovación tecnológica.",
       emotion: "LEGACY",
       color: "text-orange-400"
     },
@@ -59,15 +59,15 @@ export default function EmotionalImpact() {
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Momento Único Irrepetible",
-      description: "Esta ventana de oportunidad no se repetirá. Los early adopters de Tesla, Google, Amazon saben que el timing es todo. Este es tu momento Tesla ferroviario.",
+      title: "Oportunidad de Mercado",
+      description: "Ventana de entrada temprana en mercado no explotado con 1.500+ cruces ferroviarios sin tecnología de monitoreo en Chile.",
       emotion: "URGENCIA",
       color: "text-orange-400"
     },
     {
       icon: <TrendingUp className="w-6 h-6" />,
-      title: "Multiplicador de Riqueza",
-      description: "No es solo ROI del 55%. Es acceso al ecosistema completo INVENOR, deal flow privilegiado y oportunidades que multiplican tu patrimonio exponencialmente.",
+      title: "Retorno Financiero Proyectado",
+      description: "ROI del 55% basado en proyecciones conservadoras de recaudación municipal y análisis de mercado validado.",
       emotion: "ABUNDANCIA",
       color: "text-white"
     }
@@ -114,13 +114,11 @@ export default function EmotionalImpact() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Esto No Es Solo una <span className="text-orange-400">Inversión</span>
-            <br />Es una <span className="text-orange-400">Transformación</span>
+            Métricas de <span className="text-orange-400">Impacto</span>
           </h2>
           <p className="text-xl text-zinc-400 max-w-4xl mx-auto leading-relaxed">
-            CRUCES AI representa mucho más que números financieros. Es la oportunidad de ser parte 
-            de algo revolucionario, de generar impacto real y de asegurar tu lugar en el futuro 
-            de la innovación chilena.
+            CRUCES AI genera impacto medible tanto en seguridad pública como en retornos financieros 
+            para municipalidades e inversionistas.
           </p>
         </motion.div>
 
@@ -212,41 +210,31 @@ export default function EmotionalImpact() {
           </div>
         </motion.div>
 
-        {/* Urgency Section */}
+        {/* Investment Information Section */}
         <motion.div
-          className="bg-gradient-to-r from-red-600/20 to-orange-600/20 rounded-2xl p-8 border border-red-600/30 text-center"
+          className="bg-zinc-800/50 rounded-2xl p-8 border border-zinc-700/50 text-center"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.8 }}
           viewport={{ once: true }}
         >
-          <div className="mb-6">
-            <div className="inline-flex items-center px-4 py-2 bg-red-600/30 border border-red-600/50 rounded-full mb-4">
-              <Clock className="w-4 h-4 text-red-400 mr-2" />
-              <span className="text-red-300 font-bold text-sm">OPORTUNIDAD LIMITADA</span>
-            </div>
-            
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Las Oportunidades Como Esta <span className="text-red-400">No Esperan</span>
-            </h3>
-            <p className="text-zinc-300 mb-8 max-w-3xl mx-auto text-lg">
-              Google, Tesla, Amazon... todos tuvieron su momento de entrada. 
-              Los inversores que actuaron rápido cambiaron sus vidas para siempre. 
-              CRUCES AI es tu momento. La pregunta no es si va a funcionar, 
-              sino si vas a formar parte de esta transformación.
-            </p>
-          </div>
+          <h3 className="text-3xl font-bold text-white mb-4">
+            Información de <span className="text-orange-400">Inversión</span>
+          </h3>
+          <p className="text-zinc-300 mb-8 max-w-3xl mx-auto text-lg">
+            CRUCES AI ofrece una oportunidad de inversión en tecnología con impacto social medible. 
+            Revise los detalles financieros y proyecciones para evaluar la propuesta.
+          </p>
 
           <motion.button
             onClick={() => document.getElementById('inversion')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-500 hover:to-orange-500 text-white px-10 py-5 rounded-xl font-bold text-xl transition-all duration-300 shadow-2xl"
+            className="bg-orange-600 hover:bg-orange-500 text-white px-10 py-5 rounded-xl font-bold text-xl transition-all duration-300 shadow-lg"
             whileHover={{ 
-              scale: 1.05,
-              boxShadow: "0 20px 40px rgba(239, 68, 68, 0.3)"
+              scale: 1.05
             }}
             whileTap={{ scale: 0.95 }}
           >
-            SÍ, QUIERO SER PARTE DE ESTA REVOLUCIÓN
+            Ver Detalles de Inversión
           </motion.button>
         </motion.div>
       </div>

@@ -97,7 +97,7 @@ export default function StatsSection({ data }: StatsSectionProps) {
           </motion.div>
           
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Números que <span className="text-orange-400">Convencen</span>
+            Métricas <span className="text-orange-400">Clave</span>
           </h2>
           <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
             Resultados validados por Ferronor y respaldados por data real de 12 municipios confirmados

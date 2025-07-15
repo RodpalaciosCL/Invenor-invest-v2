@@ -11,8 +11,8 @@ export default function Timeline3D() {
       title: "FASE 1: BASE INSTALLATION",
       period: "0-12 meses",
       status: "ACTIVO",
-      color: "from-green-500 to-green-700",
-      bgColor: "bg-green-500/20",
+      color: "from-orange-500 to-orange-700",
+      bgColor: "bg-orange-500/20",
       icon: <Target className="w-8 h-8" />,
       milestones: [
         "25 cruces operativos",
@@ -69,8 +69,8 @@ export default function Timeline3D() {
       title: "FASE 3: SCALE UP",
       period: "17-20 meses",
       status: "PLANIFICADO", 
-      color: "from-blue-500 to-blue-700",
-      bgColor: "bg-blue-500/20",
+      color: "from-zinc-500 to-zinc-700",
+      bgColor: "bg-zinc-500/20",
       icon: <TrendingUp className="w-8 h-8" />,
       milestones: [
         "40 cruces activos",
@@ -98,8 +98,8 @@ export default function Timeline3D() {
       title: "FASE 4: HYPERGROWTH", 
       period: "21-24 meses",
       status: "ESTRATÉGICO",
-      color: "from-purple-500 to-purple-700", 
-      bgColor: "bg-purple-500/20",
+      color: "from-zinc-600 to-zinc-800", 
+      bgColor: "bg-zinc-600/20",
       icon: <Rocket className="w-8 h-8" />,
       milestones: [
         "50 cruces premium",
@@ -127,8 +127,8 @@ export default function Timeline3D() {
       title: "FASE 5: DOMINATION",
       period: "25+ meses", 
       status: "VISIÓN",
-      color: "from-yellow-500 to-yellow-700",
-      bgColor: "bg-yellow-500/20", 
+      color: "from-orange-500 to-orange-700",
+      bgColor: "bg-orange-500/20", 
       icon: <Star className="w-8 h-8" />,
       milestones: [
         "60+ cruces nacionales",
@@ -157,11 +157,11 @@ export default function Timeline3D() {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case "ACTIVO": return "text-green-400 bg-green-500/20";
+      case "ACTIVO": return "text-orange-400 bg-orange-500/20";
       case "PRÓXIMO": return "text-orange-400 bg-orange-500/20";
-      case "PLANIFICADO": return "text-blue-400 bg-blue-500/20";
-      case "ESTRATÉGICO": return "text-purple-400 bg-purple-500/20";
-      case "VISIÓN": return "text-yellow-400 bg-yellow-500/20";
+      case "PLANIFICADO": return "text-zinc-400 bg-zinc-500/20";
+      case "ESTRATÉGICO": return "text-zinc-400 bg-zinc-500/20";
+      case "VISIÓN": return "text-orange-400 bg-orange-500/20";
       default: return "text-zinc-400 bg-zinc-500/20";
     }
   };
@@ -170,8 +170,8 @@ export default function Timeline3D() {
     <section className="py-20 bg-zinc-900 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-zinc-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
@@ -183,18 +183,18 @@ export default function Timeline3D() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="inline-flex items-center px-4 py-2 bg-purple-600/20 border border-purple-600/30 rounded-full mb-6">
-            <Clock className="w-4 h-4 text-purple-400 mr-2" />
-            <span className="text-purple-300 font-medium text-sm">Roadmap Interactivo 4D</span>
+          <div className="inline-flex items-center px-4 py-2 bg-orange-600/20 border border-orange-600/30 rounded-full mb-6">
+            <Clock className="w-4 h-4 text-orange-400 mr-2" />
+            <span className="text-orange-300 font-medium text-sm">Roadmap Interactivo</span>
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            El <span className="text-purple-400">Camino</span> Hacia Tu 
-            <br /><span className="text-green-400">Riqueza Exponencial</span>
+            El <span className="text-orange-400">Roadmap</span> de 
+            <br /><span className="text-orange-400">Crecimiento</span>
           </h2>
           <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
-            Cada fase diseñada para maximizar tu retorno. Cada milestone validado por data real. 
-            Este es el blueprint exacto que convertirá tu inversión en fortuna.
+            Cada fase diseñada para maximizar retornos. Cada milestone validado por data real. 
+            Roadmap de crecimiento basado en métricas verificables.
           </p>
         </motion.div>
 

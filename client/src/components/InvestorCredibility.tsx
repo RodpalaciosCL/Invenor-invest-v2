@@ -173,7 +173,7 @@ export default function InvestorCredibility() {
           viewport={{ once: true }}
         >
           <h3 className="text-3xl font-bold text-center text-white mb-12">
-            Validación de Mercado <span className="text-green-400">Irrefutable</span>
+            Validación de Mercado <span className="text-orange-400">Comprobada</span>
           </h3>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -188,7 +188,7 @@ export default function InvestorCredibility() {
                 whileHover={{ scale: 1.05, y: -5 }}
               >
                 <div className="text-4xl mb-4">{validation.icon}</div>
-                <div className="text-4xl font-black text-green-400 mb-2">
+                <div className="text-4xl font-black text-orange-400 mb-2">
                   {validation.metric}
                 </div>
                 <h4 className="text-lg font-bold text-white mb-2">
@@ -250,15 +250,15 @@ export default function InvestorCredibility() {
 
         {/* Trust Builder CTA */}
         <motion.div
-          className="bg-gradient-to-r from-blue-600/20 to-green-600/20 rounded-2xl p-8 border border-blue-600/30 text-center"
+          className="bg-zinc-800/50 rounded-2xl p-8 border border-zinc-700/50 text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
           viewport={{ once: true }}
         >
           <h3 className="text-3xl font-bold text-white mb-4">
-            <span className="text-blue-400">100% Verificable</span> - 
-            <span className="text-green-400"> 0% Especulación</span>
+            <span className="text-orange-400">100% Verificable</span> - 
+            <span className="text-white"> 0% Especulación</span>
           </h3>
           <p className="text-zinc-300 mb-8 max-w-3xl mx-auto text-lg">
             Cada métrica, cada contrato, cada validación es auditable. 
@@ -268,7 +268,7 @@ export default function InvestorCredibility() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.button
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-colors duration-200 flex items-center justify-center gap-2"
+              className="bg-zinc-600 hover:bg-zinc-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-colors duration-200 flex items-center justify-center gap-2"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -277,12 +277,12 @@ export default function InvestorCredibility() {
             </motion.button>
             <motion.button
               onClick={() => document.getElementById('inversion')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-colors duration-200 flex items-center justify-center gap-2"
+              className="bg-orange-600 hover:bg-orange-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-colors duration-200 flex items-center justify-center gap-2"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <TrendingUp className="w-5 h-5" />
-              Invertir Ahora
+              Ver Información de Inversión
             </motion.button>
           </div>
         </motion.div>

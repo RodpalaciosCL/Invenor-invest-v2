@@ -10,7 +10,7 @@ export default function FutureOpportunities() {
       description: "Expansión exclusiva para early investors con acceso prioritario a la siguiente oportunidad disruptiva en el sector público.",
       icon: <Rocket className="w-8 h-8" />,
       badge: "PRÓXIMAMENTE",
-      color: "from-purple-500 to-purple-700",
+      color: "from-zinc-500 to-zinc-700",
       priority: "🥇 PRIORIDAD ABSOLUTA"
     },
     {
@@ -20,7 +20,7 @@ export default function FutureOpportunities() {
       description: "Acceso exclusivo a expansión LATAM con potencial de mercado de miles de millones USD para inversores tempranos.",
       icon: <Globe className="w-8 h-8" />,
       badge: "EN DESARROLLO",
-      color: "from-blue-500 to-blue-700",
+      color: "from-zinc-600 to-zinc-800",
       priority: "🥈 ACCESO PREFERENCIAL"
     },
     {
@@ -66,7 +66,7 @@ export default function FutureOpportunities() {
     <section className="py-20 bg-zinc-900 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-zinc-500/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-orange-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
@@ -79,14 +79,14 @@ export default function FutureOpportunities() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="inline-flex items-center px-4 py-2 bg-purple-600/20 border border-purple-600/30 rounded-full mb-6">
-            <Crown className="w-4 h-4 text-purple-400 mr-2" />
-            <span className="text-purple-300 font-medium text-sm">Exclusivo Para Inversores Fundacionales</span>
+          <div className="inline-flex items-center px-4 py-2 bg-zinc-600/20 border border-zinc-600/30 rounded-full mb-6">
+            <Crown className="w-4 h-4 text-zinc-400 mr-2" />
+            <span className="text-zinc-300 font-medium text-sm">Para Inversores Fundacionales</span>
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             No Solo Inviertes en <span className="text-orange-400">CRUCES AI</span>
-            <br />Accedes al <span className="text-purple-400">Ecosistema INVENOR</span>
+            <br />Accedes al <span className="text-orange-400">Ecosistema INVENOR</span>
           </h2>
           <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
             Los inversores en CRUCES AI obtienen acceso prioritario a todas las futuras 
@@ -180,7 +180,7 @@ export default function FutureOpportunities() {
           viewport={{ once: true }}
         >
           <h3 className="text-3xl font-bold text-center text-white mb-12">
-            Ventajas <span className="text-purple-400">Exclusivas</span> del Ecosistema
+            Ventajas del <span className="text-orange-400">Ecosistema</span>
           </h3>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -194,11 +194,11 @@ export default function FutureOpportunities() {
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.05 }}
               >
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-600 rounded-xl mb-4 text-white">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-zinc-600 rounded-xl mb-4 text-white">
                   {benefit.icon}
                 </div>
                 
-                <div className="inline-block px-3 py-1 bg-purple-600/20 rounded-full text-purple-300 text-xs font-bold mb-3">
+                <div className="inline-block px-3 py-1 bg-zinc-600/20 rounded-full text-zinc-300 text-xs font-bold mb-3">
                   {benefit.highlight}
                 </div>
                 
@@ -215,7 +215,7 @@ export default function FutureOpportunities() {
 
         {/* Call to Action */}
         <motion.div
-          className="bg-gradient-to-r from-orange-600/20 to-purple-600/20 rounded-2xl p-8 border border-orange-600/30 text-center"
+          className="bg-zinc-800/50 rounded-2xl p-8 border border-zinc-700/50 text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
@@ -237,11 +237,11 @@ export default function FutureOpportunities() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Asegurar Mi Posición
+              Ver Detalles de Inversión
               <ArrowRight className="w-5 h-5" />
             </motion.button>
             <motion.button
-              className="border-2 border-purple-600 text-purple-400 hover:bg-purple-600 hover:text-white px-8 py-4 rounded-xl font-bold text-lg transition-colors duration-200 flex items-center justify-center gap-2"
+              className="border-2 border-zinc-600 text-zinc-400 hover:bg-zinc-600 hover:text-white px-8 py-4 rounded-xl font-bold text-lg transition-colors duration-200 flex items-center justify-center gap-2"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

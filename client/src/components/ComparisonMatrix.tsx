@@ -245,13 +245,13 @@ export default function ComparisonMatrix() {
                     {/* Improvement */}
                     <div className="text-center">
                       {metric.name === "Costo Mensual" ? (
-                        <div className="text-green-400 font-bold">-80% costo</div>
+                        <div className="text-orange-400 font-bold">-80% costo</div>
                       ) : metric.name === "Tasa de Detección" ? (
-                        <div className="text-green-400 font-bold">+330% mejor</div>
+                        <div className="text-orange-400 font-bold">+330% mejor</div>
                       ) : metric.name === "ROI Anual" ? (
-                        <div className="text-green-400 font-bold">+588% mejor</div>
+                        <div className="text-orange-400 font-bold">+588% mejor</div>
                       ) : (
-                        <div className="text-green-400 font-bold">Superiior</div>
+                        <div className="text-orange-400 font-bold">Superior</div>
                       )}
                     </div>
 
@@ -265,12 +265,12 @@ export default function ComparisonMatrix() {
                         transition={{ duration: 0.3 }}
                       >
                         <div className="grid md:grid-cols-2 gap-6">
-                          <div className="bg-red-900/20 rounded-lg p-4 border border-red-600/30">
-                            <h5 className="text-red-400 font-semibold mb-2">Método Tradicional</h5>
-                            <p className="text-zinc-300 text-sm">{metric.tradicional.detail}</p>
+                          <div className="bg-zinc-800/50 rounded-lg p-4 border border-zinc-600/50">
+                            <h5 className="text-zinc-300 font-semibold mb-2">Método Tradicional</h5>
+                            <p className="text-zinc-400 text-sm">{metric.tradicional.detail}</p>
                           </div>
-                          <div className="bg-green-900/20 rounded-lg p-4 border border-green-600/30">
-                            <h5 className="text-green-400 font-semibold mb-2">CRUCES AI</h5>
+                          <div className="bg-orange-900/20 rounded-lg p-4 border border-orange-600/30">
+                            <h5 className="text-orange-400 font-semibold mb-2">CRUCES AI</h5>
                             <p className="text-zinc-300 text-sm">{metric.cruces.detail}</p>
                           </div>
                         </div>

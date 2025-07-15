@@ -130,7 +130,7 @@ export default function InteractiveDemo() {
                 <div className="absolute inset-0 flex items-center justify-center">
                   <motion.button
                     onClick={() => setIsPlaying(!isPlaying)}
-                    className="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-2xl"
+                    className="bg-orange-600 hover:bg-orange-500 text-white p-4 rounded-full shadow-2xl"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   >
@@ -150,7 +150,7 @@ export default function InteractiveDemo() {
                     setViolations(0);
                     setRevenue(0);
                   }}
-                  className="text-blue-400 hover:text-blue-300 text-sm font-semibold"
+                  className="text-orange-400 hover:text-orange-300 text-sm font-semibold"
                 >
                   Reset Contadores
                 </button>
@@ -172,7 +172,7 @@ export default function InteractiveDemo() {
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <div className="p-2 bg-blue-600 rounded-lg text-white">
+                      <div className="p-2 bg-orange-600 rounded-lg text-white">
                         {metric.icon}
                       </div>
                       <div className="text-zinc-300">{metric.label}</div>
