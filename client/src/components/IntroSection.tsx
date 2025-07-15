@@ -7,56 +7,61 @@ export default function IntroSection() {
   const [showTimeline, setShowTimeline] = useState(false);
 
   const narrativeSteps = [
-    "🟥 Cada semana, decenas de vehículos cruzan mal un paso ferroviario en Chile.",
-    "🚨 Los accidentes no se reportan. Las multas no se cursan. La seguridad es invisible.",
-    "🌐 Hoy, eso cambia con INVENOR: tecnología, data, y eficiencia para proteger vidas."
+    "Cada semana, decenas de vehículos cruzan incorrectamente pasos ferroviarios en Chile.",
+    "Los accidentes no se reportan. Las multas no se cursan. La seguridad es invisible.",
+    "INVENOR transforma esta crisis en una oportunidad de inversión tecnológica rentable."
   ];
 
   const timelineSteps = [
     {
       id: "problema",
-      emoji: "🚧",
-      title: "El Problema",
-      description: "Más de 1.500 cruces ferroviarios sin control en zonas urbanas.",
+      icon: AlertTriangle,
+      title: "Identificación del Problema",
+      description: "1.500+ cruces ferroviarios sin monitoreo tecnológico en zonas urbanas de Chile.",
       stats: "1.500+ cruces desprotegidos",
-      color: "text-red-400",
-      bgColor: "bg-red-400/10"
+      color: "text-orange-400",
+      bgColor: "bg-orange-400/10",
+      borderColor: "border-orange-400/30"
     },
     {
       id: "vacio", 
-      emoji: "📉",
-      title: "El Vacío",
-      description: "Municipios sin recursos. Fiscalización nula. Accidentes invisibles.",
-      stats: "0% fiscalización efectiva",
+      icon: Shield,
+      title: "Análisis del Vacío",
+      description: "Municipalidades carecen de recursos técnicos para fiscalización efectiva.",
+      stats: "0% fiscalización actual",
       color: "text-zinc-400",
-      bgColor: "bg-zinc-400/10"
+      bgColor: "bg-zinc-400/10",
+      borderColor: "border-zinc-400/30"
     },
     {
       id: "descubrimiento",
-      emoji: "🔍", 
-      title: "El Descubrimiento",
-      description: "Analizamos data real, medimos ineficiencia. 22% de efectividad actual.",
-      stats: "22% efectividad tradicional",
+      icon: Brain, 
+      title: "Validación Técnica",
+      description: "Análisis de datos reales confirma baja efectividad de métodos tradicionales.",
+      stats: "22% efectividad actual",
       color: "text-orange-400",
-      bgColor: "bg-orange-400/10"
+      bgColor: "bg-orange-400/10",
+      borderColor: "border-orange-400/30"
     },
     {
       id: "solucion",
-      emoji: "🤖",
-      title: "La Solución", 
-      description: "Instalamos sensores + IA que detectan en tiempo real. 95% de precisión validada.",
+      icon: Camera,
+      title: "Desarrollo de Solución", 
+      description: "Sistema de IA con visión computacional alcanza 95% de precisión validada.",
       stats: "95% precisión IA",
       color: "text-orange-400",
-      bgColor: "bg-orange-400/10"
+      bgColor: "bg-orange-400/10",
+      borderColor: "border-orange-400/30"
     },
     {
       id: "modelo",
-      emoji: "📈",
-      title: "El Modelo",
-      description: "Cada infracción genera ingreso. La municipalidad gana. El inversionista gana.",
+      icon: TrendingUp,
+      title: "Modelo de Negocio",
+      description: "Revenue compartido genera ingresos recurrentes para municipios e inversionistas.",
       stats: "55% ROI proyectado",
       color: "text-orange-400", 
-      bgColor: "bg-orange-400/10"
+      bgColor: "bg-orange-400/10",
+      borderColor: "border-orange-400/30"
     }
   ];
 
@@ -81,14 +86,41 @@ export default function IntroSection() {
   return (
     <>
       {/* Pantalla de Impacto Narrativo */}
-      <section className="min-h-screen bg-black relative overflow-hidden flex items-center justify-center">
-        {/* Fondo Animado de Tren */}
+      <section className="min-h-screen bg-zinc-900 relative overflow-hidden flex items-center justify-center">
+        {/* Patrón Geométrico de Fondo */}
         <div className="absolute inset-0">
+          {/* Elementos geométricos animados */}
           <motion.div
-            className="absolute top-1/4 left-1/4 w-32 h-32 bg-orange-500/20 rounded-full blur-2xl"
+            className="absolute top-1/4 left-1/4 w-32 h-32 border border-orange-400/20 rounded-full"
             animate={{
-              scale: [1, 1.5, 1],
-              opacity: [0.2, 0.4, 0.2],
+              scale: [1, 1.2, 1],
+              rotate: [0, 180, 360],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+          <motion.div
+            className="absolute bottom-1/3 right-1/3 w-24 h-24 border border-zinc-400/20 rotate-45"
+            animate={{
+              scale: [1, 1.1, 1],
+              rotate: [45, 225, 405],
+            }}
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1
+            }}
+          />
+          
+          {/* Líneas de conexión animadas */}
+          <motion.div
+            className="absolute top-1/2 left-0 h-px bg-orange-400/30"
+            animate={{
+              width: ["0%", "100%", "0%"],
             }}
             transition={{
               duration: 4,
@@ -96,54 +128,44 @@ export default function IntroSection() {
               ease: "easeInOut"
             }}
           />
-          <motion.div
-            className="absolute bottom-1/3 right-1/3 w-24 h-24 bg-red-500/20 rounded-full blur-2xl"
-            animate={{
-              scale: [1, 1.3, 1],
-              opacity: [0.3, 0.5, 0.3],
-            }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 1
-            }}
-          />
-          
-          {/* Elementos de tren y señalización animados */}
-          <motion.div
-            className="absolute top-1/2 left-0 w-16 h-4 bg-orange-500/30 rounded-full"
-            animate={{
-              x: [0, window.innerWidth || 1200],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "linear"
-            }}
-          />
         </div>
 
         {/* Contenido Narrativo */}
-        <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
           <motion.div
-            className="mb-8"
+            className="mb-12"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <Train className="w-16 h-16 text-orange-400 mx-auto mb-6" />
+            <div className="relative inline-block">
+              <div className="w-20 h-20 bg-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-8">
+                <Train className="w-12 h-12 text-white" />
+              </div>
+              <motion.div
+                className="absolute -inset-2 border border-orange-400/30 rounded-3xl"
+                animate={{
+                  scale: [1, 1.1, 1],
+                  opacity: [0.3, 0.6, 0.3],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
+            </div>
           </motion.div>
 
           {/* Narrativa Secuencial */}
-          <div className="space-y-8 mb-12">
+          <div className="space-y-12 mb-16">
             {narrativeSteps.map((step, index) => (
               <motion.div
                 key={index}
-                className="text-2xl md:text-3xl lg:text-4xl font-bold leading-relaxed"
+                className="max-w-4xl mx-auto"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ 
-                  opacity: index <= currentNarrative ? 1 : 0.3,
+                  opacity: index <= currentNarrative ? 1 : 0.4,
                   y: index <= currentNarrative ? 0 : 20
                 }}
                 transition={{ 
@@ -151,7 +173,15 @@ export default function IntroSection() {
                   delay: index <= currentNarrative ? 0 : 0.5
                 }}
               >
-                <span className="text-white">{step}</span>
+                <div className={`p-8 rounded-2xl border ${
+                  index <= currentNarrative 
+                    ? 'bg-zinc-800/50 border-orange-400/30' 
+                    : 'bg-zinc-800/20 border-zinc-700/30'
+                } backdrop-blur-sm`}>
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-relaxed text-white">
+                    {step}
+                  </h3>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -160,19 +190,19 @@ export default function IntroSection() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ 
-              opacity: showTimeline ? 1 : 0,
-              scale: showTimeline ? 1 : 0.9
+              opacity: currentNarrative >= narrativeSteps.length - 1 ? 1 : 0,
+              scale: currentNarrative >= narrativeSteps.length - 1 ? 1 : 0.9
             }}
-            transition={{ duration: 0.6, delay: 0.5 }}
+            transition={{ duration: 0.8, delay: 1 }}
           >
             <motion.button
-              onClick={() => setShowTimeline(true)}
+              onClick={scrollToNext}
               className="inline-flex items-center gap-3 bg-orange-600 hover:bg-orange-500 text-white px-10 py-5 rounded-full font-bold text-xl transition-all duration-300 group shadow-2xl"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Eye className="w-6 h-6" />
-              Ver cómo funciona INVENOR
+              <BarChart3 className="w-6 h-6" />
+              Analizar la Oportunidad
               <ChevronRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
             </motion.button>
           </motion.div>
@@ -203,15 +233,15 @@ export default function IntroSection() {
           >
             <div className="inline-flex items-center px-4 py-2 bg-orange-600/20 border border-orange-600/30 rounded-full mb-6">
               <BarChart3 className="w-4 h-4 text-orange-400 mr-2" />
-              <span className="text-orange-300 font-medium text-sm">Historia de la Solución</span>
+              <span className="text-orange-300 font-medium text-sm">Proceso de Desarrollo</span>
             </div>
             
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              ¿Por qué Nació <span className="text-orange-400">INVENOR</span>?
+              Metodología de <span className="text-orange-400">Análisis</span>
             </h2>
             <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
-              Una línea de tiempo que muestra cómo identificamos el problema, 
-              analizamos la oportunidad y desarrollamos la solución que está transformando Chile.
+              Proceso sistemático de identificación, análisis y desarrollo de la solución 
+              tecnológica que transforma la gestión de cruces ferroviarios en Chile.
             </p>
           </motion.div>
 
@@ -243,9 +273,11 @@ export default function IntroSection() {
                 >
                   {/* Contenido */}
                   <div className={`flex-1 ${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
-                    <div className={`bg-zinc-800 rounded-2xl p-6 border border-zinc-700/50 ${step.bgColor} backdrop-blur-sm`}>
-                      <div className="flex items-center gap-3 mb-4">
-                        <span className="text-3xl">{step.emoji}</span>
+                    <div className={`bg-zinc-800 rounded-2xl p-6 border ${step.borderColor} ${step.bgColor} backdrop-blur-sm`}>
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className={`w-12 h-12 ${step.bgColor} rounded-xl flex items-center justify-center border ${step.borderColor}`}>
+                          <step.icon className={`w-6 h-6 ${step.color}`} />
+                        </div>
                         <h3 className={`text-2xl font-bold ${step.color}`}>
                           {step.title}
                         </h3>
