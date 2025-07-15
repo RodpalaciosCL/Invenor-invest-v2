@@ -28,6 +28,7 @@ import ScrollToTop from '../components/ScrollToTop';
 import NavigationBar from '../components/NavigationBar';
 import ProgressIndicator from '../components/ProgressIndicator';
 import SectionDivider from '../components/SectionDivider';
+import IntroSection from '../components/IntroSection';
 
 
 export default function Home() {
@@ -39,6 +40,10 @@ export default function Home() {
       <NavigationBar />
       <section id="hero" className="pt-24">
         <Hero />
+      </section>
+      
+      <section id="intro">
+        <IntroSection />
       </section>
       
       <section id="stats">
