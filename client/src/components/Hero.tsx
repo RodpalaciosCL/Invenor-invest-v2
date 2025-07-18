@@ -87,7 +87,7 @@ export default function Hero() {
         >
           <Zap className="w-5 h-5 text-orange-400 mr-3" />
           <span className="text-orange-300 font-semibold">
-            🚀 OPORTUNIDAD DE INVERSIÓN TIER 1
+            OPORTUNIDAD DE INVERSIÓN TIER 1
           </span>
         </motion.div>
 
