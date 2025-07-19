@@ -22,13 +22,13 @@ export default function StatsSection({ data }: StatsSectionProps) {
   const statsData = [
     {
       label: "ROI Proyectado",
-      value: 55,
+      value: 49,
       format: "%",
       icon: <TrendingUp className="w-8 h-8" />,
       color: "text-orange-400",
       bgColor: "bg-orange-400/10",
-      description: "Retorno de inversión garantizado en 24 meses",
-      trend: "+42% vs promedio industria"
+      description: "Retorno de inversión garantizado en 26 meses",
+      trend: "+29% vs promedio industria"
     },
     {
       label: "Eficiencia IA",
@@ -42,18 +42,18 @@ export default function StatsSection({ data }: StatsSectionProps) {
     },
     {
       label: "Retorno Total",
-      value: 3.1,
+      value: 3.053,
       format: "B",
       prefix: "$",
       icon: <DollarSign className="w-8 h-8" />,
       color: "text-orange-400",
       bgColor: "bg-orange-400/10",
-      description: "Valor proyectado a 10 años",
-      trend: "CLP $2.5 trillones"
+      description: "Valor proyectado a 26 meses",
+      trend: "CLP $3,053,200,000"
     },
     {
       label: "Payback Period",
-      value: 15,
+      value: 26,
       format: " meses",
       icon: <Target className="w-8 h-8" />,
       color: "text-orange-400",

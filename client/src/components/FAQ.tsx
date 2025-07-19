@@ -9,14 +9,14 @@ export default function FAQ() {
     {
       icon: <DollarSign className="w-5 h-5" />,
       category: "Inversión",
-      question: "¿Cuáles son las garantías del ROI del 55%?",
-      answer: "El ROI del 55% está respaldado por:\n\n• **Contratos firmados**: 12 municipios ya comprometidos con implementación\n• **Validación técnica**: Ferronor confirma eficiencia 95% vs 22% actual\n• **Data real**: Incrementos del 256% en recaudación ya validados\n• **Modelo B2G**: Contratos municipales de largo plazo (5-10 años)\n• **Payback 15 meses**: Recuperación de inversión garantizada\n\nNo es proyección, es resultado validado en implementaciones piloto."
+      question: "¿Cuáles son las garantías del ROI del 49%?",
+      answer: "El ROI del 49% está respaldado por:\n\n• **Contratos firmados**: 12 municipios ya comprometidos con implementación\n• **Validación técnica**: Ferronor confirma eficiencia 95% vs 8% actual\n• **Data real**: Incrementos del 256% en recaudación ya validados\n• **Modelo B2G**: Contratos municipales de largo plazo (5-10 años)\n• **Payback 26 meses**: Recuperación de inversión garantizada\n\nNo es proyección, es resultado validado en implementaciones piloto."
     },
     {
       icon: <Zap className="w-5 h-5" />,
       category: "Tecnología",
       question: "¿Cómo funciona la IA de detección y qué la hace tan precisa?",
-      answer: "CRUCES AI utiliza computer vision avanzada:\n\n• **Algoritmos propietarios**: ML especializado en reconocimiento de patentes\n• **Precisión 99.5%**: En detección de placas patentes\n• **95% eficiencia**: En clasificación de infracciones vs 22% métodos tradicionales\n• **24/7 operación**: Monitoreo continuo sin intervención humana\n• **Edge computing**: Procesamiento local para respuesta inmediata\n• **Validación Ferronor**: Empresa líder confirmó superioridad técnica\n\nTecnología probada en entorno ferroviario real chileno."
+      answer: "CRUCES AI utiliza computer vision avanzada:\n\n• **Algoritmos propietarios**: ML especializado en reconocimiento de patentes\n• **Precisión 99.5%**: En detección de placas patentes\n• **95% eficiencia**: En clasificación de infracciones vs 8% métodos tradicionales\n• **24/7 operación**: Monitoreo continuo sin intervención humana\n• **Edge computing**: Procesamiento local para respuesta inmediata\n• **Validación Ferronor**: Empresa líder confirmó superioridad técnica\n\nTecnología probada en entorno ferroviario real chileno."
     },
     {
       icon: <Target className="w-5 h-5" />,
@@ -28,7 +28,7 @@ export default function FAQ() {
       icon: <TrendingUp className="w-5 h-5" />,
       category: "Validación",
       question: "¿Qué evidencia concreta existe de que la solución funciona?",
-      answer: "Validación técnica y comercial completa:\n\n• **Ferronor**: Empresa ferroviaria líder validó técnicamente\n• **12 Municipios**: Contratos B2G confirmados (no LOIs, contratos reales)\n• **256% incremento**: Recaudación validada en terreno\n• **95% vs 22%**: Eficiencia comparada medida en implementaciones\n• **Payback 15 meses**: Confirmado en casos reales\n• **Data transparente**: Acceso a métricas reales de municipios\n\nNo es startup early-stage, es solución con tracción probada."
+      answer: "Validación técnica y comercial completa:\n\n• **Ferronor**: Empresa ferroviaria líder validó técnicamente\n• **12 Municipios**: Contratos B2G confirmados (no LOIs, contratos reales)\n• **256% incremento**: Recaudación validada en terreno\n• **95% vs 8%**: Eficiencia comparada medida en implementaciones\n• **Payback 26 meses**: Confirmado en casos reales\n• **Data transparente**: Acceso a métricas reales de municipios\n\nNo es startup early-stage, es solución con tracción probada."
     },
     {
       icon: <Shield className="w-5 h-5" />,

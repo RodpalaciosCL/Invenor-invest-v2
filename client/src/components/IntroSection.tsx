@@ -48,8 +48,8 @@ export default function IntroSection() {
       icon: <BarChart3 className="w-12 h-12" />,
       title: "Oportunidad de Inversión",
       subtitle: "ROI Validado y Escalable",
-      description: "12 contratos municipales firmados generan incrementos del 256% en recaudación, ofreciendo 55% ROI proyectado con payback 15 meses.",
-      metric: 55,
+      description: "12 contratos municipales firmados generan incrementos del 256% en recaudación, ofreciendo 49% ROI proyectado con payback 26 meses.",
+      metric: 49,
       metricLabel: "ROI Garantizado",
       color: "text-orange-400",
       bgColor: "bg-orange-400/10",
@@ -58,8 +58,8 @@ export default function IntroSection() {
   ];
 
   const investmentMetrics = [
-    { value: 3.1, label: "Retorno Total", unit: "B", prefix: "$" },
-    { value: 15, label: "Meses Payback", unit: "", prefix: "" },
+    { value: 3.053, label: "Retorno Total", unit: "B", prefix: "$" },
+    { value: 26, label: "Meses Payback", unit: "", prefix: "" },
     { value: 256, label: "Incremento", unit: "%", prefix: "+" },
     { value: 12, label: "Contratos B2G", unit: "", prefix: "" }
   ];

@@ -44,12 +44,12 @@ export default function ComparisonMatrix() {
         {
           name: "ROI Anual",
           tradicional: { value: "8%", status: "poor", detail: "Baja eficiencia limita recaudación" },
-          cruces: { value: "55%", status: "excellent", detail: "Alta eficiencia maximiza revenue municipal" }
+          cruces: { value: "49%", status: "excellent", detail: "Alta eficiencia maximiza revenue municipal" }
         },
         {
           name: "Payback Period",
           tradicional: { value: "36+ meses", status: "bad", detail: "Alto CAPEX inicial, baja eficiencia" },
-          cruces: { value: "15 meses", status: "excellent", detail: "Inversión recuperada rápidamente" }
+          cruces: { value: "26 meses", status: "excellent", detail: "Inversión recuperada rápidamente" }
         },
         {
           name: "Ahorro vs Baseline",

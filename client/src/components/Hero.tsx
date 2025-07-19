@@ -13,9 +13,9 @@ export default function Hero() {
   const [currentMetric, setCurrentMetric] = useState(0);
 
   const metrics = [
-    { value: "55%", label: "ROI Garantizado", sublabel: "En 24 meses" },
+    { value: "49%", label: "ROI Garantizado", sublabel: "En 26 meses" },
     { value: "95%", label: "Eficiencia IA", sublabel: "vs 8% actual" },
-    { value: "$3.1B", label: "Retorno Total", sublabel: "Proyectado" },
+    { value: "$3.053B", label: "Retorno Total", sublabel: "Proyectado" },
     { value: "256%", label: "Incremento", sublabel: "Recaudación" },
   ];
 

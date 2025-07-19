@@ -25,7 +25,7 @@ export default function DataRoomDashboard() {
 
   // Stress testing scenarios
   const stressScenarios = [
-    { scenario: "Base", roi: 55, van: 1301, probabilidad: 100, color: "#10B981" },
+    { scenario: "Base", roi: 49, van: 1301, probabilidad: 100, color: "#10B981" },
     { scenario: "Regulación Adversa", roi: 38, van: 920, probabilidad: 15, color: "#F59E0B" },
     { scenario: "Competencia Agresiva", roi: 42, van: 1050, probabilidad: 25, color: "#EF4444" },
     { scenario: "Recesión Económica", roi: 31, van: 740, probabilidad: 30, color: "#DC2626" }

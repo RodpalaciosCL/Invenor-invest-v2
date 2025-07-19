@@ -13,14 +13,14 @@ export default function InvestmentSimulator() {
     {
       icon: <TrendingUp className="w-8 h-8" />,
       label: "ROI Proyectado",
-      value: "55%",
+      value: "49%",
       subtitle: "Retorno anual esperado",
       color: "text-orange-400"
     },
     {
       icon: <Target className="w-8 h-8" />,
       label: "Payback Period",
-      value: "15 meses",
+      value: "26 meses",
       subtitle: "Recuperación de inversión",
       color: "text-orange-400"
     },

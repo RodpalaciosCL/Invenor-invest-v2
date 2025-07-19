@@ -115,12 +115,12 @@ export default function InvestmentOpportunity() {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6">
                   <div className="border-l-4 border-orange-600 pl-6">
-                    <h4 className="text-xl font-bold text-orange-400 mb-2">$2.067 Billones</h4>
+                    <h4 className="text-xl font-bold text-orange-400 mb-2">$2.053 Billones</h4>
                     <p className="text-zinc-300">Inversión inicial total requerida</p>
                   </div>
                   <div className="border-l-4 border-orange-600 pl-6">
-                    <h4 className="text-xl font-bold text-orange-400 mb-2">$3.096 Billones</h4>
-                    <p className="text-zinc-300">Retorno total proyectado 24 meses</p>
+                    <h4 className="text-xl font-bold text-orange-400 mb-2">$3.053 Billones</h4>
+                    <p className="text-zinc-300">Retorno total proyectado 26 meses</p>
                   </div>
                   <div className="border-l-4 border-orange-600 pl-6">
                     <h4 className="text-xl font-bold text-orange-400 mb-2">$21.794 Billones</h4>
@@ -130,9 +130,9 @@ export default function InvestmentOpportunity() {
 
                 <div className="relative">
                   <div className="bg-black/30 rounded-2xl p-12 text-center border border-orange-600/30">
-                    <div className="text-6xl font-black text-orange-400 mb-4">55%</div>
+                    <div className="text-6xl font-black text-orange-400 mb-4">49%</div>
                     <div className="text-2xl font-bold text-white mb-2">ROI</div>
-                    <div className="text-orange-400 font-medium">En 24 meses</div>
+                    <div className="text-orange-400 font-medium">En 26 meses</div>
                   </div>
                 </div>
               </div>

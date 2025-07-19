@@ -53,7 +53,7 @@ export function loadProjectData() {
     },
     {
       titulo: "Incremento Recaudación",
-      descripcion: "Hasta 256% más multas. Retorno 55% ROI en 24 meses para municipalidades.",
+      descripcion: "Hasta 256% más multas. Retorno 49% ROI en 26 meses para municipalidades.",
       icono: "money"
     },
     {
@@ -79,23 +79,23 @@ export function loadProjectData() {
   ];
 
   const indicadoresData: Indicador[] = [
-    { label: "Inversión Inicial", value: 2067.6, formato: "M$" },
-    { label: "Retorno Total", value: 3096.2, formato: "M$" },
-    { label: "ROI", value: 55, formato: "%" },
-    { label: "IRR Anual", value: 42, formato: "%" },
-    { label: "Payback", value: 15, formato: "meses" },
+    { label: "Inversión Inicial", value: 2053.2, formato: "M$" },
+    { label: "Retorno Total", value: 3053.2, formato: "M$" },
+    { label: "ROI", value: 49, formato: "%" },
+    { label: "IRR Anual", value: 20.1, formato: "%" },
+    { label: "Payback", value: 26, formato: "meses" },
     { label: "Cruces Año 3", value: 60, formato: "unidades" },
     { label: "Comunas Objetivo", value: 12, formato: "regiones" },
     { label: "Eficiencia IA", value: 95, formato: "%" }
   ];
 
   const metricasFinancieras: MetricasFinancieras = {
-    inversionInicial: 2067600000,
-    retornoTotal: 3096177500,
-    gananciaNeta: 1136193777,
-    roi: 0.55,
-    irrAnual: 0.42,
-    paybackMeses: 15,
+    inversionInicial: 2053200000,
+    retornoTotal: 3053200000,
+    gananciaNeta: 1000000000,
+    roi: 0.49,
+    irrAnual: 0.201,
+    paybackMeses: 26,
     margenProfit: 0.49
   };
 
