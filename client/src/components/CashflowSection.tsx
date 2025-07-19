@@ -2,41 +2,44 @@ import React from 'react';
 import { TrendingUp, Calendar, DollarSign, BarChart3 } from 'lucide-react';
 
 const CashflowSection = () => {
-  // Datos del cashflow basados en el Excel V5 - Flow Detail (24 meses)
+  // Datos del cashflow basados directamente en Excel V5 - Hoja Cashflow
   const monthlyData = [
-    { month: 'Ene 24', ingresos: 0, gastos: -180, neto: -180, acumulado: -180 },
-    { month: 'Feb 24', ingresos: 0, gastos: -180, neto: -180, acumulado: -360 },
-    { month: 'Mar 24', ingresos: 0, gastos: -200, neto: -200, acumulado: -560 },
-    { month: 'Abr 24', ingresos: 0, gastos: -200, neto: -200, acumulado: -760 },
-    { month: 'May 24', ingresos: 0, gastos: -220, neto: -220, acumulado: -980 },
-    { month: 'Jun 24', ingresos: 150, gastos: -220, neto: -70, acumulado: -1050 },
-    { month: 'Jul 24', ingresos: 300, gastos: -240, neto: 60, acumulado: -990 },
-    { month: 'Ago 24', ingresos: 450, gastos: -240, neto: 210, acumulado: -780 },
-    { month: 'Sep 24', ingresos: 600, gastos: -260, neto: 340, acumulado: -440 },
-    { month: 'Oct 24', ingresos: 750, gastos: -260, neto: 490, acumulado: 50 },
-    { month: 'Nov 24', ingresos: 900, gastos: -280, neto: 620, acumulado: 670 },
-    { month: 'Dic 24', ingresos: 1050, gastos: -280, neto: 770, acumulado: 1440 },
-    { month: 'Ene 25', ingresos: 1200, gastos: -300, neto: 900, acumulado: 2340 },
-    { month: 'Feb 25', ingresos: 1350, gastos: -300, neto: 1050, acumulado: 3390 },
-    { month: 'Mar 25', ingresos: 1500, gastos: -320, neto: 1180, acumulado: 4570 },
-    { month: 'Abr 25', ingresos: 1650, gastos: -320, neto: 1330, acumulado: 5900 },
-    { month: 'May 25', ingresos: 1800, gastos: -340, neto: 1460, acumulado: 7360 },
-    { month: 'Jun 25', ingresos: 1950, gastos: -340, neto: 1610, acumulado: 8970 },
-    { month: 'Jul 25', ingresos: 2100, gastos: -360, neto: 1740, acumulado: 10710 },
-    { month: 'Ago 25', ingresos: 2250, gastos: -360, neto: 1890, acumulado: 12600 },
-    { month: 'Sep 25', ingresos: 2400, gastos: -380, neto: 2020, acumulado: 14620 },
-    { month: 'Oct 25', ingresos: 2550, gastos: -380, neto: 2170, acumulado: 16790 },
-    { month: 'Nov 25', ingresos: 2700, gastos: -400, neto: 2300, acumulado: 19090 },
-    { month: 'Dic 25', ingresos: 2850, gastos: -400, neto: 2450, acumulado: 21540 }
+    { month: 'Mes 1', ingresos: 0, gastos: -406.1, neto: -406.1, acumulado: -406.1, pagoInv: 0 },
+    { month: 'Mes 2', ingresos: 0, gastos: -406.1, neto: -406.1, acumulado: -812.2, pagoInv: 0 },
+    { month: 'Mes 3', ingresos: 0, gastos: -124.1, neto: -124.1, acumulado: -936.3, pagoInv: 0 },
+    { month: 'Mes 4', ingresos: 0, gastos: -124.1, neto: -124.1, acumulado: -1060.4, pagoInv: 0 },
+    { month: 'Mes 5', ingresos: 0, gastos: -124.1, neto: -124.1, acumulado: -1184.5, pagoInv: 0 },
+    { month: 'Mes 6', ingresos: 48.4, gastos: -124.1, neto: -75.7, acumulado: -1260.2, pagoInv: 0 },
+    { month: 'Mes 7', ingresos: 48.4, gastos: -124.1, neto: -75.7, acumulado: -1335.9, pagoInv: 0 },
+    { month: 'Mes 8', ingresos: 48.4, gastos: -124.1, neto: -75.7, acumulado: -1411.6, pagoInv: 0 },
+    { month: 'Mes 9', ingresos: 96.9, gastos: -124.1, neto: -27.2, acumulado: -1468.8, pagoInv: 30 },
+    { month: 'Mes 10', ingresos: 96.9, gastos: -124.1, neto: -27.2, acumulado: -1526.0, pagoInv: 30 },
+    { month: 'Mes 11', ingresos: 96.9, gastos: -124.1, neto: -27.2, acumulado: -1583.2, pagoInv: 30 },
+    { month: 'Mes 12', ingresos: 96.9, gastos: -124.1, neto: -27.2, acumulado: -1640.4, pagoInv: 30 },
+    { month: 'Mes 13', ingresos: 290.6, gastos: -124.1, neto: 166.5, acumulado: -1554.0, pagoInv: 80 },
+    { month: 'Mes 14', ingresos: 290.6, gastos: -124.1, neto: 166.5, acumulado: -1467.5, pagoInv: 80 },
+    { month: 'Mes 15', ingresos: 290.6, gastos: -124.1, neto: 166.5, acumulado: -1381.0, pagoInv: 80 },
+    { month: 'Mes 16', ingresos: 290.6, gastos: -124.1, neto: 166.5, acumulado: -1294.5, pagoInv: 80 },
+    { month: 'Mes 17', ingresos: 290.6, gastos: -124.1, neto: 166.5, acumulado: -1218.0, pagoInv: 90 },
+    { month: 'Mes 18', ingresos: 290.6, gastos: -124.1, neto: 166.5, acumulado: -1141.5, pagoInv: 90 },
+    { month: 'Mes 19', ingresos: 290.6, gastos: -124.1, neto: 166.5, acumulado: -1065.0, pagoInv: 90 },
+    { month: 'Mes 20', ingresos: 290.6, gastos: -124.1, neto: 166.5, acumulado: -988.5, pagoInv: 90 },
+    { month: 'Mes 21', ingresos: 508.5, gastos: -124.1, neto: 384.4, acumulado: -904.1, pagoInv: 300 },
+    { month: 'Mes 22', ingresos: 508.5, gastos: -124.1, neto: 384.4, acumulado: -819.6, pagoInv: 300 },
+    { month: 'Mes 23', ingresos: 508.5, gastos: -124.1, neto: 384.4, acumulado: -735.2, pagoInv: 300 },
+    { month: 'Mes 24', ingresos: 508.5, gastos: -124.1, neto: 384.4, acumulado: -704.0, pagoInv: 353.2 },
+    { month: 'Mes 25', ingresos: 0, gastos: 0, neto: 0, acumulado: -704.0, pagoInv: 0 },
+    { month: 'Mes 26', ingresos: 0, gastos: 0, neto: 0, acumulado: -704.0, pagoInv: 1000 }
   ];
 
-  // Métricas clave del primer año
+  // Métricas clave del proyecto (según Excel V5 - datos reales)
   const firstYearMetrics = {
-    totalIngresos: 9000,
-    totalGastos: -2940,
-    netoAnual: 6060,
-    breakEven: 10, // mes 10 (Octubre 2024)
-    roiAnual: 206
+    totalIngresos: 3053.2, // Total pago inversionista
+    totalGastos: -2053.2, // Inversión inicial
+    netoAnual: 1000, // Ganancia neta inversionista
+    breakEven: 13, // mes 13 - primer flujo positivo
+    roiAnual: 49, // ROI real del proyecto
+    paybackInversionista: 26 // mes 26 - pago final al inversionista
   };
 
   const formatCurrency = (value: number) => {
@@ -59,8 +62,8 @@ const CashflowSection = () => {
             Cashflow Proyectado 24 Meses
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Análisis mes a mes del flujo de caja proyectado, mostrando el camino hacia la rentabilidad 
-            y el punto de equilibrio en el mes 10.
+            Análisis mes a mes del flujo de caja proyectado según Excel V5, mostrando el primer flujo positivo 
+            en el mes 13 y pago final al inversionista en mes 26.
           </p>
         </div>
 
@@ -72,7 +75,7 @@ const CashflowSection = () => {
               <span className="text-slate-400 text-sm font-medium">Break Even</span>
             </div>
             <div className="text-2xl font-bold text-white">Mes {firstYearMetrics.breakEven}</div>
-            <div className="text-sm text-emerald-400">Octubre 2024</div>
+            <div className="text-sm text-emerald-400">Primer flujo positivo</div>
           </div>
 
           <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6">
@@ -81,7 +84,7 @@ const CashflowSection = () => {
               <span className="text-slate-400 text-sm font-medium">Ingresos Año 1</span>
             </div>
             <div className="text-2xl font-bold text-white">{formatCurrency(firstYearMetrics.totalIngresos * 1000)}</div>
-            <div className="text-sm text-blue-400">+206% ROI</div>
+            <div className="text-sm text-blue-400">+{firstYearMetrics.roiAnual}% ROI</div>
           </div>
 
           <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6">
@@ -90,7 +93,7 @@ const CashflowSection = () => {
               <span className="text-slate-400 text-sm font-medium">Flujo Neto Año 1</span>
             </div>
             <div className="text-2xl font-bold text-white">{formatCurrency(firstYearMetrics.netoAnual * 1000)}</div>
-            <div className="text-sm text-purple-400">67% Margen Neto</div>
+            <div className="text-sm text-purple-400">70% Margen Neto</div>
           </div>
 
           <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6">
@@ -98,8 +101,8 @@ const CashflowSection = () => {
               <Calendar className="w-5 h-5 text-orange-400" />
               <span className="text-slate-400 text-sm font-medium">Payback Period</span>
             </div>
-            <div className="text-2xl font-bold text-white">10 meses</div>
-            <div className="text-sm text-orange-400">Recuperación rápida</div>
+            <div className="text-2xl font-bold text-white">{firstYearMetrics.paybackInversionista} meses</div>
+            <div className="text-sm text-orange-400">Pago total inversionista</div>
           </div>
         </div>
 

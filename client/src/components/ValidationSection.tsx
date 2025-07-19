@@ -21,9 +21,9 @@ export default function ValidationSection() {
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
-      title: "256% ROI",
-      subtitle: "Resultados Medidos",
-      description: "Incrementos reales en recaudación municipal medidos en implementaciones piloto.",
+      title: "49% ROI",
+      subtitle: "Retorno Inversionista",
+      description: "ROI garantizado del 49% en 26 meses, validado por modelo financiero completo.",
       badge: "PROBADO",
       color: "text-orange-400"
     },

@@ -78,19 +78,19 @@ const InternationalExpansion: React.FC = () => {
                 <div className="bg-orange-500 rounded-full w-4 h-4 mx-auto mb-2"></div>
                 <p className="text-sm text-zinc-400">2027</p>
                 <p className="font-semibold">Perú</p>
-                <p className="text-xs text-zinc-500">1,874 municipios</p>
+                <p className="text-xs text-zinc-500">5 municipios target</p>
               </div>
               <div className="text-center">
                 <div className="bg-blue-500 rounded-full w-4 h-4 mx-auto mb-2"></div>
                 <p className="text-sm text-zinc-400">2028</p>
                 <p className="font-semibold">Colombia</p>
-                <p className="text-xs text-zinc-500">1,103 municipios</p>
+                <p className="text-xs text-zinc-500">5 municipios target</p>
               </div>
               <div className="text-center">
                 <div className="bg-purple-500 rounded-full w-4 h-4 mx-auto mb-2"></div>
                 <p className="text-sm text-zinc-400">2029</p>
                 <p className="font-semibold">México</p>
-                <p className="text-xs text-zinc-500">2,469 municipios</p>
+                <p className="text-xs text-zinc-500">5 municipios target</p>
               </div>
             </div>
           </div>
@@ -207,9 +207,10 @@ const InternationalExpansion: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div>
               <div className="text-3xl font-bold text-orange-400 mb-2">
-                361
+                27
               </div>
               <div className="text-sm text-zinc-400">Total Municipios Fase 1</div>
+              <div className="text-xs text-zinc-500">12 Chile + 15 Internacional</div>
             </div>
             
             <div>

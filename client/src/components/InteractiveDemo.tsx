@@ -15,7 +15,7 @@ export default function InteractiveDemo() {
         setDetectedVehicles(prev => prev + Math.floor(Math.random() * 3) + 1);
         if (Math.random() > 0.7) { // 30% violation rate
           setViolations(prev => prev + 1);
-          setRevenue(prev => prev + 80000); // $80k per violation
+          setRevenue(prev => prev + 100900); // $100,900 per violation
         }
       }, 1500);
       return () => clearInterval(interval);

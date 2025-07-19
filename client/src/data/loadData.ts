@@ -105,9 +105,9 @@ export function loadProjectData() {
     },
     { 
       comuna: "La Calera", 
-      total: 750, 
+      total: 1500, 
       region: "Valparaíso", 
-      incrementoMultas: 0.75,
+      incrementoMultas: 1.5,
       ingresosActuales: 15906216000,
       recaudacionMultas: 333379000,
       aporteProyecto: 250000000
@@ -152,7 +152,7 @@ export function loadProjectData() {
       comuna: "La Serena", 
       total: 140, 
       region: "Coquimbo", 
-      incrementoMultas: 0.14,
+      incrementoMultas: 0.28,
       ingresosActuales: 108770618000,
       recaudacionMultas: 1770788000,
       aporteProyecto: 250000000
@@ -161,7 +161,7 @@ export function loadProjectData() {
       comuna: "Coquimbo", 
       total: 110, 
       region: "Coquimbo", 
-      incrementoMultas: 0.11,
+      incrementoMultas: 0.22,
       ingresosActuales: 90283274000,
       recaudacionMultas: 2281154000,
       aporteProyecto: 250000000
@@ -171,7 +171,7 @@ export function loadProjectData() {
       total: 80, 
       region: "Tarapacá", 
       incrementoMultas: 0.08,
-      ingresosActuales: 104723522000,
+      ingresosActuales: 100472352000,
       recaudacionMultas: 3165279000,
       aporteProyecto: 250000000
     }

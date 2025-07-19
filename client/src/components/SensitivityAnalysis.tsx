@@ -3,18 +3,18 @@ import { useState } from "react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar } from "recharts";
 
 export default function SensitivityAnalysis() {
-  const [activeScenario, setActiveScenario] = useState("optimista");
+  const [activeScenario, setActiveScenario] = useState("base");
 
   const scenarios = {
     conservador: {
       name: "Conservador",
       color: "#3b82f6", // blue
-      description: "Crecimiento moderado con menor riesgo",
+      description: "Escenario conservador (-20% rendimiento)",
       metrics: {
-        roi: "18%",
-        payback: "4.2 años",
-        irr: "22%",
-        van: "$2.1M"
+        roi: "39%",
+        payback: "26 meses",
+        irr: "20.1%",
+        van: "$2,053M"
       },
       data: [
         { año: 2024, valor: 100, flujo: 85 },
@@ -25,15 +25,15 @@ export default function SensitivityAnalysis() {
         { año: 2029, valor: 229, flujo: 199 }
       ]
     },
-    optimista: {
-      name: "Optimista",
-      color: "#10b981", // emerald
-      description: "Crecimiento acelerado con mayor potencial",
+    base: {
+      name: "Base",
+      color: "#f97316", // orange
+      description: "Escenario base (rendimiento esperado)",
       metrics: {
-        roi: "28%",
-        payback: "3.1 años",
-        irr: "35%",
-        van: "$4.2M"
+        roi: "49%",
+        payback: "26 meses",
+        irr: "20.1%",
+        van: "$3,053M"
       },
       data: [
         { año: 2024, valor: 100, flujo: 90 },
