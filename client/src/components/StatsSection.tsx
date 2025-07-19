@@ -43,13 +43,13 @@ export default function StatsSection({ data }: StatsSectionProps) {
     {
       label: "Retorno Total",
       value: 3053,
-      format: "K",
+      format: "MM",
       prefix: "$",
       icon: <DollarSign className="w-8 h-8" />,
       color: "text-orange-400",
       bgColor: "bg-orange-400/10",
       description: "Retorno total proyectado 26 meses",
-      trend: "USD $3,053,000"
+      trend: "USD $3,053,000,000"
     },
     {
       label: "Payback Period",
