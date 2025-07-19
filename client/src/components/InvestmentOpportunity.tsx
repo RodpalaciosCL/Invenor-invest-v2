@@ -116,15 +116,15 @@ export default function InvestmentOpportunity() {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6">
                   <div className="border-l-4 border-orange-600 pl-6">
-                    <h4 className="text-xl font-bold text-orange-400 mb-2">$2,053MM</h4>
+                    <h4 className="text-xl font-bold text-orange-400 mb-2">$2,053,200,000</h4>
                     <p className="text-zinc-300">Inversión inicial total requerida</p>
                   </div>
                   <div className="border-l-4 border-orange-600 pl-6">
-                    <h4 className="text-xl font-bold text-orange-400 mb-2">$3,053MM</h4>
+                    <h4 className="text-xl font-bold text-orange-400 mb-2">$3,053,200,000</h4>
                     <p className="text-zinc-300">Retorno total proyectado 26 meses</p>
                   </div>
                   <div className="border-l-4 border-orange-600 pl-6">
-                    <h4 className="text-xl font-bold text-orange-400 mb-2">$20,341MM</h4>
+                    <h4 className="text-xl font-bold text-orange-400 mb-2">$20,341,440,000</h4>
                     <p className="text-zinc-300">Ventas anuales año 3 (70 cruces)</p>
                   </div>
                 </div>
@@ -259,16 +259,16 @@ export default function InvestmentOpportunity() {
               <div className="space-y-6">
                 <div className="grid md:grid-cols-3 gap-6 text-center">
                   <div className="bg-zinc-800 p-6 rounded-lg">
-                    <div className="text-3xl font-bold text-orange-400 mb-2">15</div>
+                    <div className="text-3xl font-bold text-orange-400 mb-2">26</div>
                     <div className="text-zinc-300">meses payback</div>
                   </div>
                   <div className="bg-zinc-800 p-6 rounded-lg">
-                    <div className="text-3xl font-bold text-green-400 mb-2">42%</div>
+                    <div className="text-3xl font-bold text-green-400 mb-2">20.1%</div>
                     <div className="text-zinc-300">IRR anual</div>
                   </div>
                   <div className="bg-zinc-800 p-6 rounded-lg">
-                    <div className="text-3xl font-bold text-blue-400 mb-2">93.1%</div>
-                    <div className="text-zinc-300">Margen EBITDA</div>
+                    <div className="text-3xl font-bold text-blue-400 mb-2">70%</div>
+                    <div className="text-zinc-300">Margen Operativo</div>
                   </div>
                 </div>
 
@@ -276,15 +276,15 @@ export default function InvestmentOpportunity() {
                   <h4 className="text-xl font-bold text-white mb-4">Análisis de Sensibilidad</h4>
                   <div className="grid md:grid-cols-3 gap-4">
                     <div className="text-center p-4 bg-yellow-600/20 rounded-lg">
-                      <div className="text-xl font-bold text-yellow-400">34%</div>
+                      <div className="text-xl font-bold text-yellow-400">39%</div>
                       <div className="text-zinc-300 text-sm">Conservador (-20%)</div>
                     </div>
                     <div className="text-center p-4 bg-orange-600/20 rounded-lg border-2 border-orange-600">
-                      <div className="text-xl font-bold text-orange-400">42%</div>
+                      <div className="text-xl font-bold text-orange-400">49%</div>
                       <div className="text-zinc-300 text-sm">Base (actual)</div>
                     </div>
                     <div className="text-center p-4 bg-green-600/20 rounded-lg">
-                      <div className="text-xl font-bold text-green-400">49%</div>
+                      <div className="text-xl font-bold text-green-400">59%</div>
                       <div className="text-zinc-300 text-sm">Optimista (+20%)</div>
                     </div>
                   </div>

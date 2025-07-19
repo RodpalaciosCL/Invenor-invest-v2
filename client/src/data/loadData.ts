@@ -178,13 +178,13 @@ export function loadProjectData() {
   ];
 
   const indicadoresData: Indicador[] = [
-    { label: "Inversión Inicial", value: 2053.2, formato: "M$" },
-    { label: "Retorno Total", value: 3053.2, formato: "M$" },
+    { label: "Inversión Inicial", value: 2053, formato: "MM" },
+    { label: "Retorno Total", value: 3053, formato: "MM" },
     { label: "ROI", value: 49, formato: "%" },
     { label: "IRR Anual", value: 20.1, formato: "%" },
     { label: "Payback", value: 26, formato: "meses" },
     { label: "Cruces Año 3", value: 70, formato: "unidades" },
-    { label: "Valor Multa", value: 100.9, formato: "K$" },
+    { label: "Valor Multa", value: 100900, formato: "CLP" },
     { label: "Margen Operativo", value: 70, formato: "%" },
     { label: "Infracciones/día", value: 8, formato: "por cruce" },
     { label: "Eficiencia IA", value: 95, formato: "%" }
@@ -194,10 +194,10 @@ export function loadProjectData() {
     inversionInicial: 2053200000,
     retornoTotal: 3053200000,
     gananciaNeta: 1000000000,
-    roi: 0.487,
+    roi: 0.49,
     irrAnual: 0.201,
     paybackMeses: 26,
-    margenProfit: 0.696
+    margenProfit: 0.70
   };
 
   const proyeccionesAnuales: ProyeccionAnual[] = [
