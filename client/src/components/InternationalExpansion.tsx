@@ -5,35 +5,41 @@ const InternationalExpansion: React.FC = () => {
     {
       name: 'Perú',
       flag: '🇵🇪',
-      municipalities: 1874,
+      municipalities: 5,
+      totalMunicipalities: 1874,
       population: '33M',
       targetYear: 2027,
       phase: 'Fase 2',
       marketSize: '2,100',
       potentialRevenue: '420',
-      status: 'En preparación'
+      status: 'En preparación',
+      targetCities: ['Miraflores', 'San Isidro', 'Surco', 'San Borja', 'La Victoria']
     },
     {
       name: 'Colombia',
       flag: '🇨🇴',
-      municipalities: 1103,
+      municipalities: 5,
+      totalMunicipalities: 1103,
       population: '51M',
       targetYear: 2028,
       phase: 'Fase 3',
       marketSize: '3,200',
       potentialRevenue: '640',
-      status: 'Análisis inicial'
+      status: 'Análisis inicial',
+      targetCities: ['Chapinero', 'Usaquén', 'Kennedy', 'Suba', 'Engativá']
     },
     {
       name: 'México',
       flag: '🇲🇽',
-      municipalities: 2469,
+      municipalities: 5,
+      totalMunicipalities: 2469,
       population: '128M',
       targetYear: 2029,
       phase: 'Fase 4',
       marketSize: '8,100',
       potentialRevenue: '1,620',
-      status: 'Evaluación'
+      status: 'Evaluación',
+      targetCities: ['Benito Juárez', 'Miguel Hidalgo', 'Cuauhtémoc', 'Iztapalapa', 'Naucalpan']
     }
   ];
 
@@ -104,8 +110,19 @@ const InternationalExpansion: React.FC = () => {
 
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
-                  <span className="text-zinc-400">Municipios:</span>
-                  <span className="font-bold text-orange-400">{country.municipalities.toLocaleString()}</span>
+                  <span className="text-zinc-400">Municipios fase inicial:</span>
+                  <span className="font-bold text-orange-400">{country.municipalities}</span>
+                </div>
+                
+                <div className="mb-4">
+                  <span className="text-zinc-400 text-sm block mb-2">Ciudades objetivo:</span>
+                  <div className="flex flex-wrap gap-1">
+                    {country.targetCities.map((city, i) => (
+                      <span key={i} className="bg-zinc-700 text-xs px-2 py-1 rounded text-zinc-300">
+                        {city}
+                      </span>
+                    ))}
+                  </div>
                 </div>
                 
                 <div className="flex justify-between items-center">
@@ -190,9 +207,9 @@ const InternationalExpansion: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div>
               <div className="text-3xl font-bold text-orange-400 mb-2">
-                {(346 + countries.reduce((sum, c) => sum + c.municipalities, 0)).toLocaleString()}
+                361
               </div>
-              <div className="text-sm text-zinc-400">Total Municipios</div>
+              <div className="text-sm text-zinc-400">Total Municipios Fase 1</div>
             </div>
             
             <div>

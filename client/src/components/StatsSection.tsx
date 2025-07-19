@@ -41,15 +41,15 @@ export default function StatsSection({ data }: StatsSectionProps) {
       trend: "vs 49% proyección inicial"
     },
     {
-      label: "Ganancia Neta",
-      value: 1000,
+      label: "Retorno Total",
+      value: 3053,
       format: "MM",
       prefix: "$",
       icon: <DollarSign className="w-8 h-8" />,
       color: "text-orange-400",
       bgColor: "bg-orange-400/10",
-      description: "Mil millones de pesos de ganancia",
-      trend: "CLP $1,000,000,000"
+      description: "Retorno total proyectado 26 meses",
+      trend: "CLP $3,053,200,000"
     },
     {
       label: "Payback Period",
