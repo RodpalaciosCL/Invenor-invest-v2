@@ -1,324 +1,256 @@
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
-import { AlertTriangle, Camera, Brain, TrendingUp, ChevronRight, Train, Shield, Zap } from "lucide-react";
+import { useState } from "react";
+import { TrendingUp, Shield, Target, DollarSign, AlertTriangle, Zap, Eye, BarChart3, ArrowRight, CheckCircle } from "lucide-react";
+import CountUp from "react-countup";
 
 export default function IntroSection() {
-  const [currentStep, setCurrentStep] = useState(0);
-  const [autoPlay, setAutoPlay] = useState(true);
+  const [selectedPoint, setSelectedPoint] = useState(0);
 
-  const steps = [
+  const keyPoints = [
     {
-      id: "problema",
-      title: "El Problema",
-      subtitle: "Crisis en Cruces Ferroviarios",
-      description: "Más de 1.500 cruces ferroviarios sin control en Chile. Cada uno, una posible tragedia. Las multas no se cursan. Los accidentes aumentan.",
-      icon: AlertTriangle,
+      id: 0,
+      icon: <AlertTriangle className="w-12 h-12" />,
+      title: "Crisis de Seguridad",
+      subtitle: "Infraestructura Ferroviaria Vulnerable",
+      description: "1.500 cruces ferroviarios operan sin monitoreo tecnológico en Chile, creando un vacío crítico de seguridad y oportunidades de recaudación perdidas.",
+      metric: 1500,
+      metricLabel: "Cruces sin Control",
       color: "text-red-400",
       bgColor: "bg-red-400/10",
-      stats: "1.500+ cruces desprotegidos"
+      borderColor: "border-red-400/30"
     },
     {
-      id: "vacio",
-      title: "El Vacío de Fiscalización",
-      subtitle: "Sin Capacidad de Control",
-      description: "Las municipalidades no tienen capacidad técnica para vigilar estos puntos críticos. El Estado no llega. La tecnología actual es insuficiente.",
-      icon: Shield,
-      color: "text-yellow-400",
-      bgColor: "bg-yellow-400/10",
-      stats: "0% fiscalización efectiva"
-    },
-    {
-      id: "solucion",
-      title: "La Solución Tecnológica",
-      subtitle: "IA + Visión Computacional",
-      description: "Cámaras inteligentes detectan infracciones 24/7. La data es procesada por IA y enviada a un centro de control. Todo en segundos, sin intervención humana.",
-      icon: Brain,
+      id: 1,
+      icon: <Eye className="w-12 h-12" />,
+      title: "Ineficiencia Sistémica",
+      subtitle: "Métodos Tradicionales Limitados",
+      description: "Sistemas actuales alcanzan solo 8% de efectividad en detección, mientras infracciones no detectadas representan pérdidas millonarias anuales.",
+      metric: 8,
+      metricLabel: "Efectividad Actual",
       color: "text-orange-400",
       bgColor: "bg-orange-400/10",
-      stats: "95% precisión IA"
+      borderColor: "border-orange-400/30"
     },
     {
-      id: "impacto",
-      title: "El Modelo de Impacto",
-      subtitle: "Inversión con Propósito",
-      description: "Las multas generadas financian el sistema, entregan ingresos recurrentes a municipalidades y retornos sostenibles a inversionistas. Un modelo ganar-ganar-ganar.",
-      icon: TrendingUp,
+      id: 2,
+      icon: <Zap className="w-12 h-12" />,
+      title: "Solución Revolucionaria",
+      subtitle: "Inteligencia Artificial Validada",
+      description: "CRUCES AI integra visión computacional avanzada alcanzando 95% de precisión en detección automática con evidencia legal trazable.",
+      metric: 95,
+      metricLabel: "Precisión IA",
       color: "text-green-400",
       bgColor: "bg-green-400/10",
-      stats: "55% ROI proyectado"
+      borderColor: "border-green-400/30"
+    },
+    {
+      id: 3,
+      icon: <BarChart3 className="w-12 h-12" />,
+      title: "Oportunidad de Inversión",
+      subtitle: "ROI Validado y Escalable",
+      description: "12 contratos municipales firmados generan incrementos del 256% en recaudación, ofreciendo 49% ROI proyectado con payback 26 meses.",
+      metric: 49,
+      metricLabel: "ROI Garantizado",
+      color: "text-orange-400",
+      bgColor: "bg-orange-400/10",
+      borderColor: "border-orange-400/30"
     }
   ];
 
-  useEffect(() => {
-    if (!autoPlay) return;
-    
-    const interval = setInterval(() => {
-      setCurrentStep((prev) => (prev + 1) % steps.length);
-    }, 5000);
-    
-    return () => clearInterval(interval);
-  }, [autoPlay, steps.length]);
-
-  const scrollToMetrics = () => {
-    document.getElementById('stats')?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const investmentMetrics = [
+    { value: 3.053, label: "Retorno Total", unit: "B", prefix: "$" },
+    { value: 26, label: "Meses Payback", unit: "", prefix: "" },
+    { value: 256, label: "Incremento", unit: "%", prefix: "+" },
+    { value: 12, label: "Contratos B2G", unit: "", prefix: "" }
+  ];
 
   return (
     <section className="py-20 bg-zinc-900 relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0">
-        <motion.div
-          className="absolute top-0 right-0 w-96 h-96 bg-orange-600/5 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-      </div>
+      <div className="absolute inset-0 bg-gradient-to-br from-orange-900/5 to-transparent"></div>
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-600/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-orange-600/5 rounded-full blur-3xl"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 relative">
         {/* Header */}
         <motion.div
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            De la Crisis a la <span className="text-orange-400">Oportunidad</span>
-          </h2>
-          <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
-            Descubre cómo INVENOR transforma un problema nacional en una inversión con impacto social y retorno financiero validado
-          </p>
+          <motion.h2 
+            className="text-5xl font-bold text-white mb-6 leading-tight"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            Oportunidad de Inversión
+            <span className="text-orange-400 block mt-2">Tecnológica Validada</span>
+          </motion.h2>
+          <motion.p 
+            className="text-xl text-zinc-400 max-w-4xl mx-auto leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            Transformando la crisis de seguridad ferroviaria en flujos de ingresos recurrentes 
+            con tecnología IA validada por Ferronor y 12 municipios confirmados
+          </motion.p>
         </motion.div>
 
-        {/* Story Timeline */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          {/* Navigation Steps */}
-          <div className="space-y-6">
-            {steps.map((step, index) => {
-              const Icon = step.icon;
-              const isActive = index === currentStep;
-              
-              return (
-                <motion.div
-                  key={step.id}
-                  className={`relative p-6 rounded-2xl border cursor-pointer transition-all duration-500 ${
-                    isActive 
-                      ? 'bg-zinc-800 border-orange-400/50 shadow-2xl' 
-                      : 'bg-zinc-800/30 border-zinc-700/50 hover:border-zinc-600'
-                  }`}
-                  onClick={() => {
-                    setCurrentStep(index);
-                    setAutoPlay(false);
-                  }}
-                  whileHover={{ scale: 1.02 }}
-                  layout
-                >
-                  <div className="flex items-start gap-4">
-                    <motion.div
-                      className={`p-3 rounded-xl ${step.bgColor} ${isActive ? step.color : 'text-zinc-500'}`}
-                      animate={{ scale: isActive ? 1.1 : 1 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <Icon className="w-6 h-6" />
-                    </motion.div>
-                    
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between mb-2">
-                        <h3 className={`text-lg font-semibold ${isActive ? 'text-white' : 'text-zinc-400'}`}>
-                          {step.title}
-                        </h3>
-                        <span className={`text-sm font-medium ${isActive ? 'text-orange-400' : 'text-zinc-500'}`}>
-                          {step.stats}
-                        </span>
-                      </div>
-                      
-                      <p className={`text-sm ${isActive ? 'text-zinc-300' : 'text-zinc-500'}`}>
-                        {step.subtitle}
-                      </p>
-                      
-                      <motion.div
-                        initial={false}
-                        animate={{ opacity: isActive ? 1 : 0, height: isActive ? 'auto' : 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="overflow-hidden"
-                      >
-                        <p className="text-zinc-400 mt-3 leading-relaxed">
-                          {step.description}
-                        </p>
-                      </motion.div>
+        {/* Interactive Journey */}
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+          {/* Left: Point Selection */}
+          <div className="space-y-4">
+            {keyPoints.map((point, index) => (
+              <motion.div
+                key={point.id}
+                className={`p-6 rounded-2xl border-2 cursor-pointer transition-all duration-300 ${
+                  selectedPoint === index
+                    ? `${point.bgColor} ${point.borderColor} scale-105`
+                    : 'bg-zinc-800 border-zinc-700 hover:border-zinc-600'
+                }`}
+                onClick={() => setSelectedPoint(index)}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: selectedPoint === index ? 1.05 : 1.02 }}
+              >
+                <div className="flex items-center space-x-4">
+                  <div className={`${point.color} p-2 rounded-xl ${point.bgColor}`}>
+                    {point.icon}
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-white mb-1">
+                      {point.title}
+                    </h3>
+                    <p className="text-zinc-400 text-sm">
+                      {point.subtitle}
+                    </p>
+                  </div>
+                  <div className="text-right">
+                    <div className={`text-2xl font-bold ${point.color}`}>
+                      {point.metric === 1500 ? "1,500" : `${point.metric}${point.id === 3 ? "%" : point.id === 2 ? "%" : "%"}`}
+                    </div>
+                    <div className="text-zinc-500 text-xs">
+                      {point.metricLabel}
                     </div>
                   </div>
-                  
-                  {isActive && (
-                    <motion.div
-                      className="absolute left-0 top-0 w-1 h-full bg-orange-400 rounded-r"
-                      layoutId="activeIndicator"
-                    />
-                  )}
-                </motion.div>
-              );
-            })}
+                </div>
+              </motion.div>
+            ))}
           </div>
 
-          {/* Visual Content */}
-          <div className="relative">
-            <motion.div
-              className="bg-zinc-800 rounded-3xl p-8 border border-zinc-700/50"
-              key={currentStep}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              {/* Visual Icons based on current step */}
-              <div className="flex justify-center mb-8">
-                {currentStep === 0 && (
-                  <div className="relative">
-                    <Train className="w-20 h-20 text-red-400" />
-                    <motion.div
-                      className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center"
-                      animate={{ scale: [1, 1.2, 1] }}
-                      transition={{ duration: 1, repeat: Infinity }}
-                    >
-                      <AlertTriangle className="w-4 h-4 text-white" />
-                    </motion.div>
-                  </div>
-                )}
-                
-                {currentStep === 1 && (
-                  <div className="grid grid-cols-3 gap-4">
-                    {[...Array(6)].map((_, i) => (
-                      <motion.div
-                        key={i}
-                        className="w-12 h-12 bg-zinc-700 rounded-lg flex items-center justify-center"
-                        animate={{ opacity: [0.3, 0.7, 0.3] }}
-                        transition={{ duration: 2, repeat: Infinity, delay: i * 0.2 }}
-                      >
-                        <Shield className="w-6 h-6 text-yellow-400" />
-                      </motion.div>
-                    ))}
-                  </div>
-                )}
-                
-                {currentStep === 2 && (
-                  <div className="relative">
-                    <Camera className="w-20 h-20 text-orange-400" />
-                    <motion.div
-                      className="absolute top-0 right-0 w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center"
-                      animate={{ scale: [1, 1.3, 1] }}
-                      transition={{ duration: 1.5, repeat: Infinity }}
-                    >
-                      <Brain className="w-5 h-5 text-white" />
-                    </motion.div>
-                    <motion.div
-                      className="absolute -bottom-2 -left-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center"
-                      animate={{ scale: [1, 1.2, 1] }}
-                      transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
-                    >
-                      <Zap className="w-4 h-4 text-white" />
-                    </motion.div>
-                  </div>
-                )}
-                
-                {currentStep === 3 && (
-                  <div className="grid grid-cols-2 gap-4">
-                    <motion.div
-                      className="bg-green-500/20 p-4 rounded-lg text-center"
-                      animate={{ y: [0, -5, 0] }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                    >
-                      <TrendingUp className="w-8 h-8 text-green-400 mx-auto mb-2" />
-                      <p className="text-sm text-green-400 font-semibold">Inversionistas</p>
-                    </motion.div>
-                    <motion.div
-                      className="bg-orange-500/20 p-4 rounded-lg text-center"
-                      animate={{ y: [0, -5, 0] }}
-                      transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
-                    >
-                      <Shield className="w-8 h-8 text-orange-400 mx-auto mb-2" />
-                      <p className="text-sm text-orange-400 font-semibold">Municipalidades</p>
-                    </motion.div>
-                    <motion.div
-                      className="bg-blue-500/20 p-4 rounded-lg text-center col-span-2"
-                      animate={{ y: [0, -5, 0] }}
-                      transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
-                    >
-                      <Train className="w-8 h-8 text-blue-400 mx-auto mb-2" />
-                      <p className="text-sm text-blue-400 font-semibold">Seguridad Ciudadana</p>
-                    </motion.div>
-                  </div>
-                )}
+          {/* Right: Detailed View */}
+          <motion.div
+            key={selectedPoint}
+            className="bg-zinc-800 rounded-3xl p-8 border border-zinc-700"
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="flex items-center space-x-4 mb-6">
+              <div className={`${keyPoints[selectedPoint].color} p-3 rounded-xl ${keyPoints[selectedPoint].bgColor}`}>
+                {keyPoints[selectedPoint].icon}
               </div>
-              
-              {/* Step Content */}
-              <div className="text-center">
-                <h3 className="text-2xl font-bold text-white mb-4">
-                  {steps[currentStep].title}
+              <div>
+                <h3 className="text-2xl font-bold text-white">
+                  {keyPoints[selectedPoint].title}
                 </h3>
-                <p className="text-zinc-400 leading-relaxed mb-6">
-                  {steps[currentStep].description}
+                <p className={`text-lg ${keyPoints[selectedPoint].color}`}>
+                  {keyPoints[selectedPoint].subtitle}
                 </p>
-                <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full ${steps[currentStep].bgColor}`}>
-                  <span className={`text-sm font-semibold ${steps[currentStep].color}`}>
-                    {steps[currentStep].stats}
-                  </span>
-                </div>
               </div>
-            </motion.div>
-            
-            {/* Progress Indicator */}
-            <div className="flex justify-center mt-6 gap-3">
-              {steps.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => {
-                    setCurrentStep(index);
-                    setAutoPlay(false);
-                  }}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentStep 
-                      ? 'bg-orange-400 w-8' 
-                      : 'bg-zinc-600 hover:bg-zinc-500'
-                  }`}
-                />
-              ))}
             </div>
-          </div>
+
+            <p className="text-zinc-300 text-lg leading-relaxed mb-8">
+              {keyPoints[selectedPoint].description}
+            </p>
+
+            {/* Metric Visualization */}
+            <div className="bg-zinc-900 rounded-2xl p-6 text-center">
+              <div className={`text-5xl font-bold mb-2 ${keyPoints[selectedPoint].color}`}>
+                <CountUp
+                  start={0}
+                  end={keyPoints[selectedPoint].metric}
+                  duration={2}
+                  suffix={keyPoints[selectedPoint].id === 0 ? "" : "%"}
+                  separator={keyPoints[selectedPoint].id === 0 ? "," : ""}
+                />
+              </div>
+              <div className="text-zinc-400 text-lg">
+                {keyPoints[selectedPoint].metricLabel}
+              </div>
+            </div>
+          </motion.div>
         </div>
 
-        {/* CTA de Transición */}
+        {/* Investment Metrics */}
         <motion.div
-          className="text-center"
-          initial={{ opacity: 0, y: 20 }}
+          className="bg-gradient-to-r from-zinc-800 to-zinc-900 rounded-3xl p-8 border border-zinc-700"
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="bg-zinc-800/50 rounded-3xl p-8 border border-zinc-700/50 max-w-4xl mx-auto">
+          <div className="text-center mb-8">
             <h3 className="text-3xl font-bold text-white mb-4">
-              Ya no es solo una necesidad urgente.
+              Propuesta de Valor para Inversores
             </h3>
-            <p className="text-xl text-orange-400 mb-8 font-semibold">
-              Es una inversión con retorno validado.
+            <p className="text-zinc-400 text-lg">
+              Métricas validadas por 12 municipios con contratos B2G firmados
             </p>
-            
-            <motion.button
-              onClick={scrollToMetrics}
-              className="inline-flex items-center gap-3 bg-orange-600 hover:bg-orange-500 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 group"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Ver Números de la Oportunidad
-              <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-            </motion.button>
           </div>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            {investmentMetrics.map((metric, index) => (
+              <motion.div
+                key={index}
+                className="text-center p-6 bg-zinc-800 rounded-2xl border border-zinc-700"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <div className="text-4xl font-bold text-orange-400 mb-2">
+                  {metric.prefix}
+                  <CountUp
+                    start={0}
+                    end={metric.value}
+                    duration={2.5}
+                    decimals={metric.value === 3.1 ? 1 : 0}
+                    delay={1}
+                  />
+                  {metric.unit}
+                </div>
+                <div className="text-zinc-400 text-sm font-medium">
+                  {metric.label}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Call to Action */}
+          <motion.div
+            className="text-center mt-8"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
+            viewport={{ once: true }}
+          >
+            <div className="flex items-center justify-center space-x-2 text-green-400">
+              <CheckCircle className="w-5 h-5" />
+              <span className="text-lg font-semibold">
+                Validado por Ferronor y 12 Municipios
+              </span>
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

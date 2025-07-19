@@ -8,11 +8,11 @@ export default function Timeline3D() {
   const phases = [
     {
       id: 0,
-      title: "FASE 1: BASE INSTALLATION",
+      title: "FASE 1: Implementación Base",
       period: "0-12 meses",
       status: "ACTIVO",
-      color: "from-green-500 to-green-700",
-      bgColor: "bg-green-500/20",
+      color: "from-orange-500 to-orange-700",
+      bgColor: "bg-orange-500/20",
       icon: <Target className="w-8 h-8" />,
       milestones: [
         "25 cruces operativos",
@@ -37,7 +37,7 @@ export default function Timeline3D() {
     },
     {
       id: 1,
-      title: "FASE 2: OPTIMIZATION",
+      title: "FASE 2: Optimización",
       period: "13-16 meses", 
       status: "PRÓXIMO",
       color: "from-orange-500 to-orange-700",
@@ -66,11 +66,11 @@ export default function Timeline3D() {
     },
     {
       id: 2,
-      title: "FASE 3: SCALE UP",
+      title: "FASE 3: Escalamiento",
       period: "17-20 meses",
       status: "PLANIFICADO", 
-      color: "from-blue-500 to-blue-700",
-      bgColor: "bg-blue-500/20",
+      color: "from-zinc-500 to-zinc-700",
+      bgColor: "bg-zinc-500/20",
       icon: <TrendingUp className="w-8 h-8" />,
       milestones: [
         "40 cruces activos",
@@ -95,18 +95,18 @@ export default function Timeline3D() {
     },
     {
       id: 3,
-      title: "FASE 4: HYPERGROWTH", 
+      title: "FASE 4: Expansión Nacional", 
       period: "21-24 meses",
-      status: "ESTRATÉGICO",
-      color: "from-purple-500 to-purple-700", 
-      bgColor: "bg-purple-500/20",
+      status: "PLANIFICADO",
+      color: "from-zinc-600 to-zinc-800", 
+      bgColor: "bg-zinc-600/20",
       icon: <Rocket className="w-8 h-8" />,
       milestones: [
-        "50 cruces premium",
+        "50 cruces operativos",
         "$1.5B ingresos mensuales",
-        "Máximo ROI alcanzado", 
-        "Preparación LATAM",
-        "IPO considerations"
+        "Cobertura nacional",
+        "Evaluación mercados regionales",
+        "Optimización operacional"
       ],
       metrics: {
         cruces: 50,
@@ -116,39 +116,10 @@ export default function Timeline3D() {
         roi: 65
       },
       achievements: [
-        "🚀 Peak ROI achieved",
-        "🚀 LATAM expansion ready",
-        "🚀 Market leadership",
-        "🚀 Exit opportunities"
-      ]
-    },
-    {
-      id: 4,
-      title: "FASE 5: DOMINATION",
-      period: "25+ meses", 
-      status: "VISIÓN",
-      color: "from-yellow-500 to-yellow-700",
-      bgColor: "bg-yellow-500/20", 
-      icon: <Star className="w-8 h-8" />,
-      milestones: [
-        "60+ cruces nacionales",
-        "$1.8B+ ingresos mensuales",
-        "Dominación mercado chileno",
-        "Expansión internacional",
-        "Multiple exit strategies"
-      ],
-      metrics: {
-        cruces: 60,
-        revenue: 1800,
-        teamSize: 200,
-        efficiency: 99.5,
-        roi: 75
-      },
-      achievements: [
-        "👑 Market domination",
-        "👑 International presence", 
-        "👑 Industry standard",
-        "👑 Legacy established"
+        "⭐ Cobertura nacional establecida",
+        "⭐ Operaciones optimizadas",
+        "⭐ Evaluación internacional iniciada",
+        "⭐ ROI sostenible"
       ]
     }
   ];
@@ -157,11 +128,11 @@ export default function Timeline3D() {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case "ACTIVO": return "text-green-400 bg-green-500/20";
+      case "ACTIVO": return "text-orange-400 bg-orange-500/20";
       case "PRÓXIMO": return "text-orange-400 bg-orange-500/20";
-      case "PLANIFICADO": return "text-blue-400 bg-blue-500/20";
-      case "ESTRATÉGICO": return "text-purple-400 bg-purple-500/20";
-      case "VISIÓN": return "text-yellow-400 bg-yellow-500/20";
+      case "PLANIFICADO": return "text-zinc-400 bg-zinc-500/20";
+      case "ESTRATÉGICO": return "text-zinc-400 bg-zinc-500/20";
+
       default: return "text-zinc-400 bg-zinc-500/20";
     }
   };
@@ -170,8 +141,8 @@ export default function Timeline3D() {
     <section className="py-20 bg-zinc-900 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-zinc-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
@@ -183,18 +154,18 @@ export default function Timeline3D() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="inline-flex items-center px-4 py-2 bg-purple-600/20 border border-purple-600/30 rounded-full mb-6">
-            <Clock className="w-4 h-4 text-purple-400 mr-2" />
-            <span className="text-purple-300 font-medium text-sm">Roadmap Interactivo 4D</span>
+          <div className="inline-flex items-center px-4 py-2 bg-orange-600/20 border border-orange-600/30 rounded-full mb-6">
+            <Clock className="w-4 h-4 text-orange-400 mr-2" />
+            <span className="text-orange-300 font-medium text-sm">Roadmap Interactivo</span>
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            El <span className="text-purple-400">Camino</span> Hacia Tu 
-            <br /><span className="text-green-400">Riqueza Exponencial</span>
+            El <span className="text-orange-400">Roadmap</span> de 
+            <br /><span className="text-orange-400">Crecimiento</span>
           </h2>
           <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
-            Cada fase diseñada para maximizar tu retorno. Cada milestone validado por data real. 
-            Este es el blueprint exacto que convertirá tu inversión en fortuna.
+            Cada fase diseñada para maximizar retornos. Cada milestone validado por data real. 
+            Roadmap de crecimiento basado en métricas verificables.
           </p>
         </motion.div>
 
@@ -427,33 +398,7 @@ export default function Timeline3D() {
           </div>
         </motion.div>
 
-        {/* Call to Action */}
-        <motion.div
-          className="mt-16 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="text-3xl font-bold text-white mb-4">
-            Este <span className="text-purple-400">Roadmap</span> es Tu 
-            <br /><span className="text-green-400">Blueprint de Riqueza</span>
-          </h3>
-          <p className="text-zinc-300 mb-8 max-w-3xl mx-auto text-lg">
-            Cada fase ha sido calculada, validada y probada. No es especulación - 
-            es el plan exacto que seguiremos para multiplicar tu inversión.
-          </p>
-          
-          <motion.button
-            onClick={() => document.getElementById('inversion')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-gradient-to-r from-purple-600 to-green-600 hover:from-purple-500 hover:to-green-500 text-white px-10 py-5 rounded-xl font-bold text-xl transition-all duration-300 shadow-2xl"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Rocket className="w-6 h-6 inline mr-2" />
-            Iniciar Mi Roadmap
-          </motion.button>
-        </motion.div>
+
       </div>
     </section>
   );

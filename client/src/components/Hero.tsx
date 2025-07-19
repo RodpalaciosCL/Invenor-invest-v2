@@ -1,15 +1,22 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { ArrowRight, Zap, Target, TrendingUp, Play, ChevronDown } from "lucide-react";
+import {
+  ArrowRight,
+  Zap,
+  Target,
+  TrendingUp,
+  Play,
+  ChevronDown,
+} from "lucide-react";
 
 export default function Hero() {
   const [currentMetric, setCurrentMetric] = useState(0);
-  
+
   const metrics = [
-    { value: "55%", label: "ROI Garantizado", sublabel: "En 24 meses" },
-    { value: "95%", label: "Eficiencia IA", sublabel: "vs 22% actual" },
-    { value: "$3.1B", label: "Retorno Total", sublabel: "Proyectado" },
-    { value: "256%", label: "Incremento", sublabel: "Recaudación" }
+    { value: "49%", label: "ROI Garantizado", sublabel: "En 26 meses" },
+    { value: "95%", label: "Eficiencia IA", sublabel: "vs 8% actual" },
+    { value: "$3.053B", label: "Retorno Total", sublabel: "Proyectado" },
+    { value: "256%", label: "Incremento", sublabel: "Recaudación" },
   ];
 
   useEffect(() => {
@@ -20,10 +27,10 @@ export default function Hero() {
   }, []);
 
   const scrollToInvestment = () => {
-    document.getElementById('inversion')?.scrollIntoView({ behavior: 'smooth' });
+    document
+      .getElementById("inversion")
+      ?.scrollIntoView({ behavior: "smooth" });
   };
-
-
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-zinc-900">
@@ -38,7 +45,7 @@ export default function Hero() {
           transition={{
             duration: 6,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "easeInOut",
           }}
         />
         <motion.div
@@ -51,7 +58,7 @@ export default function Hero() {
             duration: 8,
             repeat: Infinity,
             ease: "easeInOut",
-            delay: 2
+            delay: 2,
           }}
         />
       </div>
@@ -64,9 +71,9 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <img 
-            src="https://res.cloudinary.com/dhobnlg73/image/upload/v1751486212/Untitled_design_6_g3yugq.png" 
-            alt="INVENOR Logo" 
+          <img
+            src="https://res.cloudinary.com/dhobnlg73/image/upload/v1751486212/Untitled_design_6_g3yugq.png"
+            alt="INVENOR Logo"
             className="h-36 md:h-40 filter drop-shadow-2xl"
           />
         </motion.div>
@@ -79,7 +86,9 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <Zap className="w-5 h-5 text-orange-400 mr-3" />
-          <span className="text-orange-300 font-semibold">🚀 OPORTUNIDAD DE INVERSIÓN TIER 1</span>
+          <span className="text-orange-300 font-semibold">
+            OPORTUNIDAD DE INVERSIÓN TIER 1
+          </span>
         </motion.div>
 
         {/* Subtitle */}
@@ -89,8 +98,10 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Revolucionando la <span className="text-orange-400">Seguridad Ferroviaria</span> 
-          <br />con Inteligencia Artificial
+          Revolucionando la{" "}
+          <span className="text-orange-400">Seguridad Ferroviaria</span>
+          <br />
+          con Inteligencia Artificial
         </motion.h2>
 
         {/* Description */}
@@ -130,14 +141,14 @@ export default function Hero() {
                 {metrics[currentMetric].sublabel}
               </div>
             </motion.div>
-            
+
             {/* Metric Indicators */}
             <div className="flex justify-center gap-2 mt-6">
               {metrics.map((_, index) => (
                 <div
                   key={index}
                   className={`w-2 h-2 rounded-full transition-colors duration-300 ${
-                    index === currentMetric ? 'bg-orange-400' : 'bg-zinc-600'
+                    index === currentMetric ? "bg-orange-400" : "bg-zinc-600"
                   }`}
                 />
               ))}
@@ -162,9 +173,13 @@ export default function Hero() {
             Ver Oportunidad de Inversión
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </motion.button>
-          
+
           <motion.button
-            onClick={() => document.getElementById('video-section')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() =>
+              document
+                .getElementById("video-section")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
             className="group border-2 border-orange-600 text-orange-400 hover:bg-orange-600 hover:text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

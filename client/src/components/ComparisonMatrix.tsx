@@ -44,12 +44,12 @@ export default function ComparisonMatrix() {
         {
           name: "ROI Anual",
           tradicional: { value: "8%", status: "poor", detail: "Baja eficiencia limita recaudación" },
-          cruces: { value: "55%", status: "excellent", detail: "Alta eficiencia maximiza revenue municipal" }
+          cruces: { value: "49%", status: "excellent", detail: "Alta eficiencia maximiza revenue municipal" }
         },
         {
           name: "Payback Period",
           tradicional: { value: "36+ meses", status: "bad", detail: "Alto CAPEX inicial, baja eficiencia" },
-          cruces: { value: "15 meses", status: "excellent", detail: "Inversión recuperada rápidamente" }
+          cruces: { value: "26 meses", status: "excellent", detail: "Inversión recuperada rápidamente" }
         },
         {
           name: "Ahorro vs Baseline",
@@ -245,13 +245,13 @@ export default function ComparisonMatrix() {
                     {/* Improvement */}
                     <div className="text-center">
                       {metric.name === "Costo Mensual" ? (
-                        <div className="text-green-400 font-bold">-80% costo</div>
+                        <div className="text-orange-400 font-bold">-80% costo</div>
                       ) : metric.name === "Tasa de Detección" ? (
-                        <div className="text-green-400 font-bold">+330% mejor</div>
+                        <div className="text-orange-400 font-bold">+330% mejor</div>
                       ) : metric.name === "ROI Anual" ? (
-                        <div className="text-green-400 font-bold">+588% mejor</div>
+                        <div className="text-orange-400 font-bold">+588% mejor</div>
                       ) : (
-                        <div className="text-green-400 font-bold">Superiior</div>
+                        <div className="text-orange-400 font-bold">Superior</div>
                       )}
                     </div>
 
@@ -265,12 +265,12 @@ export default function ComparisonMatrix() {
                         transition={{ duration: 0.3 }}
                       >
                         <div className="grid md:grid-cols-2 gap-6">
-                          <div className="bg-red-900/20 rounded-lg p-4 border border-red-600/30">
-                            <h5 className="text-red-400 font-semibold mb-2">Método Tradicional</h5>
-                            <p className="text-zinc-300 text-sm">{metric.tradicional.detail}</p>
+                          <div className="bg-zinc-800/50 rounded-lg p-4 border border-zinc-600/50">
+                            <h5 className="text-zinc-300 font-semibold mb-2">Método Tradicional</h5>
+                            <p className="text-zinc-400 text-sm">{metric.tradicional.detail}</p>
                           </div>
-                          <div className="bg-green-900/20 rounded-lg p-4 border border-green-600/30">
-                            <h5 className="text-green-400 font-semibold mb-2">CRUCES AI</h5>
+                          <div className="bg-orange-900/20 rounded-lg p-4 border border-orange-600/30">
+                            <h5 className="text-orange-400 font-semibold mb-2">CRUCES AI</h5>
                             <p className="text-zinc-300 text-sm">{metric.cruces.detail}</p>
                           </div>
                         </div>
@@ -325,33 +325,7 @@ export default function ComparisonMatrix() {
           </div>
         </motion.div>
 
-        {/* Call to Action */}
-        <motion.div
-          className="mt-16 bg-gradient-to-r from-red-600/20 to-green-600/20 rounded-2xl p-8 border border-orange-600/30 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="text-3xl font-bold text-white mb-4">
-            Los Números <span className="text-orange-400">No Mienten</span>
-            <br />La <span className="text-green-400">Superioridad es Absoluta</span>
-          </h3>
-          <p className="text-zinc-300 mb-8 max-w-3xl mx-auto text-lg">
-            Cada métrica demuestra que CRUCES AI no es solo una mejora incremental - 
-            es una revolución completa que hace obsoletos los métodos tradicionales.
-          </p>
-          
-          <motion.button
-            onClick={() => document.getElementById('inversion')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-gradient-to-r from-orange-600 to-green-600 hover:from-orange-500 hover:to-green-500 text-white px-10 py-5 rounded-xl font-bold text-xl transition-all duration-300 shadow-2xl"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Target className="w-6 h-6 inline mr-2" />
-            Elegir el Futuro, No el Pasado
-          </motion.button>
-        </motion.div>
+
       </div>
     </section>
   );

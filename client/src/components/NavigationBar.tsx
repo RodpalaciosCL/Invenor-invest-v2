@@ -92,7 +92,7 @@ export default function NavigationBar() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <div className="flex justify-center items-center w-full py-3">
+      <div className="flex justify-center items-center w-full py-4">
         <div className="flex justify-between items-center w-[90%] max-w-[1400px]">
           
           {/* Logo a la izquierda */}
@@ -111,7 +111,7 @@ export default function NavigationBar() {
             <img 
               src="https://res.cloudinary.com/dhobnlg73/image/upload/v1752531633/Untitled_design_7_lr3xod.png" 
               alt="INVENOR Logo" 
-              className="h-10 w-auto"
+              className="h-12 w-auto"
             />
           </motion.div>
           
@@ -121,7 +121,7 @@ export default function NavigationBar() {
               <motion.button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`nav-item relative text-white text-sm font-medium tracking-wide py-2 px-4 rounded-full transition-all duration-300 ${
+                className={`nav-item relative text-white text-base font-medium tracking-wide py-3 px-5 rounded-full transition-all duration-300 ${
                   activeSection === item.id
                     ? 'bg-orange-600 text-white shadow-lg'
                     : 'hover:text-orange-400 hover:bg-orange-400/10 hover:-translate-y-0.5'
@@ -140,7 +140,7 @@ export default function NavigationBar() {
             <div className="relative">
               <motion.button
                 onClick={() => setShowCalculator(!showCalculator)}
-                className={`p-3 rounded-full transition-all duration-300 ${
+                className={`p-4 rounded-full transition-all duration-300 ${
                   showCalculator
                     ? 'bg-orange-600 text-white shadow-lg'
                     : 'text-zinc-400 hover:text-orange-400 hover:bg-orange-400/10'
@@ -148,7 +148,7 @@ export default function NavigationBar() {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Calculator className="w-5 h-5" />
+                <Calculator className="w-6 h-6" />
               </motion.button>
 
               {/* Calculator Dropdown */}

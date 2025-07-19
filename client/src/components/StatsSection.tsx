@@ -97,7 +97,7 @@ export default function StatsSection({ data }: StatsSectionProps) {
           </motion.div>
           
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Números que <span className="text-orange-400">Convencen</span>
+            Métricas <span className="text-orange-400">Clave</span>
           </h2>
           <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
             Resultados validados por Ferronor y respaldados por data real de 12 municipios confirmados
@@ -204,32 +204,7 @@ export default function StatsSection({ data }: StatsSectionProps) {
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <motion.div
-          className="text-center mt-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <div className="bg-gradient-to-r from-zinc-800/80 to-zinc-700/80 backdrop-blur-sm rounded-2xl p-8 border border-zinc-600/50">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              ¿Convencido? Los números hablan por sí solos
-            </h3>
-            <p className="text-zinc-400 mb-6 max-w-2xl mx-auto">
-              Estas métricas no son proyecciones optimistas. Son resultados reales validados 
-              técnicamente por Ferronor y confirmados por municipios ya comprometidos.
-            </p>
-            <motion.button
-              className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-2xl"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => document.getElementById('inversion')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Ver Detalles de Inversión
-            </motion.button>
-          </div>
-        </motion.div>
+
       </div>
     </section>
   );

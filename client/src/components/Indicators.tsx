@@ -58,20 +58,20 @@ export default function Indicators({ data }: IndicatorsProps) {
         <div className="grid md:grid-cols-3 gap-8 text-center">
           <div className="bg-zinc-700 p-6 rounded-lg">
             <h4 className="text-lg font-semibold text-green-400 mb-2">Escenario Optimista</h4>
-            <p className="text-2xl font-bold text-white">49%</p>
+            <p className="text-2xl font-bold text-white">58%</p>
             <p className="text-zinc-400 mt-1">IRR (+20% infracciones)</p>
             <p className="text-sm text-zinc-500 mt-2">VAN: $1.541M</p>
           </div>
           <div className="bg-zinc-700 p-6 rounded-lg border-2 border-orange-600">
             <h4 className="text-lg font-semibold text-orange-400 mb-2">Escenario Base</h4>
-            <p className="text-2xl font-bold text-white">42%</p>
-            <p className="text-zinc-400 mt-1">IRR (proyección actual)</p>
+            <p className="text-2xl font-bold text-white">49%</p>
+            <p className="text-zinc-400 mt-1">ROI (proyección actual)</p>
             <p className="text-sm text-zinc-500 mt-2">VAN: $1.301M</p>
           </div>
           <div className="bg-zinc-700 p-6 rounded-lg">
             <h4 className="text-lg font-semibold text-yellow-400 mb-2">Escenario Conservador</h4>
-            <p className="text-2xl font-bold text-white">34%</p>
-            <p className="text-zinc-400 mt-1">IRR (-20% infracciones)</p>
+            <p className="text-2xl font-bold text-white">39%</p>
+            <p className="text-zinc-400 mt-1">ROI (-20% infracciones)</p>
             <p className="text-sm text-zinc-500 mt-2">VAN: $1.041M</p>
           </div>
         </div>

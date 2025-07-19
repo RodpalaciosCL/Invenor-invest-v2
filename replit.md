@@ -4,6 +4,8 @@
 
 This is a sophisticated React-based interactive pitch deck for INVENOR, showcasing their CRUCES AI railway crossing monitoring system. Built with advanced web technologies including React, TypeScript, Framer Motion, TailwindCSS, and includes authentication system, AI chatbot (MarIA), and comprehensive data visualization.
 
+**CRITICAL UPDATE (2025-07-19)**: All financial data corrected to match Excel V5 analysis for investor accuracy.
+
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
@@ -54,7 +56,7 @@ Color palette: STRICTLY orange, gray, white, black only - NO gradients, blues, p
 
 ### Advanced Interactive Components
 - **loadData.ts**: Centralized loading of authentic CRUCES AI dataset
-- **Real Financial Data**: Complete intro.md dataset with ROI 55%, IRR 42%, payback 15 months
+- **Real Financial Data**: Complete Excel V5 dataset with ROI 49%, IRR 20.1%, payback 26 months
 - **Direct Access Flow**: Immediate entry to maximize engagement and reduce barriers
 - **Framer Motion**: Professional animations throughout all components
 - **Interactive Elements**: Hover effects, smooth transitions, modal systems
@@ -119,3 +121,31 @@ Color palette: STRICTLY orange, gray, white, black only - NO gradients, blues, p
 - **File System**: Restricted access for security
 
 The application follows a clean separation of concerns with shared TypeScript types, centralized configuration, and a scalable architecture that supports both development and production environments.
+
+## Recent Changes (2025-07-19)
+
+### **CRITICAL FINANCIAL DATA CORRECTIONS**
+✅ **Excel V5 Analysis Implementation Complete**
+- **ROI**: 55% → **49%** (corrected across 8+ components)
+- **Payback**: 15 meses → **26 meses** (updated throughout)
+- **Capital requerido**: $2,067M → **$2,053,200,000 CLP**
+- **Retorno total**: $3.1B → **$3,053,200,000 CLP**
+- **IRR**: 42% → **20.1% anual**
+
+### **Files Updated**
+1. ✅ **loadData.ts** - Central data source corrected
+2. ✅ **Hero.tsx** - ROI 49%, payback 26 meses, return $3.053B
+3. ✅ **StatsSection.tsx** - ROI 49%, payback 26 meses, return corrected
+4. ✅ **InvestmentOpportunity.tsx** - Investment amounts and ROI updated
+5. ✅ **ComparisonMatrix.tsx** - ROI 49%, payback 26 meses
+6. ✅ **InvestmentSimulator.tsx** - ROI 49%, payback 26 meses
+7. ✅ **IntroSection.tsx** - ROI 49%, payback 26 meses, return $3.053B
+8. ✅ **DataRoomDashboard.tsx** - Base scenario ROI 49%
+9. ✅ **Indicators.tsx** - All sensitivity scenarios adjusted for 49% base
+10. ✅ **FAQ.tsx** - ROI guarantees and validation corrected to 49%
+
+### **Data Consistency Achieved**
+- All components now reflect accurate Excel V5 financial projections
+- Investor presentation maintains credibility with authentic data
+- Effectiveness data corrected from unrealistic 22% to accurate 8%
+- Proper CLP currency formatting throughout

@@ -18,21 +18,21 @@ export default function InvestmentOpportunity() {
       title: "Personal & Operación",
       subtitle: "Equipo técnico, instalación, mantenimiento 24/7",
       amount: "$725M",
-      color: "#22d3ee"
+      color: "#71717a"
     },
     {
       percentage: 12,
       title: "Infraestructura",
       subtitle: "Cloud, conectividad 5G, energía solar",
       amount: "$248M",
-      color: "#10b981"
+      color: "#52525b"
     },
     {
       percentage: 8,
       title: "Marketing & Legal",
       subtitle: "Comercialización B2G, aspectos legales",
       amount: "$165M",
-      color: "#8b5cf6"
+      color: "#3f3f46"
     }
   ];
 

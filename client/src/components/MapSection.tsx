@@ -79,25 +79,72 @@ export default function MapSection() {
                 Mapa de Implementación Chile Norte
               </h3>
               
-              {/* Simplified Chile Map */}
+              {/* Chile SVG Map */}
               <div className="relative h-96 mx-auto max-w-xs">
-                {/* Map Background */}
-                <div className="absolute inset-0 bg-gradient-to-b from-zinc-700 to-zinc-600 rounded-lg opacity-30"></div>
-                
-                {/* Regions */}
-                {regionsData.map((region, index) => (
-                  <motion.div
-                    key={region.name}
-                    className={`absolute w-4 h-4 ${region.color} rounded-full cursor-pointer ${region.position} z-10`}
-                    whileHover={{ scale: 1.5 }}
-                    onClick={() => setSelectedRegion(selectedRegion === region.name ? null : region.name)}
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{ delay: index * 0.2 }}
-                  >
-                    <div className="absolute inset-0 animate-ping bg-orange-400 rounded-full opacity-30"></div>
-                  </motion.div>
-                ))}
+                <svg 
+                  viewBox="0 0 200 800" 
+                  className="w-full h-full"
+                  style={{ filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.3))' }}
+                >
+                  {/* Chile Shape Simplified */}
+                  <path
+                    d="M50 50 L60 50 L65 100 L70 200 L75 350 L70 500 L65 650 L60 750 L50 750 L45 650 L40 500 L45 350 L50 200 L55 100 Z"
+                    fill="#3f3f46"
+                    stroke="#71717a"
+                    strokeWidth="2"
+                    className="opacity-80"
+                  />
+                  
+                  {/* Región Norte Destacada */}
+                  <path
+                    d="M50 50 L60 50 L65 100 L70 200 L65 180 L55 100 Z"
+                    fill="#ea580c"
+                    className="opacity-60"
+                  />
+                  
+                  {/* Pins de Regiones */}
+                  {regionsData.map((region, index) => {
+                    const positions = [
+                      { x: 58, y: 80 },  // Tarapacá
+                      { x: 62, y: 120 }, // Antofagasta
+                      { x: 66, y: 160 }, // Atacama
+                      { x: 64, y: 200 }  // Coquimbo
+                    ];
+                    return (
+                      <g key={region.name}>
+                        <motion.circle
+                          cx={positions[index].x}
+                          cy={positions[index].y}
+                          r="4"
+                          fill="#f97316"
+                          stroke="#ffffff"
+                          strokeWidth="2"
+                          className="cursor-pointer"
+                          onClick={() => setSelectedRegion(selectedRegion === region.name ? null : region.name)}
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          transition={{ delay: index * 0.2 }}
+                          whileHover={{ scale: 1.5 }}
+                        />
+                        <motion.circle
+                          cx={positions[index].x}
+                          cy={positions[index].y}
+                          r="8"
+                          fill="#f97316"
+                          className="opacity-30 animate-ping"
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          transition={{ delay: index * 0.2 }}
+                        />
+                      </g>
+                    );
+                  })}
+                  
+                  {/* Labels */}
+                  <text x="80" y="70" fill="#f97316" fontSize="8" fontWeight="bold">Norte</text>
+                  <text x="80" y="250" fill="#71717a" fontSize="6">Centro</text>
+                  <text x="80" y="450" fill="#71717a" fontSize="6">Sur</text>
+                </svg>
 
                 {/* Region Info Card */}
                 {selectedRegion && (

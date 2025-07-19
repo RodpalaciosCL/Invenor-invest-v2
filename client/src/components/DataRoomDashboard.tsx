@@ -25,7 +25,7 @@ export default function DataRoomDashboard() {
 
   // Stress testing scenarios
   const stressScenarios = [
-    { scenario: "Base", roi: 55, van: 1301, probabilidad: 100, color: "#10B981" },
+    { scenario: "Base", roi: 49, van: 1301, probabilidad: 100, color: "#10B981" },
     { scenario: "Regulación Adversa", roi: 38, van: 920, probabilidad: 15, color: "#F59E0B" },
     { scenario: "Competencia Agresiva", roi: 42, van: 1050, probabilidad: 25, color: "#EF4444" },
     { scenario: "Recesión Económica", roi: 31, van: 740, probabilidad: 30, color: "#DC2626" }
@@ -739,34 +739,7 @@ export default function DataRoomDashboard() {
           )}
         </motion.div>
 
-        {/* Bottom CTA */}
-        <motion.div
-          className="mt-16 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 rounded-3xl p-8 border border-blue-600/30 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="text-4xl font-bold text-white mb-4">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-              Data-Driven Decision Making
-            </span>
-          </h3>
-          <p className="text-xl text-zinc-300 mb-8 max-w-4xl mx-auto">
-            10,000 simulaciones Monte Carlo, análisis de cohorts reales, y benchmarking competitivo cuantificado. 
-            La evidencia es irrefutable: CRUCES AI representa la oportunidad de inversión más sólida del sector.
-          </p>
-          
-          <motion.button
-            onClick={() => document.getElementById('inversion')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-500 hover:via-purple-500 hover:to-pink-500 text-white px-12 py-6 rounded-xl font-bold text-xl transition-all duration-300 shadow-2xl"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Zap className="w-6 h-6 inline mr-3" />
-            Acceder al Deal Flow Exclusivo
-          </motion.button>
-        </motion.div>
+
       </div>
     </section>
   );
