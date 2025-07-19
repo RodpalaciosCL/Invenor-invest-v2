@@ -58,7 +58,7 @@ export default function IntroSection() {
   ];
 
   const investmentMetrics = [
-    { value: 3.053, label: "Retorno Total", unit: "B", prefix: "$" },
+    { value: 3053, label: "Retorno Total", unit: "K", prefix: "$" },
     { value: 26, label: "Meses Payback", unit: "", prefix: "" },
     { value: 256, label: "Incremento", unit: "%", prefix: "+" },
     { value: 12, label: "Contratos B2G", unit: "", prefix: "" }
