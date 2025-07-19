@@ -43,11 +43,14 @@ const CashflowSection = () => {
   };
 
   const formatCurrency = (value: number) => {
-    const absValue = Math.abs(value);
-    if (absValue >= 1000) {
-      return `$${(value / 1000).toFixed(0)}k`;
-    }
-    return `$${value.toFixed(0)}`;
+    // Los valores ya están en miles, convertir a formato completo
+    const fullValue = value * 1000;
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0
+    }).format(fullValue);
   };
 
   return (
@@ -83,7 +86,7 @@ const CashflowSection = () => {
               <TrendingUp className="w-5 h-5 text-blue-400" />
               <span className="text-slate-400 text-sm font-medium">Ingresos Año 1</span>
             </div>
-            <div className="text-2xl font-bold text-white">{formatCurrency(firstYearMetrics.totalIngresos * 1000)}</div>
+            <div className="text-2xl font-bold text-white">{formatCurrency(firstYearMetrics.totalIngresos)}</div>
             <div className="text-sm text-blue-400">+{firstYearMetrics.roiAnual}% ROI</div>
           </div>
 
@@ -92,7 +95,7 @@ const CashflowSection = () => {
               <BarChart3 className="w-5 h-5 text-purple-400" />
               <span className="text-slate-400 text-sm font-medium">Flujo Neto Año 1</span>
             </div>
-            <div className="text-2xl font-bold text-white">{formatCurrency(firstYearMetrics.netoAnual * 1000)}</div>
+            <div className="text-2xl font-bold text-white">{formatCurrency(firstYearMetrics.netoAnual)}</div>
             <div className="text-sm text-purple-400">70% Margen Neto</div>
           </div>
 
@@ -130,20 +133,20 @@ const CashflowSection = () => {
                   <tr key={index} className="border-b border-slate-700/30 hover:bg-slate-800/20">
                     <td className="py-4 px-6 text-white font-medium">{data.month}</td>
                     <td className="py-4 px-6 text-right text-emerald-400 font-medium">
-                      {data.ingresos > 0 ? formatCurrency(data.ingresos * 1000) : '-'}
+                      {data.ingresos > 0 ? formatCurrency(data.ingresos) : '-'}
                     </td>
                     <td className="py-4 px-6 text-right text-red-400 font-medium">
-                      {formatCurrency(data.gastos * 1000)}
+                      {formatCurrency(data.gastos)}
                     </td>
                     <td className={`py-4 px-6 text-right font-medium ${
                       data.neto >= 0 ? 'text-emerald-400' : 'text-red-400'
                     }`}>
-                      {formatCurrency(data.neto * 1000)}
+                      {formatCurrency(data.neto)}
                     </td>
                     <td className={`py-4 px-6 text-right font-medium ${
                       data.acumulado >= 0 ? 'text-emerald-400' : 'text-red-400'
                     }`}>
-                      {formatCurrency(data.acumulado * 1000)}
+                      {formatCurrency(data.acumulado)}
                     </td>
                     <td className="py-4 px-6 text-center">
                       {data.acumulado >= 0 ? (
@@ -181,7 +184,7 @@ const CashflowSection = () => {
                       isPositive ? 'bg-emerald-500' : 'bg-red-500'
                     } transition-all duration-300 hover:opacity-80`}
                     style={{ height: `${height}%` }}
-                    title={`${data.month}: ${formatCurrency(data.acumulado * 1000)}`}
+                    title={`${data.month}: ${formatCurrency(data.acumulado)}`}
                   />
                   {index % 3 === 0 && (
                     <span className="text-xs text-slate-400 mt-2 transform -rotate-45">

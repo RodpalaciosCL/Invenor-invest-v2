@@ -50,7 +50,7 @@ export default function SensitivityAnalysis() {
       description: "Escenario más cauteloso con menor crecimiento",
       metrics: {
         roi: "12%",
-        payback: "5.8 años",
+        payback: "36 meses",
         irr: "15%",
         van: "$980K"
       },

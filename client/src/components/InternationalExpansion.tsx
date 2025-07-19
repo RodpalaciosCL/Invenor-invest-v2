@@ -72,7 +72,7 @@ const InternationalExpansion: React.FC = () => {
                 <div className="bg-green-600 rounded-full w-4 h-4 mx-auto mb-2"></div>
                 <p className="text-sm text-zinc-400">2025-2026</p>
                 <p className="font-semibold">Chile</p>
-                <p className="text-xs text-zinc-500">346 comunas</p>
+                <p className="text-xs text-zinc-500">12 comunas target</p>
               </div>
               <div className="text-center">
                 <div className="bg-orange-500 rounded-full w-4 h-4 mx-auto mb-2"></div>
