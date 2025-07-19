@@ -37,20 +37,21 @@ export default function InvestmentOpportunity() {
   ];
 
   const cashflowProjection = [
-    { mes: "Mes 6", ingreso: "$68M", descripcion: "Primeros ingresos - pruebas piloto" },
-    { mes: "Mes 9", ingreso: "$151M", descripcion: "Gestión inicial 25 cruces" },
-    { mes: "Mes 15", ingreso: "$605M", descripcion: "Break-even - perfeccionamiento" },
-    { mes: "Mes 17", ingreso: "$908M", descripcion: "Consolidación + crecimiento" },
-    { mes: "Mes 21", ingreso: "$1.589B", descripcion: "Máximo rendimiento 50 cruces" }
+    { mes: "Mes 6", ingreso: "$48M", descripcion: "Primeros ingresos - pruebas piloto" },
+    { mes: "Mes 9", ingreso: "$97M", descripcion: "Gestión inicial 20 cruces" },
+    { mes: "Mes 15", ingreso: "$291M", descripcion: "Break-even - perfeccionamiento" },
+    { mes: "Mes 17", ingreso: "$291M", descripcion: "Consolidación + crecimiento" },
+    { mes: "Mes 21", ingreso: "$509M", descripcion: "Crecimiento acelerado" },
+    { mes: "Mes 26", ingreso: "$1,000M", descripcion: "Pago final al inversionista" }
   ];
 
   const projectStrengths = [
     "Ferronor: Validación técnica completa con empresa ferroviaria",
     "12 Municipios: Contratos B2G de largo plazo confirmados",
-    "ROI 55% en 24 meses con payback de 15 meses garantizado",
-    "95% eficiencia IA vs 22% actual = 4.3x mejora comprobada",
-    "Escalabilidad nacional: 50+ comunas adicionales identificadas",
-    "Mercado LATAM: Potencial internacional miles de millones USD"
+    "ROI 49% en 26 meses con IRR 20.1% anual garantizado",
+    "70% margen operativo validado por Excel financiero V5",
+    "Escalabilidad internacional: Perú, Colombia y México identificados",
+    "$100,900 CLP por multa fijado por el Estado chileno"
   ];
 
   return (
@@ -115,24 +116,24 @@ export default function InvestmentOpportunity() {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6">
                   <div className="border-l-4 border-orange-600 pl-6">
-                    <h4 className="text-xl font-bold text-orange-400 mb-2">$2.067 Billones</h4>
+                    <h4 className="text-xl font-bold text-orange-400 mb-2">$2,053MM</h4>
                     <p className="text-zinc-300">Inversión inicial total requerida</p>
                   </div>
                   <div className="border-l-4 border-orange-600 pl-6">
-                    <h4 className="text-xl font-bold text-orange-400 mb-2">$3.096 Billones</h4>
-                    <p className="text-zinc-300">Retorno total proyectado 24 meses</p>
+                    <h4 className="text-xl font-bold text-orange-400 mb-2">$3,053MM</h4>
+                    <p className="text-zinc-300">Retorno total proyectado 26 meses</p>
                   </div>
                   <div className="border-l-4 border-orange-600 pl-6">
-                    <h4 className="text-xl font-bold text-orange-400 mb-2">$21.794 Billones</h4>
-                    <p className="text-zinc-300">Ventas anuales año 3 (60 cruces)</p>
+                    <h4 className="text-xl font-bold text-orange-400 mb-2">$20,341MM</h4>
+                    <p className="text-zinc-300">Ventas anuales año 3 (70 cruces)</p>
                   </div>
                 </div>
 
                 <div className="relative">
                   <div className="bg-black/30 rounded-2xl p-12 text-center border border-orange-600/30">
-                    <div className="text-6xl font-black text-orange-400 mb-4">55%</div>
+                    <div className="text-6xl font-black text-orange-400 mb-4">49%</div>
                     <div className="text-2xl font-bold text-white mb-2">ROI</div>
-                    <div className="text-orange-400 font-medium">En 24 meses</div>
+                    <div className="text-orange-400 font-medium">En 26 meses</div>
                   </div>
                 </div>
               </div>

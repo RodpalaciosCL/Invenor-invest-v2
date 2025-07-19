@@ -22,44 +22,44 @@ export default function StatsSection({ data }: StatsSectionProps) {
   const statsData = [
     {
       label: "ROI Proyectado",
-      value: 55,
+      value: 49,
       format: "%",
       icon: <TrendingUp className="w-8 h-8" />,
       color: "text-orange-400",
       bgColor: "bg-orange-400/10",
-      description: "Retorno de inversión garantizado en 24 meses",
-      trend: "+42% vs promedio industria"
+      description: "Retorno de inversión garantizado en 26 meses",
+      trend: "IRR 20.1% anual"
     },
     {
-      label: "Eficiencia IA",
-      value: 95,
+      label: "Margen Operativo",
+      value: 70,
       format: "%",
       icon: <Zap className="w-8 h-8" />,
       color: "text-orange-400",
       bgColor: "bg-orange-400/10", 
-      description: "Precisión en detección de infracciones",
-      trend: "vs 22% método tradicional"
+      description: "Margen neto del proyecto validado",
+      trend: "vs 49% proyección inicial"
     },
     {
-      label: "Retorno Total",
-      value: 3.1,
-      format: "B",
+      label: "Ganancia Neta",
+      value: 1000,
+      format: "MM",
       prefix: "$",
       icon: <DollarSign className="w-8 h-8" />,
       color: "text-orange-400",
       bgColor: "bg-orange-400/10",
-      description: "Valor proyectado a 10 años",
-      trend: "CLP $2.5 trillones"
+      description: "Mil millones de pesos de ganancia",
+      trend: "CLP $1,000,000,000"
     },
     {
       label: "Payback Period",
-      value: 15,
+      value: 26,
       format: " meses",
       icon: <Target className="w-8 h-8" />,
       color: "text-orange-400",
       bgColor: "bg-orange-400/10",
-      description: "Tiempo de recuperación de inversión",
-      trend: "vs 36 meses promedio"
+      description: "Tiempo de recuperación total de inversión",
+      trend: "Pago único mes 26"
     }
   ];
 

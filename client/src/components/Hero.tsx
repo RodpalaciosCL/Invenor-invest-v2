@@ -101,7 +101,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           Sistema inteligente que detecta infracciones en cruces ferroviarios 24/7, 
-          incrementando la recaudación municipal hasta <span className="text-orange-400 font-bold">256%</span> 
+          incrementando la recaudación municipal hasta <span className="text-orange-400 font-bold">256%</span>{" "}
           con <span className="text-orange-400 font-bold">95% de eficiencia IA</span> validada por Ferronor.
         </motion.p>
 

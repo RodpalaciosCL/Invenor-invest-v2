@@ -29,6 +29,10 @@ import NavigationBar from '../components/NavigationBar';
 import ProgressIndicator from '../components/ProgressIndicator';
 import SectionDivider from '../components/SectionDivider';
 import IntroSection from '../components/IntroSection';
+import ParticipationModel from '../components/ParticipationModel';
+import CashflowSection from '../components/CashflowSection';
+import InternationalExpansion from '../components/InternationalExpansion';
+import SensitivityAnalysis from '../components/SensitivityAnalysis';
 
 
 export default function Home() {
@@ -116,6 +120,22 @@ export default function Home() {
       
       <section id="inversion">
         <InvestmentOpportunity />
+      </section>
+      
+      <section id="participation">
+        <ParticipationModel />
+      </section>
+      
+      <section id="cashflow">
+        <CashflowSection />
+      </section>
+      
+      <section id="expansion">
+        <InternationalExpansion />
+      </section>
+      
+      <section id="sensitivity">
+        <SensitivityAnalysis />
       </section>
       
       <section id="futuro">
